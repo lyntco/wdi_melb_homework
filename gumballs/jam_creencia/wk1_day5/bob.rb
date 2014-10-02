@@ -14,6 +14,12 @@ while input != "Holla atcha lata"
 	elsif input == "Holla atcha lata"
 		break
 
+	elsif input.include? "grounded"
+		puts "But I did my homework!"
+
+	elsif input.include? "Bro,"
+		puts "D00d, n0t kewl."
+		
 	else 
 		puts "Cool bro."
 

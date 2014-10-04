@@ -5,13 +5,13 @@ class Animal
 		@age = animal_details[:age]
 		@gender = animal_details[:gender]
 		@species = animal_details[:species]
-		@owner = owner
-		@toys = []
+		@owner = owner || "no one"
+		@toys = [] 
 
 	end
 
 	def to_s
-		print "#{@name} is a #{@age} year old #{@gender} #{@species} owned by #{@owner}. Toys: #{@toys.join(", ")}."
+		print "#{@name} is a #{@age} year old #{@gender} #{@species} owned by #{@owner}. Toys: #{@toys.join(", ")}"
 	end
 
 	def to_s_option

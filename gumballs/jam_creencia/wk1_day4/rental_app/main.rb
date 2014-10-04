@@ -2,6 +2,9 @@ require_relative "tenant"
 require_relative "apartment"
 require_relative "building"
 
+require "pry"
+
+
 #DEFINE STUFF
 
 def menu
@@ -21,7 +24,76 @@ def menu
 end
 
 
+#PRE EXISTING DATA
 
+
+	t1_details = {
+		:name => "Jam",
+		:age => 26,
+		:gender => "female",
+		:occupation => "nurse"
+		}
+
+	t1 = Tenant.new(t1_details)
+
+	# p t1
+
+	tenant_list = []
+
+	tenant_list << t1
+
+		# p tenant_list
+
+
+ 	a1_details = {
+			:room_number => 33, 
+			:number_bedrooms => 2, 
+			:number_bathrooms => 1, 
+			:has_parking => true,
+			:tenants => [t1]
+
+		}
+
+	a1 = Apartment.new(a1_details)
+
+	# p a1
+
+	apartment_list = []
+
+	apartment_list << a1
+		# p apartment_list
+
+
+	b1_details = {
+	  :address => '485 St Kilda Rd',
+	  :has_elevator => false,
+	  :number_of_floors => 3,
+	  :apartments => [a1]
+	}
+
+	b1 = Building.new(b1_details)
+
+	# p b1
+
+	building_list = []
+
+	building_list << b1
+
+	
+
+	# p building_list
+
+
+	def show_apartments(apartment_list, to_s)
+		apartment_list.each {|a| a.to_s}
+	end
+
+def counter
+	count = 0
+end
+
+
+binding.pry
 
 #PROGRAM STARTS
 
@@ -34,41 +106,56 @@ while input !=7
 	
 	case input
 
-	when 1 
-		# puts "What is the tenant's name?"
-		# tenant_name = gets.chomp
+		when 1 
+			puts "What is the tenant's name?"
+			tenant_name = gets.chomp
 
-		# puts "What is the tenant's age?"
-		# tenant_age = gets.chomp
+			puts "What is the tenant's age?"
+			tenant_age = gets.chomp
 
-		# puts "What is the tenant's gender?"
-		# tenant_gender = gets.chomp
+			puts "What is the tenant's gender?"
+			tenant_gender = gets.chomp
 
-		# puts "What is the tenant's occupation?"
-		# tenant_occupation = gets.chomp
+			puts "What is the tenant's occupation?"
+			tenant_occupation = gets.chomp
+
+				
+			tenant_details = {
+				:name => tenant_name,
+				:age => tenant_age,
+				:gender => tenant_gender,
+				:occupation => tenant_occupation
+			}
+
+			t = Tenant.new(tenant_details)
+
+			# puts "--t:"
+			# p t
+
+
+			puts "Would you like to add the tenant to an apartment? (y/n)"
+			ans_add_to_apt = gets.chomp
+
+			if ans_add_to_apt == "y"
+				puts "available apartments:\n"
+				show_apartments(apartment_list, to_s)
+
+				puts "please select the unit (index):\n"
+				apt_choice = gets.chomp.to_i
+	
+				apartment_list[apt_choice].tenants << t
+		
+				puts "Added #{t.name} to unit #{apartment_list[apt_choice].room_number}.\n\n"
+
+			else
+				puts "Added tenant.\n\n"
 
 			
-		# tenant_details = {
-		# 	:name => tenant_name,
-		# 	:age => tenant_age,
-		# 	:gender => tenant_gender,
-		# 	:occupation => tenant_occupation
-		# }
 
-		# t = Tenant.new(tenant_details)
+			end
 
-		# puts "--t:"
-		# p t
-
-		# def add_tenant(t, Apartment.tenants)
-		# t.each {|key, value| Apartment.tenants[key] = value}
-		# end
-
-		# add_tenant(t, Apartment.tenants)
-
-		p Apartment.tenants
-
-
+			menu
+			input = gets.chomp	
 
 	# when 2 
 	# 	puts "What is the apartment's room number?"
@@ -130,9 +217,28 @@ while input !=7
 
 		# 	add_building(b, building_list)
 
-		
+		# when 4 
+		# 	puts "Tenant list:"
+		# 	tenant_list.each {|t| 
+		# 		puts t.to_s
+		# 	}
 
 
+			# when 5
+			
+			# 	puts "Apartment list:"
+			# 	show_apartments(apartment_list, to_s)
+
+
+		# when 6
+		# 	puts "Building list:"
+		# 		building_list.each {|b| 
+		# 			puts b.to_s
+		# 		}
+
+
+
+				
 
 
 
@@ -145,9 +251,6 @@ while input !=7
 	end		
 
 
+
+
 end
-
-
-
-
-

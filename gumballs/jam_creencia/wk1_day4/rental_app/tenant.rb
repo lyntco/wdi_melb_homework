@@ -8,7 +8,13 @@ class Tenant
 		@occupation = tenant_details[:occupation]
 	end
 
+
+def to_s
+	puts "> #{@name} is a #{@age} year old #{@gender} who works as a #{@occupation}."
 end
+
+end
+
 
 
 

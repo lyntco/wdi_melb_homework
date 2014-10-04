@@ -9,19 +9,19 @@ class Building
 		@apartments = []
 	end
 
-end
 
-def list_apartments
+
+	def list_apartments
     @apartments.values.join(", ")
   end
 
-  building_list = {}
+ 
 
-# b1_details = {
-#   :address => '30 Forrest St',
-#   :has_elevator => false,
-#   :number_of_floors => 3,
-#   :apartments => []
-# }
+ 	def to_s
+    puts "> #{@address} has #{@number_of_floors} floors and #{@apartments.count} apartments within."
+  end
 
-# b1 = Building.new(b1_details)
+
+
+end
+

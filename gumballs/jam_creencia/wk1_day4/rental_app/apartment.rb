@@ -9,21 +9,12 @@ class Apartment
 		@tenants = []
 	end
 
+
+
+def to_s
+	puts "> Unit #{room_number} has #{number_bedrooms} bedrooms, #{number_bathrooms}, and #{tenants.count} tenants"
 end
 
-
-def list_tenants
-	@tenants.join(", ")
+ 	
 end
-
-
-# apartment_details = {
-#   :room_number => 3,
-#   :number_bedrooms => 2,
-#   :number_bathrooms => 1,
-#   :has_parking => true,
-#   :tenants => []
-# }
-
-# a1 = Apartment.new(apartment_details)
 

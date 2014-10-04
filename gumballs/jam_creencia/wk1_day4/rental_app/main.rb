@@ -8,10 +8,10 @@ require "pry"
 #DEFINE STUFF
 
 def menu
-	puts "Welcome to Rental App!"
+	puts "		Welcome to Rental App!"
 
 
-	puts " >>MENU<<
+	puts " 				>>MENU<<
 	[1] Add tenants 		[4] View tenants
 	[2] Add apartment		[5] View apartments
 	[3] Add building		[6] View buildings
@@ -36,13 +36,10 @@ end
 
 	t1 = Tenant.new(t1_details)
 
-	# p t1
 
 	tenant_list = []
 
 	tenant_list << t1
-
-		# p tenant_list
 
 
  	a1_details = {
@@ -56,12 +53,10 @@ end
 
 	a1 = Apartment.new(a1_details)
 
-	# p a1
 
 	apartment_list = []
 
 	apartment_list << a1
-		# p apartment_list
 
 
 	b1_details = {
@@ -73,27 +68,12 @@ end
 
 	b1 = Building.new(b1_details)
 
-	# p b1
 
 	building_list = []
 
 	building_list << b1
 
-	
 
-	# p building_list
-
-
-	def show_apartments(apartment_list, to_s)
-		apartment_list.each {|a| a.to_s}
-	end
-
-def counter
-	count = 0
-end
-
-
-binding.pry
 
 #PROGRAM STARTS
 
@@ -129,8 +109,7 @@ while input !=7
 
 			t = Tenant.new(tenant_details)
 
-			# puts "--t:"
-			# p t
+			tenant_list << t
 
 
 			puts "Would you like to add the tenant to an apartment? (y/n)"
@@ -138,7 +117,8 @@ while input !=7
 
 			if ans_add_to_apt == "y"
 				puts "available apartments:\n"
-				show_apartments(apartment_list, to_s)
+				apartment_list.each { |a| a.to_s }
+				
 
 				puts "please select the unit (index):\n"
 				apt_choice = gets.chomp.to_i
@@ -150,107 +130,126 @@ while input !=7
 			else
 				puts "Added tenant.\n\n"
 
-			
-
 			end
 
 			menu
-			input = gets.chomp	
+			input = gets.chomp.to_i	
 
-	# when 2 
-	# 	puts "What is the apartment's room number?"
-	# 		apt_room_num = gets.chomp
+	when 2 
+		puts "What is the apartment's room number?"
+			apt_room_num = gets.chomp
 
-	# 	puts "How many bedrooms are in the apartment?"
-	# 		apt_bedrooms = gets.chomp
+		puts "How many bedrooms are in the apartment?"
+			apt_bedrooms = gets.chomp
 
-	# 	puts "How many bathrooms are in the apartment?"
-	# 		apt_bathrooms = gets.chomp
+		puts "How many bathrooms are in the apartment?"
+			apt_bathrooms = gets.chomp
 
-	# 	puts "Does the apartment have parking? (true/false)"
-	# 		apt_has_parking = gets.chomp
-
-
-	# 	apartment_details = {
-	# 		:room_number => apt_room_num, 
-	# 		:number_bedrooms => apt_bedrooms, 
-	# 		:number_bathrooms => apt_bathrooms, 
-	# 		:has_parking => apt_has_parking,
-	# 		:tenants => []
-
-	# 	}
-
-	# 	a = Apartment.new(apartment_details)
-
-	# 	p a
+		puts "Does the apartment have parking? (true/false)"
+			apt_has_parking = gets.chomp
 
 
+		apartment_details = {
+			:room_number => apt_room_num, 
+			:number_bedrooms => apt_bedrooms, 
+			:number_bathrooms => apt_bathrooms, 
+			:has_parking => apt_has_parking,
+			:tenants => []
 
+		}
 
+		a = Apartment.new(apartment_details)
 
-		# when 3
-			
-		# 	puts "What is the building address?"
-		# 	bldg_address = gets.chomp
+		apartment_list << a
 
-		# 	puts "How many floors are in the building?"
-		# 	bldg_floors = gets.chomp
+		puts "Add apartment to a building? (y/n)"
+		ans_add_to_bldg = gets.chomp
 
-		# 	puts "Does the building have an elevator? (true/false)"
-		# 	bldg_has_elevator = gets.chomp
-
-		# 	building_details = {
-		# 		:address => bldg_address, 
-		# 		:has_elevator => bldg_has_elevator, 
-		# 		:number_of_floors => bldg_floors,
-		# 		:apartments => []
-		# 	}
-
-
-		# 	b = Building.new(building_details)
-
-		# 	building_list = {}
-
-		# 	def add_building(b, building_list)
-		# 		b.each {|key, value| building_list[key] = value}
-		# 	end
-
-		# 	add_building(b, building_list)
-
-		# when 4 
-		# 	puts "Tenant list:"
-		# 	tenant_list.each {|t| 
-		# 		puts t.to_s
-		# 	}
-
-
-			# when 5
-			
-			# 	puts "Apartment list:"
-			# 	show_apartments(apartment_list, to_s)
-
-
-		# when 6
-		# 	puts "Building list:"
-		# 		building_list.each {|b| 
-		# 			puts b.to_s
-		# 		}
-
-
-
+			if ans_add_to_bldg == "y"
+				puts "available buildings:\n"
+				building_list.each { |b| b.to_s }
 				
 
-
-
-
-		break
-
+				puts "please select the building (index starting from 0):\n"
+				bldg_choice = gets.chomp.to_i
+	
+				building_list[bldg_choice].apartments << t
 		
+				puts "Added unit #{a.room_number} to building #{building_list[bldg_choice].address}.\n\n"
+
+			else
+				puts "Added apartment.\n\n"
+
+			end
+
+	
+		menu
+			input = gets.chomp.to_i
+
+
+
+
+		when 3
+			
+			puts "What is the building address?"
+			bldg_address = gets.chomp
+
+			puts "How many floors are in the building?"
+			bldg_floors = gets.chomp
+
+			puts "Does the building have an elevator? (true/false)"
+			bldg_has_elevator = gets.chomp
+
+			building_details = {
+				:address => bldg_address, 
+				:has_elevator => bldg_has_elevator, 
+				:number_of_floors => bldg_floors,
+				:apartments => []
+			}
+
+
+			b = Building.new(building_details)
+
+
+			building_list << b
+
+			puts "Building added."
+
+
+			menu
+			input = gets.chomp.to_i
+
+		when 4 
+			puts "Tenant list:"
+			tenant_list.each {|t| 
+				puts t.to_s
+			}
+			menu
+			input = gets.chomp.to_i
+
+
+			when 5
+			
+				puts "Apartment list:"
+				apartment_list.each {|a| a.to_s}
+			menu
+			input = gets.chomp.to_i
+
+		when 6
+			puts "Building list:"
+				building_list.each {|b| 
+					puts b.to_s
+				}
+
+				menu
+			input = gets.chomp.to_i
+
+				
+			when 7
+				break
 
 
 	end		
-
-
 
 
 end

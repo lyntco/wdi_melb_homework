@@ -104,6 +104,7 @@ $part2_backward =
 
 
 #The route is split in two parts from Union Square
+#Check if the stop is past Union Square = means the train is going "forward"
 def part1(linestops_on)
 	if $start < $intersec1 
 		linestops_on[$start..$intersec1]

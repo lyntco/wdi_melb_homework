@@ -15,7 +15,7 @@ class Building
     @apartments.values.join(", ")
   end
 
- 
+
 
  	def to_s
     puts "> #{@address} has #{@number_of_floors} floors and #{@apartments.count} apartments within."

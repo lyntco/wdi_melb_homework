@@ -10,7 +10,7 @@ class Tenant
 
 
 def to_s
-	puts "> #{@name} is a #{@age} year old #{@gender} who works as a #{@occupation}."
+	puts ">#{@name} is a #{@age} year old #{@gender} who works as a #{@occupation}."
 end
 
 end

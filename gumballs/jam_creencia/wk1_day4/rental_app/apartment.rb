@@ -10,9 +10,8 @@ class Apartment
 	end
 
 
-
 def to_s
-	puts "> Unit #{room_number} has #{number_bedrooms} bedrooms, #{number_bathrooms}, and #{tenants.count} tenants"
+	puts "> Unit #{@room_number} has #{@number_bedrooms} bedrooms, #{@number_bathrooms}, and #{@tenants.count} tenants"
 end
 
  	

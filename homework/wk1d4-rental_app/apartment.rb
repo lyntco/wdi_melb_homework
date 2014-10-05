@@ -8,6 +8,10 @@ class Apartment
     @tenants = []
   end
 
+  def to_s
+    "This apartment has #{@room_number} rooms. This apartment has #{@number_bedrooms} bedrooms."
+  end
+
 end
 
 # apartment_details = {
@@ -19,4 +23,14 @@ end
 
 # a1 = Apartment.new(apartment_details)
 
-# p a1.number_bathrooms
+# puts a1
+
+# apartment2_details = {
+#   :room_number => 33,
+#   :number_bedrooms => 2,
+#   :number_bathrooms => 223,
+#   :has_parking => true
+# }
+# a2 = Apartment.new(apartment2_details)
+
+# puts a2

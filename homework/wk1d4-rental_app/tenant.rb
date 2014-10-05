@@ -10,6 +10,10 @@ class Tenant
     @is_funny = tenant_details[:is_funny]
   end
 
+  # def to_s
+  #   puts "This tenant's name is #{@name}"
+  # end
+
 end
 
 # jenny_details = {
@@ -22,5 +26,4 @@ end
 
 # jenny = Tenant.new(jenny_details)
 
-# p jenny.name
-# p jenny.is_funny
+# p jenny

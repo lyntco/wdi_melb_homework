@@ -60,15 +60,21 @@ while input != 8
 	case input
 
 		when 1
+			puts "\n\n\n---------------------"
 			puts "Client list:\n"
+			puts "---------------------"
 			client_list.each {|c| puts c.to_s}
+			puts "---------------------\n\n\n"
 
 			menu
 			input = gets.chomp.to_i
 
 		when 2
+			puts "\n\n\n---------------------"
 			puts "Animals list:\n"
+			puts "---------------------"
 			animals_list.each {|a| puts a.to_s}
+			puts "---------------------\n\n\n"
 
 			menu
 			input = gets.chomp.to_i
@@ -92,6 +98,10 @@ while input != 8
 			c = Client.new(client_details)
 
 			client_list << c
+
+			puts "\n\n\n---------------------"
+			puts "#{c.name} has been added."
+			puts "---------------------\n\n\n"
 
 			menu
 			input = gets.chomp.to_i
@@ -121,15 +131,19 @@ while input != 8
 
 			animals_list << a
 
+			puts "\n\n\n---------------------"
+			puts "#{a.name} has been added."
+			puts "---------------------\n\n\n"
+
 			menu
 			input = gets.chomp.to_i
 
 		when 5
-			puts "Which client wishes to adopt?"
+			puts "Which client wishes to adopt?\n\n"
 			client_list.each_with_index {|c, index| puts "#{c.to_s_pets} ---> press[#{index}]"}
 			adopting_client = gets.chomp.to_i
 
-			puts "Which animal is #{client_list[adopting_client].name} adopting?(index)"
+			puts "Which animal is #{client_list[adopting_client].name} adopting?\n\n"
 			animals_list.each_with_index {|a, index| puts "#{a.to_s_option} ---> press[#{index}]"}
 			adopting_animal = gets.chomp.to_i
 
@@ -137,19 +151,21 @@ while input != 8
 
 			animals_list[adopting_animal].owner = client_list[adopting_client].name
 
-			puts "#{animals_list[adopting_animal].name} has been adopted by #{client_list[adopting_client].name}"
+			puts "\n\n\n---------------------"
+			puts "#{animals_list[adopting_animal].name} has been adopted by #{client_list[adopting_client].name}."
+			puts "---------------------\n\n\n"
 
 			menu
 			input = gets.chomp.to_i
 
 		when 6
-			puts "Which heartless client is sending a pet for adoption?"
+			puts "Which heartless client is sending a pet for adoption?\n\n"
 			client_list.each_with_index {|c, index| puts "#{c.to_s_pets} ---> press[#{index}]"}
 			get_rid_client = gets.chomp.to_i
 
 			selected_client = client_list[get_rid_client]
 
-			puts "Which poor animal will #{selected_client.name} send for adoption?(index)"
+			puts "Which poor animal will #{selected_client.name} send for adoption?\n\n"
 			selected_client.pets.each_with_index {|p, index| puts "#{p.to_s_option} ---> press[#{index}]"}
 			get_rid_animal = gets.chomp.to_i
 
@@ -159,7 +175,9 @@ while input != 8
 
 			selected_animal.owner = "no one"
 
+			puts "\n\n\n---------------------"
 			puts "#{selected_client.name} has been rid of #{selected_animal.name.to_s}."
+			puts "---------------------\n\n\n"
 
 			menu
 			input = gets.chomp.to_i
@@ -168,16 +186,17 @@ while input != 8
 			puts "What toy would you like to give?"
 			toy = gets.chomp
 
-			puts "Which animal would you like to give the #{toy} to?"
+			puts "Which animal would you like to give the #{toy} to?\n\n"
 			animals_list.each_with_index{|a, index| puts "#{a.to_s_option} ---> press[#{index}]"}
 			gifted_animal = gets.chomp.to_i
 
 			animal_received = animals_list[gifted_animal]
 			animal_received.toys << toy
 
+			puts "\n\n\n---------------------"
 			puts "#{animal_received.name} has been given a #{toy}." 
 			puts "#{animal_received.name} now has the following toys: #{animal_received.toys.join(", ")}."
-
+			puts "---------------------\n\n\n"
 			menu
 			input = gets.chomp.to_i
 

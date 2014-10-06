@@ -322,7 +322,7 @@ def options
     add_tenant_age = gets.chomp.to_i
 
     puts "What's the occupation?"
-    add_tenant_occu = gets.chomp.to_i
+    add_tenant_occu = gets.chomp
 
     puts "Male or Female?"
     add_gender = gets.chomp

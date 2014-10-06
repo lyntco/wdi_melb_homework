@@ -12,9 +12,9 @@ class Tenant
 
   def to_s   
     if is_funny == true
-      "#{name}, #{age}, #{occupation}, #{gender} and has a sense of humour"
+      "#{name} is #{age} years old, do #{occupation} for a living, #{gender} and has a sense of humour"
     else
-      "#{name}, #{age}, #{occupation}, #{gender} and has no sense of humour"
+      "#{name} is #{age} years old, do #{occupation} for a living, #{gender} and has no sense of humour"
     end
   end
 end

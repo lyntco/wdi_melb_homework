@@ -346,7 +346,7 @@ def options
     }
 
     add_new_tenant = Tenant.new(new_tenant_details)
-    $tenants << add_new_tenant
+    $tenants << add_new_tenant  #need to add the tenant to an apartment instead of $tenants... so need to ask which apartment the use wish to add the tenant to. 
     puts $tenants
   elsif option == 5
     puts "Thank you." 

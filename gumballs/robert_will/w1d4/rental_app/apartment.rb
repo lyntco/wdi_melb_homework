@@ -1,4 +1,4 @@
-zclass Apartment
+class Apartment
   attr_accessor :tenants, :room_number, :number_bedrooms, :number_bathrooms, :has_parking
   def initialize(apartment_details)
     @room_number = apartment_details [:room_number]

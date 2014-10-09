@@ -167,9 +167,9 @@ until input == "7"
       $c_array.each do |center|
         puts "Center town #{center.town}"
       end
-      puts "Enter the building address you want: "
+      puts "Enter the town you want: "
       center_want = gets.chomp
-      #$b_array.find{ |building| building.address == building_want }.apartments << (a1.room_number)
+      #$c_array.find{ |town| center.town == town_want }.town << (t1.registered_trainers)
       selected_center = $c_array.find{ |center| center.town == center_want }
       selected_center.registered_trainers << (t1.name)
     end

@@ -23,24 +23,31 @@ stop_get_off = gets.chomp.downcase
 
 # line_got_on.index {|x|x=="b"
 
-
-subway_router =	 {
-	"line n" ["Times Square", "34th", "N line 28th", "23rd", "Union Square", "8th"],
-	"line l" ["8th", "6th", "Union Square", "3rd", "1st"],
-	"line_6" ["Grand Central", "33rd", "Line 6 28th", "23rd", "Union Square", "Astor Place"]
+subway_router = {
+  "line n" => ["times square", "34th", "n line 28th", "23rd", "union square", "8th"],
+  "line l" => ["8th", "6th", "union square", "3rd", "1st"],
+  "line 6" => ["grand central", "33rd", "line 6 28th", "23rd", "union square", "astor place"]
 }
 
-def stop_index(line, final_stop)
-	subway_router[line].index(final_stop)
+
+if line_got_on == line_get_off
+  first_range = subway_router[line_got_on].index(stop_got_on)
+  second_range = subway_router[line_got_on].index(stop_get_off)
+  seperator
+  puts "Your route is:"
+  seperator
+  route = subway_router[line_got_on][first_range..second_range]
+  puts route
+# elsif line_got_on != line_get_off
+
 end
 
-def stop_distance(line, enter_stop, exit_stop)
-	stop_index(line, enter_stop) - stop_index(line, exit_stop)
-end
+# def stop_index(line, final_stop)
+# 	subway_router[line].index(final_stop)
+# end
 
+# def stop_distance(line, enter_stop, exit_stop)
+# 	stop_index(line, enter_stop) - stop_index(line, exit_stop)
+# end
 
-# Students should create a program that models a simple subway system.
-
-# The program takes the line and stop that a user is getting on at and the line and 
-# stop that user is getting off at and prints the total number of stops for the trip.
 

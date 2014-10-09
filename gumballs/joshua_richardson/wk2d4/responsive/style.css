@@ -1,0 +1,42 @@
+body {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  float: left;
+}
+
+.span-1, .span-2, .span-3 {
+  min-height: 100px;
+  float: left;
+  margin-right:1.666666%;
+  margin-bottom: 10px;
+  width: 98.33333%;
+}
+
+.span-1 {
+  background-color: #B9121B;
+  /*width: 31.66666%;*/
+}
+
+.span-2 {
+  background-color: #4C1B1B;
+  /*width: 65%;*/
+}
+
+.span-3 {
+  background-color: #F6E497;
+  /*width: 98.33333%;*/
+}
+
+@media all and (min-width: 35em) {
+  .span-1 {
+    width: 31.66666%;
+  }
+
+  .span-2 {
+    width: 65%;
+  }
+}

@@ -1,0 +1,16 @@
+body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
+.contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif;}
+.form_hint, .required_notification {font-size: 11px;}
+
+
+body {
+  background-color: #ECF0F1;
+  color: #2C3E50;
+}
+
+label {
+  min-width: 155px;
+  display: inline-block;
+  text-align: right;
+}
+

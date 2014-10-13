@@ -1,0 +1,13 @@
+<div class="container center">
+  
+
+    <h1>Travel Info</h1>
+
+    <h2><%= @stop_num %></h2>
+    
+    <div class="journey">
+      <h4><%= @journey.each {|x| print x.upcase + " "} %></h4>
+    </div>  
+
+
+</div>

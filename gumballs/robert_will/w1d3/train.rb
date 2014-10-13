@@ -26,7 +26,7 @@ lines = {
 # puts lines[:"6"]
 
 # get_vars
-	
+
 # puts s_line
 # puts s_station
 # puts e_line
@@ -56,33 +56,33 @@ until input == "exit"
 		if endline == "n"
 			puts "Which stop? (#{lines[:n].join(", ")})"
 			ends = lines[:n].index(gets.chomp)
-			
+
 			if ends > starts
-				puts " "				
+				puts " "
 				puts lines[:n][starts..ends]
 			end
 
 			if ends < starts
-				puts " "				
+				puts " "
 				puts lines[:n][ends..starts].reverse
 			end
 
 		end
-		
+
 		if endline == "l"
 			puts "Which stop? (#{lines[:l].join(", ")})"
 			ends = lines[:l].index(gets.chomp)
 
 			if ends < lines[:l].index("us")
-				
+
 				if starts > 4
-					puts " "					
+					puts " "
 					puts lines[:n][4..starts].reverse
 					puts lines[:l][ends..2].reverse
 				end
 
 				if starts < 4
-					puts " "					
+					puts " "
 					puts lines[:n][starts..4]
 					puts lines[:l][ends..2].reverse
 				end
@@ -91,13 +91,13 @@ until input == "exit"
 			if ends > lines[:l].index("us")
 
 				if starts > 4
-					puts " "					
+					puts " "
 					puts lines[:n][4..starts].reverse
 					puts lines[:l][2..ends]
 				end
 
 				if starts < 4
-					puts " "					
+					puts " "
 					puts lines[:n][starts..4]
 					puts lines[:l][2..ends]
 				end
@@ -105,22 +105,22 @@ until input == "exit"
 			end
 
 		end
-		
+
 
 		if endline == "6"
 			puts "Which stop? (#{lines[:"6"].join(", ")})"
 			ends = lines[:"6"].index(gets.chomp)
 
 			if ends < lines[:"6"].index("us")
-				
+
 				if starts > 4
-					puts " "					
+					puts " "
 					puts lines[:n][4..starts].reverse
 					puts lines[:"6"][ends..4].reverse
 				end
 
 				if starts < 4
-					puts " "					
+					puts " "
 					puts lines[:n][starts..4]
 					puts lines[:"6"][ends..4].reverse
 				end
@@ -129,13 +129,13 @@ until input == "exit"
 			if ends > lines[:"6"].index("us")
 
 				if starts > 4
-					puts " "					
+					puts " "
 					puts lines[:n][4..starts].reverse
 					puts lines[:"6"][4..ends]
 				end
 
 				if starts < 4
-					puts " "					
+					puts " "
 					puts lines[:n][starts..4]
 					puts lines[:"6"][4..ends]
 				end
@@ -143,7 +143,7 @@ until input == "exit"
 			end
 
 		end
-		
+
 	end
 
 #=======================================================================
@@ -160,14 +160,14 @@ until input == "exit"
 		if endline == "l"
 			puts "Which stop? (#{lines[:l].join(", ")})"
 			ends = lines[:l].index(gets.chomp)
-			
+
 			if ends > starts
-				puts " "				
+				puts " "
 				puts lines[:l][starts..ends]
 			end
 
 			if ends < starts
-				puts " "				
+				puts " "
 				puts lines[:l][ends..starts].reverse
 			end
 		end
@@ -178,15 +178,15 @@ until input == "exit"
 			ends = lines[:n].index(gets.chomp)
 
 			if ends < lines[:n].index("us")
-				
+
 				if starts > 2
-					puts " "					
+					puts " "
 					puts lines[:l][2..starts].reverse
 					puts lines[:n][ends..4].reverse
 				end
 
 				if starts < 2
-					puts " "					
+					puts " "
 					puts lines[:l][starts..2]
 					puts lines[:n][ends..4].reverse
 				end
@@ -195,13 +195,13 @@ until input == "exit"
 			if ends > lines[:n].index("us")
 
 				if starts > 2
-					puts " "					
+					puts " "
 					puts lines[:l][2..starts].reverse
 					puts lines[:n][4..ends]
 				end
 
 				if starts < 2
-					puts " "					
+					puts " "
 					puts lines[:l][starts..2]
 					puts lines[:n][4..ends]
 				end
@@ -209,22 +209,22 @@ until input == "exit"
 			end
 
 		end
-		
+
 
 		if endline == "6"
 			puts "Which stop? (#{lines[:"6"].join(", ")})"
 			ends = lines[:"6"].index(gets.chomp)
 
 			if ends < lines[:"6"].index("us")
-				
+
 				if starts > 2
-					puts " "					
+					puts " "
 					puts lines[:l][2..starts].reverse
 					puts lines[:"6"][ends..4].reverse
 				end
 
 				if starts < 2
-					puts " "					
+					puts " "
 					puts lines[:l][starts..2]
 					puts lines[:"6"][ends..4].reverse
 				end
@@ -233,13 +233,13 @@ until input == "exit"
 			if ends > lines[:"6"].index("us")
 
 				if starts > 2
-					puts " "					
+					puts " "
 					puts lines[:l][2..starts].reverse
 					puts lines[:"6"][4..ends]
 				end
 
 				if starts < 2
-					puts " "					
+					puts " "
 					puts lines[:l][starts..2]
 					puts lines[:"6"][4..ends]
 				end
@@ -247,7 +247,7 @@ until input == "exit"
 			end
 
 		end
-		
+
 	end
 
 #=======================================================================
@@ -264,27 +264,27 @@ until input == "exit"
 		if endline == """6"""
 			puts "Which stop? (#{lines[:"6"].join(", ")})"
 			ends = lines[:"6"].index(gets.chomp)
-			
+
 			if ends > starts
-				puts " "				
+				puts " "
 				puts lines[:"6"][starts..ends]
 			end
 
 			if ends < starts
-				puts " "				
+				puts " "
 				puts lines[:"6"][ends..starts].reverse
 			end
 
 		end
-		
+
 		if endline == "l"
 			puts "Which stop? (#{lines[:l].join(", ")})"
 			ends = lines[:l].index(gets.chomp)
 
 			if ends < lines[:l].index("us")
-				
+
 				if starts > 4
-					puts " "		
+					puts " "
 					puts lines[:"6"][4..starts].reverse
 					puts lines[:l][ends..2].reverse
 				end
@@ -299,13 +299,13 @@ until input == "exit"
 			if ends > lines[:l].index("us")
 
 				if starts > 4
-					puts " "					
+					puts " "
 					puts lines[:"6"][4..starts].reverse
 					puts lines[:l][2..ends]
 				end
 
 				if starts < 4
-					puts " "					
+					puts " "
 					puts lines[:"6"][starts..4]
 					puts lines[:l][2..ends]
 				end
@@ -313,22 +313,22 @@ until input == "exit"
 			end
 
 		end
-		
+
 
 		if endline == "n"
 			puts "Which stop? (#{lines[:n].join(", ")})"
 			ends = lines[:n].index(gets.chomp)
 
 			if ends < lines[:n].index("us")
-				
+
 				if starts > 4
-					puts " "					
+					puts " "
 					puts lines[:"6"][4..starts].reverse
 					puts lines[:n][ends..4].reverse
 				end
 
 				if starts < 4
-					puts " "					
+					puts " "
 					puts lines[:"6"][starts..4]
 					puts lines[:n][ends..4].reverse
 				end
@@ -337,7 +337,7 @@ until input == "exit"
 			if ends > lines[:n].index("us")
 
 				if starts > 2
-					puts " "					
+					puts " "
 					puts lines[:"6"][4..starts].reverse
 					puts lines[:n][4..ends]
 				end
@@ -351,7 +351,7 @@ until input == "exit"
 			end
 
 		end
-		
+
 	end
 
 

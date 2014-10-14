@@ -1,0 +1,16 @@
+
+
+<h1>Results</h1>
+
+<div id="output">
+
+   <% @search.each do |list|  %>
+    <a href="/movie/<%= list["imdbID"] %>"><p><%= list["Title"] %></p></a>
+  <% end %>
+
+
+
+
+
+    </div>
+

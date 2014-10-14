@@ -1,0 +1,19 @@
+<body>
+  <div class="movie_details">
+    <div class="info">
+      <h1><%= @title %></h1>
+      <article class="details">
+        <% @display.each do |key, value| %>
+        <p><%= key %> : <%= value %></p>
+        <% end %>
+      </article>
+
+      <a href="/"><button>Return to search</button></a>
+    </div>
+    <div class="poster">
+      <img src="<%= @poster %>">
+    </div>
+  </div>
+</body>
+
+

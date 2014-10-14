@@ -1,0 +1,16 @@
+
+
+<% @result.each do |row| %>
+<div class="gallery">
+<p><a href="/memes/<%= row['id'] %>"><%= row['title'] %></a></p>
+<% @id = row['video_url'].split('=') %>
+<iframe width="210" height="157" src="//www.youtube.com/embed/<%= @id[1] %>" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>
+
+
+
+
+
+
+

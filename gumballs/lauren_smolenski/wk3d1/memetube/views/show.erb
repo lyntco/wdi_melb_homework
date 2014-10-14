@@ -1,0 +1,23 @@
+<div class='show'>
+
+<% @result.each do |row| %>
+  <div class="top">
+  <h2><%= row['title'] %></h2>
+
+  <% @id = row['video_url'].split('=') %>
+
+  <form action="/memes/<%= row['id'] %>/delete" method="post">
+  <button>DELETE</button>
+  </form>
+
+  <a href='/memes/<%= row['id'] %>/edit'><img class='edit' src="http://www.lastrose.com/wp-content/uploads/2013/07/iconmonstr-edit-10-icon-300x300.png" alt=""></a>
+
+</div>
+
+  <iframe width="840" height="630" src="//www.youtube.com/embed/<%= @id[1] %>" frameborder="0" allowfullscreen></iframe>
+  <p><%= row['description'] %></p>
+  <% end %>
+
+  <a href="/"><img id="house" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Home_Icon.svg/512px-Home_Icon.svg.png" alt=""></a>
+
+</div>

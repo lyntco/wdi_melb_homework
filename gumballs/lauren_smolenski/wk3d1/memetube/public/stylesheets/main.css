@@ -1,0 +1,102 @@
+.header {
+  background: url('http://www.wallpaper77.com/upload/DesktopWallpapers/cache/Pattern-Orange-Slice-background-patterns-pattern-wallpapers-1152x864.jpg');
+  margin-top: 0px;
+  width: 100%;
+  text-align: center;
+}
+.logo {
+  font-size: 10em;
+  font-family:'Special Elite', cursive;
+  margin: 0px auto;
+  padding-top: 50px;
+  color: white;
+}
+
+.edit {
+  height: 40px;
+}
+
+.delete {
+  height: 40px;
+  background: none;
+}
+
+#house {
+  height: 40px;
+  display: block;
+}
+
+#plus {
+  height: 40px;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 20px;
+  font-family:'Special Elite', cursive;
+  padding: 2px;
+  vertical-align: top;
+}
+
+nav {
+  text-align: right;
+  width: 100%;
+  background-color: orange;
+  margin-top: -16px;
+}
+
+.gallery {
+  border: solid orange 10px;
+  width:230px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+.gallery a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+
+.gallery a:hover {
+  color: orange;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+.add {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  line-height: 3em;
+  width: 50%;
+  height: 360px;
+  background: url('http://wallpaperswa.com/thumbnails/detail/20120906/fruits%20lemons%20slices%201920x1200%20wallpaper_wallpaperswa.com_73.jpg');
+  margin: 0px auto;
+}
+
+.add h2 {
+  font-family: 'Special Elite', cursive;
+  font-size: 2em;
+  padding-top: 20px;
+}
+
+.show {
+font-family: 'Open Sans', sans-serif;
+text-align: center;
+}
+
+.show iframe {
+  display: block;
+  margin: 0px auto;
+}
+
+.top {
+  display: inline;
+}

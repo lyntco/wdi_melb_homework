@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memetube</title>
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+    <div class="header">
+    <h1 class="logo">MEMETUBE</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/"><img id="house" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Home_Icon.svg/512px-Home_Icon.svg.png" alt=""></a></li>
+        <li><a href="/memes/new"><img id="plus" src="http://cdn.flaticon.com/png/256/32360.png" alt=""></a></li>
+        <li><form action="/memes" method="get">
+          <label for="genre">GENRE: </label>
+          <select name="genre" id="">
+            <% @genre.each do |row| %>
+            <option><%=row['genre'] %></option>
+            <% end %>
+          </select>
+          <button>Go</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+
+  <%= yield %>
+
+</body>
+</html>
+
+
+
+

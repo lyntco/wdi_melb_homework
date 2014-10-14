@@ -1,0 +1,16 @@
+<h2>Welcome to WDI Stocks</h2>
+<h4>Please enter a stock to search. (eg. GOOG)</h4>
+
+<form action= "/">
+  <input name="search" placeholder="search">
+  <button>Go</button>
+</form>
+
+<div>
+  <p>Results for <%= @search %>:</p>
+
+  <p>Last Trade Price: $<%= @last_trade %></p>
+  <p>Day High: $<%= @day_high %></p>
+  <p>Day Low: $<%= @day_low %></p>
+  <p>Ask Price: $<%= @ask %></p>
+</div>

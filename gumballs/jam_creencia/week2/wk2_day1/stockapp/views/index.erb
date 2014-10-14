@@ -1,0 +1,16 @@
+<h1>Please enter a stock to check: </h1>
+
+<form action="">
+
+<input name="stock" placeholder="type stock here">
+<button> Check! </button>
+<h2>RESULTS</h2>
+
+<p>Name: <%= @show_stock.name %></p>
+<p>Open: <%= @show_stock.open %></p>
+<p>Previous Close: <%= @show_stock.previousClose %></p>
+<p>Day High: <%= @show_stock.dayHigh %> </p>
+<p>Day Low: <%= @show_stock.dayLow %>  </p>
+<p>Last Trade: <%= @show_stock.lastTrade %>  </p>
+
+</form>

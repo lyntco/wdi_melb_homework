@@ -1,0 +1,92 @@
+body {
+font-family: 'Muli', Helvetica, sans-serif;
+  color: white;
+/*background-image: url('subtle_stripes.png');
+  background-repeat: repeat;*/
+  background: url('the-searchers.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*#top-bar {
+  width: 100%;
+  background-color: #4c5b5c;
+  height: 100px;
+}*/
+
+header h1{
+  margin: 0px;
+  margin-left: 5%;
+  font-size: 10em;
+  /*line-height: 35px;
+  /*background-color: red;*/
+}
+
+header h2{
+  margin: 0px;
+  font-size: 3em;
+  margin-left: 20%;
+  margin-top: -2%;
+}
+
+#container {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(10,10,10,0.2);
+  background-color: white 0.5;
+  width: 100%;
+}
+
+
+form {
+  padding: 40px 0;
+}
+
+button {
+  background-color: tomato;
+color: white;
+border-radius: .3em;
+padding: .2em 0;
+position: relative;
+margin: 0 1.5em;
+width: 10em;
+display: inline-block;
+text-decoration: none;
+border: solid #b03060 1px;
+/*border-bottom: solid #b03060 4px;
+*/text-shadow: 0px 2px 0 #b03060;
+}
+
+#poster {
+  display: inline-block;
+}
+
+#poster img {
+border: 2px solid black;
+}
+
+#output {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+max-width: 400px;
+margin: 0 auto;
+padding: 40px 0 0 20px;
+}
+
+#output p {
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+}
+
+a :hover {
+  color: tomato;
+}

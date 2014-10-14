@@ -1,0 +1,69 @@
+
+ <section>
+
+  <h1>Helping you plan your journey for 3 out of the roughly 22 subway lines (and only a part of those lines). Enjoy.</h1>
+
+  <form action="/result" method="get">
+<h1>Select the line and starting stop:</h1>
+    <div class="input_group">
+      <label for="start_station">Starts Stops:</label>
+      <select name="start_station" id="start_station">
+         <option value="Placeholder">Select a station</option>
+        <option value="N1">N Line: Times Square</option>
+        <option value="N2">N Line: 34th</option>
+        <option value="N3">N Line: 28th</option>
+        <option value="N4">N Line: 23rd</option>
+        <option value="N5">N Line: Union Square</option>
+        <option value="N6">N Line: 8th</option>
+
+        <option value="L1"> L Line: 8th Avenue</option>
+        <option value="L2">L Line: 6th Street</option>
+        <option value="L3">L Line: Union Square</option>
+        <option value="L4">L Line: 3rd</option>
+        <option value="L5">L Line: 1st</option>
+
+        <option value="61">6 Line: Grand Central</option>
+        <option value="62">6 Line: 33rd</option>
+        <option value="63">6 Line: 28th</option>
+        <option value="63">6 Line: 23rd</option>
+        <option value="64">6 Line: Union Square</option>
+        <option value="65">6 Line: Astor Place</option>
+      </select>
+    </div>
+
+
+
+<h1>Select a destination line and then select your final stop:</h1>
+
+ <div class="input_group">
+      <label for="end_station">Destination Stops:</label>
+      <select name="end_station" id="end_station">
+        <option value="Placeholder">Select a station</option>
+        <option value="N1">N Line: Times Square</option>
+        <option value="N2">N Line: 34th</option>
+        <option value="N3">N Line: 28th</option>
+        <option value="N4">N Line: 23rd</option>
+        <option value="N5">N Line: Union Square</option>
+        <option value="N6">N Line: 8th</option>
+
+        <option value="L1"> L Line: 8th Avenue</option>
+        <option value="L2">L Line: 6th Street</option>
+        <option value="L3">L Line: Union Square</option>
+        <option value="L4">L Line: 3rd</option>
+        <option value="L5">L Line: 1st</option>
+
+        <option value="61">6 Line: Grand Central</option>
+        <option value="62">6 Line: 33rd</option>
+        <option value="63">6 Line: 28th</option>
+        <option value="63">6 Line: 23rd</option>
+        <option value="64">6 Line: Union Square</option>
+        <option value="65">6 Line: Astor Place</option>
+      </select>
+    </div>
+
+<button>Submit</button>
+</form>
+
+</section>
+
+<section><%= @outcome %></section>

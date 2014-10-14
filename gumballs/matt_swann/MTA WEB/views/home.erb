@@ -1,0 +1,91 @@
+<!-- put the form in here send to result 
+ -->
+
+
+
+	<form action="/" method="get">
+		<div class="input-groups">		
+
+				<label for="dep_line">Start Line:</label>
+					<select name="dep_line">
+						<option value="N">N-Line</option>
+						<option value="L">L-Line</option>
+						<option value="6">Six Line</option>
+					</select>
+
+			
+
+				<label for="dep_station">Start Sation:</label>
+					<select name="dep_station">
+						<option value="Time_Square">N-Line: Time Square</option>
+						<option value="34th">N-Line: 34th</option>
+						<option value="28th">N-Line: 28th</option>
+						<option value="23rd">N-Line: 23rd</option>
+						<option value="Union_Square">N-Line: Union Square</option>
+						<option value="8th">N-Line: 8th</option>
+						<option value="">-----------------</option>
+						<option value="8th">L-Line: 8th</option>
+						<option value="6th">L-Line: 6th</option>
+						<option value="Union_Square">L-Line: Union Square</option>
+						<option value="3rd">L-Line: 3rd</option>
+						<option value="1st">L-Line: 1st</option>
+						<option value="">-----------------</option>
+						<option value="Grand_Central">S-Line: Grand Centeral</option>
+						<option value="33rd">S-Line: 33rd</option>
+						<option value="28th">S-Line: 28th</option>
+						<option value="23rd">S-Line: 23rd</option>
+						<option value="Union_Square">S-Line: Union Square</option>
+						<option value="Astor_Place">S-Line: Astor Place Place</option>	
+					</select>
+
+		
+
+				<label for="dest_line">Destination Line:</label>
+					<select name="dest_line">
+						<option value="N">N-Line</option>
+						<option value="L">L-Line</option>
+						<option value="6">Six Line</option>
+					</select>
+
+
+
+			
+			<label for="dest_station">Destination Sation:</label>
+				<select name="dest_station">
+					<option value="Time_Square">N-Line: Time Square</option>
+					<option value="34th">N-Line: 34th</option>
+					<option value="28th">N-Line: 28th</option>
+					<option value="23rd">N-Line: 23rd</option>
+					<option value="Union_Square">N-Line: Union Square</option>
+					<option value="8th">N-Line: 8th</option>
+					<option value="">-----------------</option>
+					<option value="8th">L-Line: 8th</option>
+					<option value="6th">L-Line: 6th</option>
+					<option value="Union_Square">L-Line: Union Square</option>
+					<option value="3rd">L-Line: 3rd</option>
+					<option value="1st">L-Line: 1st</option>
+					<option value="">-----------------</option>
+					<option value="Grand_Central">S-Line: Grand Centeral</option>
+					<option value="33rd">S-Line: 33rd</option>
+					<option value="28th">S-Line: 28th</option>
+					<option value="23rd">S-Line: 23rd</option>
+					<option value="Union_Square">S-Line: Union Square</option>
+					<option value="Astor_Place">S-Line: Astor Place</option>
+				</select>
+
+	
+
+	<label for=""></label>
+
+	<button>GO!</button>
+	
+	<p>Journey is <%= @journey_result %> </p>
+
+
+
+	</div>
+</form>
+<br />
+
+<a href="http://tripplanner.mta.info/MyTrip/ui_web/customplanner/tripplanner.aspx"> For Better results click here</a>
+

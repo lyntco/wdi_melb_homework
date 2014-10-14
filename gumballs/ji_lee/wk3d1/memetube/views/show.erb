@@ -1,4 +1,4 @@
-<div class="container center">
+<div class="show_container">
   <h2 class="center">Show Video Details</h2>
 
   <% @rows.each do |row| %>
@@ -9,7 +9,7 @@
     <p><%= row['description'] %></p>
     <p><%= row['genre'] %></p>
     
-    <div class="lateral">
+    <div class="col-sm-3 row">
       <a href="/videos/<%= row['id'] %>/edit"><button class="btn btn-primary">Edit</button></a>
     
       <form action="/video/<%= row['id'] %>/delete" method="post">

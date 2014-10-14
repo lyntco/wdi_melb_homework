@@ -10,6 +10,13 @@
 </head>
 <body>
   <div class="container">
+    <ul>
+      <li><a href="/">All</a></li>
+      <% @genre.each do |row| %>
+      <li><a href="/genre/<%= row['genre'] %>"><%= row['genre']%></a></li>
+      <% end %>
+    </ul>
+
     <%= yield %>
 
     <footer>&copy: All rights reserved.</footer>

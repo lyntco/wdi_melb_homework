@@ -1,0 +1,10 @@
+<h2>show details</h2>
+
+<p><% @rows.each do |row| %></p>
+<p><%= row["title"] %><br><img src="<%= row['url'] %>" alt=""></p>
+<form action="/movies/<%= row['id'] %>/delete" method="post">
+  <button>Delete</button>
+</form>
+
+<a href="/movies/<%= row['id'] %>/edit">EDIT</a>
+<% end %>

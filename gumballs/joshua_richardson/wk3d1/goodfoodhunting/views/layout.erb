@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Good Food Hunting</title>
+</head>
+<body>
+  <ul>
+    <% @meal_types.each do |row| %>
+    <li><%= row['meal_type'] %></li>
+    <%  end %>
+  </ul>
+
+  <%= yield %>
+
+  <footer>&copy; Josh - it's a rubbish idea anyway :)</footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<h1>Home</h1>
+
+<% @rows.each do |row| %>
+
+  <a href="/movies/<%= row['id'] %>"><%= row['title'] %>
+  <%= row['id'] %></a><br>
+  <% end %>

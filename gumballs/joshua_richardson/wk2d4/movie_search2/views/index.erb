@@ -1,0 +1,25 @@
+<main id="container">
+
+  <h1>This is retro Josh MDB and kind of like the back-end of a website, it's messy</h1>
+
+  <section class="movie-description">
+
+    <h1><%= "You searched for #{@movie_hash["Title"]}" %></h1>
+
+    <h2><%= "The movie was released in #{@movie_hash["Released"]}" %></h2>
+
+    <p><%= "#{@movie_hash["Plot"]}" %></p>
+
+  </section>
+
+  <section class="feature-image">
+
+    <img class="movie-poster" src="<%="#{@movie_hash["Poster"]}"%>">
+
+  </section>
+
+</main>
+
+
+
+

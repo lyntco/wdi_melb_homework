@@ -1,0 +1,4 @@
+Marge, 40, f
+Homer, 50, m
+Lisa, 20, f
+Marge, 20, F

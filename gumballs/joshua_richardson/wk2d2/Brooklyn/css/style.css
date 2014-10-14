@@ -1,0 +1,57 @@
+body {
+  font-size: 12px;
+  line-height: 17px;
+  font-family: 'Alegreya', serif;
+  color: #5a5a5a;
+  line-height: 1.7em;
+}
+
+p, footer {
+  color: #5a5a5a;
+}
+
+a:hover {
+  color: #20222a;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+main {
+  width: 92%;
+  padding: 20px 0 20px 0;
+}
+
+#container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+header.logo {
+  background-image: url("../images/brook-and-lyn-logo.gif");
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 29px;
+  width:197px;
+  text-indent: -9999px;
+  margin: 41px 0 20px 0px;
+}
+
+.border {
+  border: 5px solid #c5c5c5;
+  padding: 1px;
+}
+
+footer {
+  padding: 10px 0 20px 0;
+}
+
+.read_more {
+  color: #3f8bc3;
+  text-decoration: none;
+}
+
+img {
+  max-width:100%
+}

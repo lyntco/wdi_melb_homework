@@ -1,0 +1,45 @@
+body {
+  background-color: #efefef;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: ;
+}
+
+#logo {
+  font-size: 500%;
+  text-align: center;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.published {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin-top: 0px;
+}
+
+.menu li {
+  display: inline;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+

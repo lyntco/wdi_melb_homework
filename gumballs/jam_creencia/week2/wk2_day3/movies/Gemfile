@@ -1,0 +1,8 @@
+source "http://rubygems.com"
+
+gem "sinatra"
+get "httparty"
+
+group :development do
+	gem "pry"
+end

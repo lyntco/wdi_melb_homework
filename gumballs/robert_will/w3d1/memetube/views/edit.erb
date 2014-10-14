@@ -1,0 +1,14 @@
+<h2>edit videos</h2>
+
+<form action="/videos/<%= @row['id'] %>" method="post">
+  <label for="">Title</label>
+  <input type="text" name="title" value="<%= @row['title'] %>"><br/>
+  <label for="">Description</label>
+  <input type="text" name="description" value="<%= @row['description'] %>"><br/>
+  <label for="">URL</label>
+  <input type="text" name="url" value="<%= @row['url'] %>"><br/>
+  <label for="">Genre Type</label>
+  <input type="text" name="genre" value="<%= @row['genre'] %>"><br/>
+
+  <button>Update</button>
+</form>

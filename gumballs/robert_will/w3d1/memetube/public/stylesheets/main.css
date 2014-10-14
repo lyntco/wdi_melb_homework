@@ -1,0 +1,53 @@
+body {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+
+}
+
+.container {
+  background-image: url("http://www.thinksnaps.com/wp-content/uploads/2014/07/Background-1.jpg");
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.container h3 {
+  font-size: 70px;
+  color: white;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.vids {
+  display: inline-block;
+  width: 32%;
+
+}
+
+.vids :hover {
+  background-color: yellow;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.genres {
+  margin-top: 100px;
+}
+
+iframe {
+  border-radius: 20px;
+}

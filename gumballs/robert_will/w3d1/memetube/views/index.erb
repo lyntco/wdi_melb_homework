@@ -1,0 +1,18 @@
+
+<div class="header">
+  <h1>Home</h1>
+</div>
+
+<% @rows.each do |row| %>
+
+<div class="vids">
+    <p><a href="/videos/<%= row['id'] %>"><%= row['title'] %></a></p>
+    <p><%= row['description'] %></p>
+    <iframe width="99%" height="315" src="<%= row['url'] %>" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+<% end %>
+
+

@@ -1,0 +1,22 @@
+body {
+  background-image: url('http://images8.alphacoders.com/292/292379.jpg');
+  text-align: center;
+  font-family: arial;
+}
+
+h1 {
+  font-family: arial;
+  color: #FFD119;
+  font-size: 40px;
+}
+
+div {
+  background-color: white;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: solid;
+  border-color: #FFD119;
+  border-width: 10px;
+  border-radius: 10px;
+}

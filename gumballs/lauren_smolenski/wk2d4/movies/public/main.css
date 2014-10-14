@@ -1,0 +1,148 @@
+body {
+  background: url(http://upload.wikimedia.org/wikipedia/commons/d/d4/New_York_City_at_night_HDR_edit1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px
+}
+
+.home {
+  color: white;
+}
+
+.content {
+  width: 700px;
+  margin: 250px auto 0px auto;
+  text-align: center;
+}
+
+.content h1 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 200px;
+}
+
+section {
+  position: relative;
+  margin-top: -150px;
+}
+
+#box {
+  background-color:#fff;
+  border-color:#cecece;
+  border-style:solid;
+  border-width:1px 0 1px 1px;
+  font-size:0.9em;
+  line-height:1;
+  padding:5px;
+  display:inline-block;
+  padding-right:30px;
+
+}
+
+.home button {
+    background-color:#d91515;
+    border:none;
+    color:#fff;
+    position:absolute;
+    top:0px;right:0px;bottom:0px;
+    width:50px;
+}
+
+.search_results {
+  background: url(http://upload.wikimedia.org/wikipedia/commons/d/d4/New_York_City_at_night_HDR_edit1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  width: 60%;
+  margin: 100px auto;
+}
+
+.search_results h1 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 100px;
+  padding-top: 30px;
+  margin-left: 50px;
+}
+
+.search_results p {
+  font-size: 16px;
+  margin-left: 50px;
+  font-family: arial;
+  color: black;
+}
+
+div.container a {
+  text-decoration: none;
+}
+
+.search_results p:hover {
+  color: #d91515;
+}
+
+.search_results button {
+    background-color:#d91515;
+    border:none;
+    color:#fff;
+    height: 40px;
+}
+
+.info p {
+  font-size: 16px;
+  font-family: arial;
+  margin: 0 30px;
+}
+
+.movie_details img {
+  padding-left: 20px;
+  width: 100%;
+}
+
+.movie_details button {
+    background-color:#d91515;
+    border:none;
+    color:#fff;
+    height: 40px;
+    margin: 30px auto;
+    position: absolute;
+    left: 40%;
+}
+
+div.movie_details {
+  margin: 0px auto;
+  width: 80%;
+
+}
+
+.movie_details div{
+  display: inline-block;
+  position: relative;
+  margin-top: 100px;
+}
+
+.info {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  vertical-align: top;
+  width: 55%;
+}
+
+.poster {
+  width: 40%;
+}
+
+.movie_details h1 {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.details {
+  margin-bottom: 30px;
+}

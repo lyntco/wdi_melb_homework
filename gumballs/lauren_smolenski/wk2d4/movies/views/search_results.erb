@@ -1,0 +1,13 @@
+<body class="search_results">
+  <div class="container">
+    <h1>Search Results:</p>
+
+    <% @movies.each do |movie| %>
+    <a href="/movie_details/<%= movie["Title"] %>"><p><%= movie["Title"] %></p></a>
+    <% end %>
+
+  <a href="/"><button>Return to search</button></a>
+
+  </div>
+</body>
+

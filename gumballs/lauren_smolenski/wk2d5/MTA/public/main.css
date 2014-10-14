@@ -1,0 +1,76 @@
+body {
+  background: url(http://statiuniti.evolutiontravel.it/schede/32746/it-new-york-speciale-partenza-di-gruppo-per-la-citta-che-non-dorme-mai-3da05.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px
+}
+
+div {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 60%;
+  margin: 100px auto;
+}
+
+h1 {
+  font-size: 6em;
+  text-align: center;
+}
+
+h2.home {
+  text-align: center;
+  margin-top: -3em;
+
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 40px;
+  text-align: center
+}
+
+div.input {
+  background-color: rgba(0, 0, 0, 0);
+  margin: 40px auto;
+  color: white;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 0.6em;
+
+}
+
+button {
+  background-color: rgba(207,202, 116,1);
+  width: 15%;
+  line-height: 1.5em;
+  margin: 0px auto 30px auto;
+  color: white;
+  border: white;
+  border-width: 2px;
+  padding: 5px;
+}
+
+button:hover {
+background-color: rgba(210,205, 119,1)
+}
+
+.stops {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 40px;
+  text-align: center;
+  margin: 40px auto;
+  color: white;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 0.6em;
+}
+
+.stops button {
+  width: 30%;
+}
+
+.output {
+  line-height: 0.5em;
+  color: rgba(207,202, 116,1);
+}

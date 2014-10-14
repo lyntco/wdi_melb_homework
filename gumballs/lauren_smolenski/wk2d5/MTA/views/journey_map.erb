@@ -1,0 +1,24 @@
+<body>
+  <div class="containter">
+    <h1>MTA</h1>
+    <h2 class="home">J O U R N E Y  M A P P E R</h2>
+
+
+
+    <div class="stops">
+      <p>Commence your journey by boarding the <%= @line_start %> line.</p>
+      <p>Your Journey Map:</p>
+      <% @journey.each do |stop| %>
+      <p class="output"><%= stop %></p>
+      <% end %>
+      <p>Thank you for using MTA Journey Mapper.</p>
+      <p>Travel Safely!</p>
+      <a href="/"><button>Map Another Journey</button></a>
+    </div>
+
+
+
+
+  </div>
+
+</body>

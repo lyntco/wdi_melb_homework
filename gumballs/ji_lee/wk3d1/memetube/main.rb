@@ -5,19 +5,25 @@ require 'pry'
 
 get '/' do
   sql = "select * from videos;"
-  @result = run_sql(sql)
+  @rows = run_sql(sql)
   erb :index
 end
 
 get '/videos' do
-  @result = run_sql("select * from videos;")
+  @rows = run_sql("select * from videos;")
   erb :index
+end
+
+post 'videos/:id/delete' do
+  sql = "DELETE FROM videos WHERE id = #{params[:id]}"
+  run_sql(sql)
+  redirect to('/')
 end
 
 get '/videos/:id/edit' do
   sql = "SELECT * FROM videos WHERE id = #{params[:id]}"
-  @results = run_sql(sql)
-  @result = @results[0]
+  @rows = run_sql(sql)
+  @row = @rows[0]
   erb :edit
 end
 
@@ -33,7 +39,7 @@ end
 
 get '/videos/:id' do 
   sql = "select * from videos where id = #{params[:id]}"
-  @result = run_sql(sql)
+  @rows = run_sql(sql)
   erb :show
 end
 
@@ -46,8 +52,8 @@ end
 
 def run_sql(sql)
   db = PG.connect(:dbname => 'memetube') 
-  result = db.exec(sql)
+  rows = db.exec(sql)
   db.close
-  return result
+  return rows
 end
 

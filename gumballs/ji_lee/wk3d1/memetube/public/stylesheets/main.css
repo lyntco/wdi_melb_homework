@@ -1,3 +1,6 @@
+.center {
+  text-align: center;
+}
 body {
   background: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSw_Wy9ElbeQMSwkzz0WStWu3dE9dxUkpAE7FVwiZXMVSSU7EdSJg);
   -moz-background-size: cover;
@@ -31,7 +34,7 @@ a:hover {
 }
 .container {
   text-align: center;
-  width: 750px;
+  width: 500px;
   margin: 0 auto;
 }
 .youtube {
@@ -39,6 +42,13 @@ a:hover {
 }
 .btn-primary {
   color: orange;
-  background-color: #333;
+  background-color: #222;
   border: none; 
+}
+.lateral {
+  display: inline-block;
+}
+.btn {
+  display: inline-block;
+  margin: 1em;
 }

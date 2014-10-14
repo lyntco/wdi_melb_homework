@@ -5,11 +5,11 @@
 
   <a href="/videos/new"><button class="btn btn-lg btn-primary">ADD VIDEO</button></a>
 
-  <% @result.each do |row| %>
+  <% @rows.each do |row| %>
     
     <div class="youtube">
       <p><a href="/videos/<%= row['id'] %>"><%= row['title'] %></a></p>
-      <iframe width="450" height="315" src="<%= row['video_url'] %>" frameborder="0" allowfullscreen></iframe>
+
     </div> 
 
   <% end %>

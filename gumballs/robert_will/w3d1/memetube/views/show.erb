@@ -1,0 +1,16 @@
+<h2>show details</h2>
+
+<% @rows.each do |row| %>
+  <p><%= row ['title'] %></p>
+  <p><%= row['description'] %></p>
+
+  <iframe width="560" height="315" src="<%= row['url'] %>" frameborder="0" allowfullscreen></iframe>
+
+  <form action="/videos/<%= row['id'] %>/delete" method="post">
+    <button>Delete</button>
+  </form>
+
+
+  <a href="/videos/<%= row['id'] %>/edit">Edit</a>
+
+<% end %>

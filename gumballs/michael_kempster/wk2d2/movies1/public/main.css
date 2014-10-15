@@ -1,0 +1,85 @@
+html {
+	background: url('http://www.mediaman.com.au/articles/movie_theatre390.jpg') no-repeat center center fixed; 
+  background-size: cover;
+	text-align: center;
+}
+
+h2 {
+	color: yellow;
+	margin: auto;
+	margin-top: 40px;
+	max-width: 400px;
+}
+
+p {
+	color: yellow;
+	margin: auto;
+	margin-top: 10px;
+	max-width: 800px;
+}
+
+.text_colour {
+	color: white;
+}
+
+a:link { 
+    color: green;
+}
+a:visited { 
+    color: brown;
+}
+a:hover { 
+    color: orange;
+}
+a:active {
+    color: red;
+}
+
+label {
+	min-width: 155px;
+	display: inline-block;
+	text-align: right;
+}
+
+.box {
+	background-color: yellow;
+	margin: auto;
+	border-style: solid;
+	border-color: red;
+	border-radius: 10px;
+	width: 300px;
+}
+
+.box2 {
+	background-color: yellow;
+	float: positioned;
+	position: absolute;
+	bottom: 50px;
+	left: 45%;
+	border-style: solid;
+	border-color: red;
+	border-radius: 10px;
+	width: 150px;
+}
+
+.box3 {
+	background-color: yellow;
+	margin: auto;
+	border-style: solid;
+	border-color: red;
+	border-radius: 20px;
+	width: 40px;
+	height: 40px;
+}
+
+.centre {
+	position: absolute;
+  top: 45%;
+  left: 35%;
+}
+
+.play_button {
+	position: absolute;
+  top: 35%;
+  left: 43%;
+}

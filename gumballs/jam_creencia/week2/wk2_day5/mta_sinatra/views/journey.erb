@@ -1,0 +1,11 @@
+
+
+<div class='container_results'>
+	<p> Your journey from <%=@line_on%>(<%=@stop_on%>) to <%=@line_off%>(<%=@stop_off%>) is as follows: </p>
+	
+	<p> <%= @route.join(" ---> ") %> </p>
+	<form id='back' action='/' method='get'>
+	<button class="back">Back</button>
+	</form>
+</div>
+

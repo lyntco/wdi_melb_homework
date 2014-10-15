@@ -1,0 +1,15 @@
+
+<div class="search_container">
+
+	<h3>Choose:</h3>
+
+	<div class="search_list">
+		<% @results_array.each do |h|  %> 
+		<p> <a href="/results_list/<%=h["imdbID"]%>"> <%= title = h["Title"] %> (<%= @year = h["Year"]%>) </a> </p>
+		<% @plot = h["Plot"]%>
+		<% end %>
+	</div>
+
+</div>
+
+<%erb :results%>

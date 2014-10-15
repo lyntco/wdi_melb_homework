@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Memetube</title>
+	<link rel="stylesheet" href="/stylesheets/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+</head>
+<body>
+			<h1>MEMETUBE</h1>
+			<p>Select by Genre:</p>
+
+
+			<div class="list">
+				<ul>
+				<li> <a href="/">All</a></li>
+				<%  @genres.each do |genre|  %>
+					<li>  <a href="/genre/<%= genre["genre"] %>">  <%= genre["genre"] %>  </a>   </li>
+				<% end %>
+				</ul>
+			</div>
+	
+	<%= yield %>
+
+</body>
+</html>

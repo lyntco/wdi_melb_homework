@@ -1,0 +1,31 @@
+
+
+
+
+<div class="container">
+	<div class="video_list">
+	<% @rows.each do |row| %>
+	
+	<p class="title"><a href="/videos/<%= row['id']%>"><%=row['name']%></a></p>
+	
+	<video width="300" height="300" controls>
+	  <source src=<%=row['video_url']%> type="video/mp4">
+	</video>
+	
+	
+	<p id="description"><%=row['description']%></p>
+	<p>Filed under: <%=row['genre']%></p>
+	
+
+	<%end%>
+	
+	</div>
+</div>
+
+<h3><a href="/videos/new">Add video</a></h3>
+
+
+
+
+
+

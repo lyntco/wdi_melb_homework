@@ -1,0 +1,20 @@
+
+<h1><%= "#{@rows.first['genre']}"%> Videos</h1>
+
+
+<%  @rows.each do |row| %>
+
+<div class="show_container">
+	<p class="genre_title"> <a href="/videos/<%= row['id']%>"> <%= row["name"]%>  </a></p>
+	
+	<video class="show_vid" width="320" height="240" controls>
+	  <source src=<%=row['video_url']%> type="video/mp4">
+	</video>
+	
+	
+	<p><%=row['description']%></p>
+	<p>Filed under: <%=row['genre']%></p>
+</div>
+
+
+<% end %>

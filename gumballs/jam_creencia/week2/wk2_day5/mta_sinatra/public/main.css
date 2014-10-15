@@ -1,0 +1,71 @@
+body {
+	background-image: url(train_bkg.jpg);
+}
+
+img {
+	margin-left: 43%;
+	opacity: 0.7;
+}
+
+.container {
+	max-width: 70%;
+	background-color: rgba(255, 255, 255, 0.3);
+	margin: 0 auto;
+
+
+}
+
+form {
+	margin-top: 70px;
+	text-align: center;
+	width: 50%;
+	height: 60%;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.7);
+	font-family: 'Raleway', sans-serif;
+	font-size: .6em;
+}
+
+
+
+p {
+	text-align: center;
+	font-weight: bold;
+}
+
+.stops {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+}
+
+.lines {
+	display: inline-block;
+
+}
+
+
+button {
+	display: block;
+	margin: 20px 37%;
+}
+
+
+.container_results {
+	width: 60%;
+	height: 200px;
+	margin: 160px auto;
+	background-color: rgba(255, 255, 255, 0.7);
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+}
+
+.back {
+	margin: 0 auto;
+}
+
+#back {
+	background-color: transparent;
+	margin: 40px auto;
+
+}

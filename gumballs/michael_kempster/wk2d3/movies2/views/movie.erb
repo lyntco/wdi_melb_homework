@@ -1,0 +1,21 @@
+<h1 class="box"><%= @result['Title'] %></h1>
+
+<div>
+	<p>Year released: <%= @result['Year'] %></p>
+	<p>Rated: <%= @result['Rated'] %></p>
+	<p>Released: <%= @result['Released'] %></p>
+	<p>Running time: <%= @result['Runtime'] %></p>
+	<p>Genre: <%= @result['Genre'] %></p>
+	<p>Director: <%= @result['Director'] %></p>
+	<p>Writers: <%= @result['Writer'] %></p>
+	<p>Actors: <%= @result['Actors'] %></p>
+	<p>Plot Summary: <%= @result['Plot'] %></p>
+	<p>Languages in: <%= @result['Language'] %></p>
+	<p>Countries set in: <%= @result['Country'] %></p>
+	<p>Awards: <%= @result['Awards'] %></p>
+	<p>Poster: <a href=<%= @result['Poster'] %>>Click here</a></p>
+	<p>Metascore: <%= @result['Metascore'] %></p>
+	<p>Internet Movie Database rating: <%= @result['imdbRating'] %></p>
+</div>
+
+<a class="box2" href="/search">Back to Search</a>

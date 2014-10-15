@@ -1,0 +1,3 @@
+price = YahooFinance::get_quotes(YahooFinance::StandardQuote, @stock)
+			@message = @stock
+			@message = "The price for #{@stock} is #{price[@stock.upcase].lastTrade}"

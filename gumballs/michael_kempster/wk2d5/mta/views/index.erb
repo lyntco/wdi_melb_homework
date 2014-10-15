@@ -1,0 +1,85 @@
+<h1 class="box2">MTA Subway System</h1>
+
+<div class="container1 opaque"></div>
+<div class="container2 opaque"></div>
+
+<div class="container1">
+	<div class="box1">
+		<h3>Please choose from the options below to create your route</h3>
+	</div>
+
+	<form class="centre" action="user_input" method="get">
+		<div class="place">
+			<label for="start_line"><h3>Origin Line</h3></label>
+			<select name="start_line">
+			<option value="N">N Line</option>
+			<option value="L">L Line</option>
+			<option value="6">6 Line</option>
+			</select>
+		</div>
+		<div class="place">
+			<label for="start_station"><h3>Origin Station</h3></label>
+			<select name="start_station">
+			<option value="1st">1st Street</option>
+			<option value="3rd">3rd Street</option>
+			<option value="6th">6th Street</option>
+			<option value="8th">8th Street</option>
+			<option value="23rd">23rd Street</option>
+			<option value="28th">28th Street</option>
+			<option value="33rd">33rd Street</option>
+			<option value="34th">34th Street</option>
+			<option value="Astor Place">Astor Place</option>
+			<option value="Grand Central">Grand Central</option>
+			<option value="Times Square">Times Square</option>
+			<option value="Union Square">Union Square</option>
+			</select>
+		</div>
+		<div class="place">
+			<label for="finish_line"><h3>Destination Line</h3></label>
+			<select name="finish_line">
+			<option value="N">N Line</option>
+			<option value="L">L Line</option>
+			<option value="6">6 Line</option>
+			</select>
+		</div>
+		<div class="place">
+			<label for="finish_station"><h3>Destination Station</h3></label>
+			<select name="finish_station">
+			<option value="1st">1st Street</option>
+			<option value="3rd">3rd Street</option>
+			<option value="6th">6th Street</option>
+			<option value="8th">8th Street</option>
+			<option value="23rd">23rd Street</option>
+			<option value="28th">28th Street</option>
+			<option value="33rd">33rd Street</option>
+			<option value="34th">34th Street</option>
+			<option value="Astor Place">Astor Place</option>
+			<option value="Grand Central">Grand Central</option>
+			<option value="Times Square">Times Square</option>
+			<option value="Union Square">Union Square</option>
+			</select>
+		</div>
+		<div class="place">
+			<button class="box3"><h3>GO</h3></button>
+		</div>
+	</form>
+
+</div>
+
+<div class="container2">
+	<div class="box1"><h3>Your Route Results</h3></div>
+
+	<%  if @route %>
+	<%  	counter = 0 %>
+	<%  	while counter < @route.length %>
+	<%			if @route[counter] == "Union Square" %>
+						<div class="place"><h3><%= @route[counter] %></h3></div>
+						<div><h6>(change trains here)</h6></div>
+	<%			else %>
+						<div class="place"><h3><%= @route[counter] %></h3></div>
+	<%			end %>
+	<%			counter += 1 %>
+	<%  	end %>
+	<%  end %>
+
+</div>

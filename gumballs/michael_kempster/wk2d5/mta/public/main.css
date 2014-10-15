@@ -1,0 +1,105 @@
+html {
+	background: url('http://9wows.com/files/2012/07/Abandoned-Subway-Tunnel-800x533.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	text-align: center;
+	font-family: arial, helvetica, sans-serif;
+}
+
+.text_colour {
+	color: white;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:hover {
+    color: yellow;
+    border-color: #00CC00;
+    border-width: 5px;
+}
+
+button:active {
+    color: red;
+}
+
+label {
+    display: inline-block;
+    min-width: 300px;
+    text-align: center;
+}
+
+input {
+	min-width: 150px;
+}
+
+/* Stop the opacity of the contents of these boxes */
+.container1 {
+	min-height: 600px;
+	position: absolute;
+	left: 12.5%;
+	top: 150px;
+	width: 35%;
+	border-radius: 50px;
+}
+
+.container2 {
+	min-height: 600px;
+	position: absolute;
+	left: 52.5%;
+	top: 150px;
+	width: 35%;
+	border-radius: 50px;
+}
+
+.opaque {
+	background-color: #CCFFFF;
+	opacity: 0.6;
+}
+
+.box1 {
+	background-color: #00CCFF;
+	margin: auto;
+	margin-top: 50px;
+	border-style: solid;
+	border-color: #0000FF;
+	border-radius: 10px;
+	width: 300px;
+	}
+
+.box2 {
+	background-color: #00CCFF;
+	margin: auto;
+	margin-top: 25px;
+	border-style: solid;
+	border-color: #0000FF;
+	border-radius: 10px;
+	width: 40%;
+	height: 75px;
+}
+
+.box3 {
+	background-color: #00CCFF;
+	margin: 25px 100px 0px 100px;
+	border-style: solid;
+	border-color: #0000FF;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+}
+
+/*Does not work as expected*/
+h1 {
+	margin: auto;
+}
+
+h6 {
+	color: #0000FF;
+}
+
+.place {
+	margin: 0px 100px 0px 100px;
+}

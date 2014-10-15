@@ -1,0 +1,5 @@
+<h1>Memetube Home</h1>
+
+<% @result.each do |row| %>
+	<p><a href="/memetube/<%= row['id'] %>"><%= row['title'] %></a></p>
+<% end %>

@@ -7,17 +7,48 @@
 # gumballs= %w(vasko lauren jam andre)
 # gumballs.map(&:capitalize)                      #same as below
 # gumballs.map{|gumballs| gumball.capitalize}     #faster
+# puts 1 + 1 unless 5>3
+# puts 1 + 2 if 5>3
 
 
+# default values of 3, and 5
 def multiples(limit, num1=3, num2=5)
   arr = []
   (1..limit).each{ |n|
     arr << n if ( n % num1 == 0 || n% num2 ==0 )
   }
-  puts arr
+  # puts arr
   "sum: #{arr.reduce(:+)}"
 end
 
-puts multiples(40)
-# puts 1 + 1 unless 5>3
-# puts 1 + 2 if 5>3
+
+
+#  no defaults, unlimited args, shorter
+def multiples2(limit, *nums)
+  arr = []
+  (1..limit).each{ |n|
+    nums.each{ |num| arr<< n if n%num==0 }
+  }
+  p arr.uniq!
+  "sum: #{arr.reduce(:+)}"
+end
+
+
+
+#  no defaults, unlimited args, efficient
+def multiples3(limit, *nums)
+  arr = []
+  (1..limit).each{ |n|
+    nums.each{ |num|
+      arr << n && break if n%num==0
+    }
+  }
+  p arr
+  "sum: #{arr.reduce(:+)}"
+end
+
+
+# puts multiples(40,3,5)
+puts multiples2(20,3,5,9)
+puts multiples3(20,3,5,9)
+puts multiples3(20,3,5,9,11)

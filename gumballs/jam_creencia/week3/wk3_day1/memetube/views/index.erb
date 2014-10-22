@@ -1,28 +1,45 @@
 
+<div class="video_list">
+
+	<div class="page_title">
+
+		<div class="genre_title">
+			<h1 class="all_vids_title">All Videos</h1>
+		</div>
 
 
+		<div class="add_button">
+			<a href="/videos/new"><img src="/addsm.png" alt="Add New Video"></a>
+		</div>
 
-<div class="container">
-	<div class="video_list">
-	<% @rows.each do |row| %>
-	
-	<p class="title"><a href="/videos/<%= row['id']%>"><%=row['name']%></a></p>
-	
-	<video width="300" height="300" controls>
-	  <source src=<%=row['video_url']%> type="video/mp4">
-	</video>
-	
-	
-	<p id="description"><%=row['description']%></p>
-	<p>Filed under: <%=row['genre']%></p>
-	
-
-	<%end%>
-	
 	</div>
+
+
+	
+	<div class="video_container">
+	<% @videos.each do |video| %>
+	
+		<div class="each_vid">
+			
+			<% edited_url = video.video_url.gsub("watch?v=", "embed/") %>
+			
+			<iframe width="420" height="236" src= <%= edited_url %> frameborder="0" allowfullscreen></iframe>
+			
+			<p><a href="/videos/<%= video.id %>"><%= video.name %></a></p>
+			<p id="description"><%= video.description %></p>
+			<p><%= video.genre %></p>
+
+		</div>
+	
+	
+		<%end%>
+
+	</div>
+	
 </div>
 
-<h3><a href="/videos/new">Add video</a></h3>
+
+
 
 
 

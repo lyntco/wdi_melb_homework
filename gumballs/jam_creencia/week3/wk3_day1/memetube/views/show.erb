@@ -1,26 +1,29 @@
 
 
-<%  @rows.each do |row| %>
-
-
-
-
 <div class="show_container">
-	<h1><%= row["name"]%></h1>
+	<h1 class="show_title"><%= @video.name %></h1>
 
+	<div class="show_iframe">
+		<% edited_url = @video.video_url.gsub("watch?v=", "embed/") %>
 	
-	<video class="show_vid" width="320" height="240" controls>
-	  <source src=<%=row['video_url']%> type="video/mp4">
-	</video>
-	
-	
-	<p><%=row['description']%></p>
-	<p>Filed under: <%=row['genre']%></p>
+			<div class="show_screen">
+			<iframe width="740" height="373" src= <%= edited_url %> frameborder="0" allowfullscreen></iframe>
+			</div>
+
+		<p><%= @video.description %></p>
+		<p><%= @video.genre %></p>
+
+	</div>
+
 </div>
 
 
 
-<h3><a href="/videos/<%= row["id"]%>/edit">Edit video</a></h3>
-<h3><a href="/videos/<%= row["id"]%>/delete">Delete video</a></h3>
-<% end %>
 
+	<form action="/videos/<%= @video.id %>/edit" method="post">
+		<button class="btn"> Edit Video </button>
+	</form>
+	
+	<form action="/videos/<%= @video.id %>/delete" method="post">
+		<button class="btn"> Delete Video </button>
+	</form>

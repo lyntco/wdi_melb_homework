@@ -1,0 +1,14 @@
+<div class="index_container">
+	<h1>Mountains of Victoria</h1>
+	
+	<% @mountains.each do |mountain| %>
+	
+	<div class="image_container">
+	<a href="/mountains/<%= mountain.id %>"><img class="image_index"src="<%= mountain.image  %>" alt=""></a>
+	
+	<p><%= link_to mountain.name, "/mountains/#{mountain.id}" %></p>
+	</div>
+	<% end %>
+	<br>
+	<button><%= link_to 'add new', "/mountains/new"  %></button>
+</div>

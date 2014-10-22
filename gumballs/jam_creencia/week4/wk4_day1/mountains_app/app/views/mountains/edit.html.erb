@@ -1,0 +1,19 @@
+<%= form_for @mountain do |mountain| %>
+
+<p>	<%= mountain.label :name  %>
+		<%= mountain.text_field :name  %></p>
+
+<p>	<%= mountain.label :elevation  %>
+		<%= mountain.text_field :elevation  %></p>
+
+<p>	<%= mountain.label :location  %>
+		<%= mountain.text_field :location  %></p>
+
+<p>	<%= mountain.label :range  %>
+		<%= mountain.text_field :range  %></p>
+
+<p>	<%= mountain.label :image  %>
+		<%= mountain.text_field :image  %></p>
+
+<button>Edit</button>
+<% end %>

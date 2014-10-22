@@ -1,20 +1,35 @@
 
-<h1><%= "#{@rows.first['genre']}"%> Videos</h1>
+<div class="video_list">
+
+	<div class="page_title">
+
+		<div class="genre_title">
+			<h1 class="all_vids_title"><%= @videos[0].genre %></h1>
+		</div>
 
 
-<%  @rows.each do |row| %>
+		<div class="add_button">
+			<a href="/videos/new"><img src="/addsm.png" alt="Add New Video"></a>
+		</div>
 
-<div class="show_container">
-	<p class="genre_title"> <a href="/videos/<%= row['id']%>"> <%= row["name"]%>  </a></p>
-	
-	<video class="show_vid" width="320" height="240" controls>
-	  <source src=<%=row['video_url']%> type="video/mp4">
-	</video>
-	
-	
-	<p><%=row['description']%></p>
-	<p>Filed under: <%=row['genre']%></p>
+	</div>
+
+	<div class="video_container">
+	<%  @videos.each do |video| %>
+
+	<div class="each_vid">
+		
+		<% edited_url = video.video_url.gsub("watch?v=", "embed/") %>
+
+		<iframe width="420" height="236" src= <%= edited_url %> frameborder="0" allowfullscreen></iframe>
+
+		<p> <a href="/videos/<%= video.id %>"> <%= video.name %>  </a></p>
+		<p id="description"><%= video.description %></p>
+		
+
+	</div>
+
+	<% end %>
 </div>
 
-
-<% end %>
+</div>

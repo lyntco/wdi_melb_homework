@@ -51,4 +51,4 @@ end
 # puts multiples(40,3,5)
 puts multiples2(20,3,5,9)
 puts multiples3(20,3,5,9)
-puts multiples3(20,3,5,9,11)
+puts multiples3(20,9,11,13)

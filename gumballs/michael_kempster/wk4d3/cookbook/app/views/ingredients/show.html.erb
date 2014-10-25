@@ -1,0 +1,8 @@
+<h2>Show Ingredients</h2>
+
+<p>Ingredient name: <%= @ingredient.name %></p>
+<p>Measurement in grams: <%= @ingredient.measurement %></p>
+<p>Cost in dollars: <%= @ingredient.cost %></p>
+<p>Image: <%= @ingredient.image_url %></p>
+
+<%= link_to 'New Ingredient', new_ingredient_path %>

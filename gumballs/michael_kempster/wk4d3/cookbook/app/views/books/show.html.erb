@@ -1,0 +1,10 @@
+<h2>Show Book</h2>
+
+<p>Book title: <%= @book.title %></p>
+<p>Cuisine included: <%= @book.cuisine %></p>
+<p>Chef: <%= @book.chef %></p>
+<p>Image: <%= @book.image_url %></p>
+
+<p><%= link_to 'Show recipes in this book', recipe_path %></p>
+<p><%= link_to 'Edit Book', edit_book_path %></p>
+<p><%= link_to 'Delete Book', @book, :method => :delete, :data => {:confirm => 'Are you sure?'}%></p>

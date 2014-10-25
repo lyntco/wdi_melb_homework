@@ -1,0 +1,23 @@
+<h2>New Ingredient</h2>
+
+<%= form_for @ingredient do |f| %>
+
+<p>
+	<%= f.label :name, 'Ingredient name' %>
+	<%= f.text_field :name %>
+</p>
+<p>
+	<%= f.label :measurement, 'Measurement in grams' %>
+	<%= f.text_field :measurement %>
+</p>
+<p>
+	<%= f.label :cost, 'Cost in dollars' %>
+	<%= f.text_field :cost %>
+</p>
+<p>
+	<%= f.label :image_url, 'Image' %>
+	<%= f.text_field :image_url %>
+</p>
+<button>Create</button>
+
+<% end %>

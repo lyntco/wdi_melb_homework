@@ -1,0 +1,5 @@
+<h1>Index</h1>
+
+<% @mountains.each do |mount| %>
+	<p><%= link_to mount.name, "/mountains/#{mount.id}" %></p>
+<% end %>

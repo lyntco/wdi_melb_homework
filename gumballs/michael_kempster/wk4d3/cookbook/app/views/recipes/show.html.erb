@@ -1,0 +1,15 @@
+<h2>Show Recipes</h2>
+
+<% @recipes.each do |r| %>
+	<p>Recipe name: <%= r.name %></p>
+	<p>Recipe course: <%= r.course %></p>
+	<p>Cooking time: <%= r.cooktime %></p>
+	<p>Serving size: <%= r.servingsize %></p>
+	<p>Cooking instructions: <%= r.instructions %></p>
+	<p>Image: <%= r.image_url %></p>
+	<p><%= link_to 'Show Recipe Ingredients', ingredient_path %></p>
+	<p><%= link_to 'Edit Recipe', edit_recipe_path %></p>
+	<p><%= link_to 'Delete Recipe', r, :method => :delete, :data => {:confirm => 'Are you sure?'}%></p>
+<% end %>
+
+<p><%= link_to 'New Recipe', new_recipe_path %></p>

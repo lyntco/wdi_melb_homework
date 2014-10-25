@@ -1,0 +1,14 @@
+<h2>Edit Videos</h2>
+
+<form action="/memetube/<%= @result['id'] %>" method="post">
+	<label for="">Title</label>
+	<input type="text" name="title" value="<%= @result['title'] %>">
+	<label for="">Description</label>
+	<input type="text" name="description" value="<%= @result['description'] %>">
+	<label for="">URL</label>
+	<input type="text" name="url" value="<%= @result['url'] %>">
+	<label for="">Genre</label>
+	<input type="text" name="genre" value="<%= @result['genre'] %>">
+
+	<button>Edit</button>
+</form>

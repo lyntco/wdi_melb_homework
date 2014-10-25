@@ -1,0 +1,32 @@
+<h2>Edit Recipe</h2>
+
+<%= form_for @recipe do |f| %>
+
+<p>
+	<%= f.label :name, 'Recipe name' %>
+	<%= f.text_field :name %>
+</p>
+<p>
+	<%= f.label :course, 'Recipe course' %>
+	<%= f.text_field :course %>
+</p>
+<p>
+	<%= f.label :cooktime, 'Cooking time' %>
+	<%= f.text_field :cooktime %>
+</p>
+<p>
+	<%= f.label :servingsize, 'Serving size' %>
+	<%= f.text_field :servingsize %>
+</p>
+<p>
+	<%= f.label :instructions, 'Cooking instructions' %>
+	<%= f.text_field :instructions %>
+</p>
+<p>
+	<%= f.label :image_url, 'Image' %>
+	<%= f.text_field :image_url %>
+</p>
+
+<button>Update</button>
+
+<% end %>

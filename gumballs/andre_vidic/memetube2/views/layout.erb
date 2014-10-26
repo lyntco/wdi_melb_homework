@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memetube</title>
+
+  <link rel="stylesheet" href="/stylesheets/main.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+  <div class="banner">
+    <a href="/" class="memetube_text">Memetube</a>
+  </div>
+
+  <div class="container">
+
+     <%= yield %>
+
+    <div class="side-bar">
+
+        <div class="list-group">
+          <a class="tag" href="/">
+           <!--"fa fa-home" home icon from font awesome, "fa-fw" means full width-->
+            <i class="fa fa-home fa-fw"></i>Home</br>
+          </a>
+
+          <a class="tag" href="/videos/new">
+            <i class="fa fa-file-text fa-fw"></i>Add New Video</br>
+          </a>
+          </br>
+          </br>
+          <i class="fa fa-file-text fa-fw"></i>Genres
+        </div>
+
+      <% @genres.each do |genre| %>
+        <h5>
+          <a href="/genres/<%= genre %>" class="tag">
+            <%= genre%>
+          </a>
+        </h5>
+      <%end%>
+    </div>
+  </div>
+
+
+
+  <footer>&copy; Memetube memetube memetube</footer>
+
+</body>
+</html>

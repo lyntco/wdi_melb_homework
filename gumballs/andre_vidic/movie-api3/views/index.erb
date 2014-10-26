@@ -1,0 +1,29 @@
+<section class="form">
+  <form action="/index" method="get">
+    <div class="input-group">
+      <label for="search" ></label>
+      <input type="search" name="search" placeholder="Enter Movie Title">
+      <button>Search</button>
+    </div>
+  </form>
+</section>
+
+<% if params['search'] && params['search'] !="" %>
+
+  <h1>MOVIES</h1>
+
+  <div class="container">
+
+      <!--Iterates through the @movies["Search"] hash-array to print out each individual movie title -->
+      <% @movieSearch.each do |each_movie| %>
+        <a href="/results/<%= each_movie["imdbID"] %>">
+          <p><%= each_movie["Title"] %></p></a>
+      <% end %>
+
+  </div>
+<% end %>
+
+
+
+
+

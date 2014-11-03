@@ -1,0 +1,22 @@
+<h2>New Mountain</h2>
+
+<%= form_for @mountain do |mount| %>
+
+	<%= mount.label :name %>
+	<p><%= mount.text_field :name %></p>
+
+	<%= mount.label :height %>
+	<p><%= mount.text_field :height %></p>
+
+	<%= mount.label :country %>
+	<p><%= mount.text_field :country %></p>
+
+	<%= mount.label :range %>
+	<p><%= mount.text_field :range %></p>
+
+	<%= mount.label :comments %>
+	<p><%= mount.text_area :comments %></p>
+
+	<button>Submit</button>
+
+<% end %>

@@ -1,0 +1,10 @@
+<h2>Mountain Details</h2>
+
+<p><%= @mountain.name %></p>
+<p><%= @mountain.height %></p>
+<p><%= @mountain.range %></p>
+<p><%= @mountain.country %></p>
+<p><%= @mountain.comments %></p>
+
+<%= link_to 'Edit', "/mountains/#{@mountain.id}/edit" %>
+<p><%= link_to 'Delete', @mountain, :method => :delete, :data => {:confirm => 'Are you sure?'}%></p>

@@ -6,20 +6,27 @@
 	<link rel="stylesheet" href="/stylesheets/main.css">
 	<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href="styles.css" rel="stylesheet" media="all and (min-width: 520px) and (max-width: 700px)">
 </head>
 <body>
-			<h1>MEMETUBE</h1>
-			<p>Select by Genre:</p>
+
+		<div class="logo_container">
+			<a href="/"> <img src="/logo.png" alt="memetube_logo"> </a>
+		</div>
 
 
-			<div class="list">
-				<ul>
-				<li> <a href="/">All</a></li>
-				<%  @genres.each do |genre|  %>
-					<li>  <a href="/genre/<%= genre["genre"] %>">  <%= genre["genre"] %>  </a>   </li>
-				<% end %>
-				</ul>
-			</div>
+
+		<div class="list">
+			<ul>
+			<li> <a href="/">All</a></li>
+			<%  @genres.each do |genre|  %>
+				<li>  <a href="/genre/<%= genre %>">  <%= genre %>  </a>   </li>
+			<% end %>
+			</ul>
+		</div>
+
+
+
 	
 	<%= yield %>
 

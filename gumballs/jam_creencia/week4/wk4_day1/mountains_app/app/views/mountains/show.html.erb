@@ -1,0 +1,10 @@
+<img src="<%= @mountain.image  %>"> <br>
+
+<p>Name: <%= @mountain.name %></p>
+<p>Location: <%= @mountain.location %></p>
+<p>Range: <%= @mountain.range %></p>
+<p>Elevation: <%= @mountain.elevation %></p>
+
+<button><%= link_to 'edit', "/mountains/#{@mountain.id}/edit" %></button>
+<button><%= link_to 'delete', "/mountains/#{@mountain.id}", method: :delete, data: { confirm: 'Are you sure?' } %></button>
+<button><%= link_to 'back', "/mountains" %></button>

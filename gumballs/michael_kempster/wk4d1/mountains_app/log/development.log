@@ -1,0 +1,976 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMountains (20141025042713)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "mountains" ("id" serial primary key, "name" character varying(255), "height" character varying(255), "country" character varying(255), "range" character varying(255), "comments" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "mountains" already exists
+: CREATE TABLE "mountains" ("id" serial primary key, "name" character varying(255), "height" character varying(255), "country" character varying(255), "range" character varying(255), "comments" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMountains (20141025042713)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "mountains" ("id" serial primary key, "name" character varying(255), "height" character varying(255), "country" character varying(255), "range" character varying(255), "comments" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141025042713"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:41:11 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/mountains"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.6ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:41:54 +1100
+Processing by MountainsController#index as HTML
+  [1m[35mMountain Load (1.1ms)[0m  SELECT "mountains".* FROM "mountains"
+  Rendered mountains/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 678ms (Views: 665.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:41:55 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:41:55 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:41:55 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:41:55 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:41:55 +1100
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2014-10-25 15:42:07 +1100
+Processing by MountainsController#new as HTML
+  Rendered mountains/new.html.erb within layouts/application (77.4ms)
+Completed 200 OK in 100ms (Views: 95.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:42:07 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:42:07 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:42:07 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:42:07 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:42:07 +1100
+
+
+Started GET "/mountains/edit" for 127.0.0.1 at 2014-10-25 15:42:13 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mMountain Load (0.3ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Mountain with 'id'=edit):
+  app/controllers/mountains_controller.rb:8:in `show'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.5ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2014-10-25 15:42:41 +1100
+
+ActionController::RoutingError (No route matches [GET] "/edit"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.2ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:43:03 +1100
+Processing by MountainsController#index as HTML
+  [1m[35mMountain Load (0.3ms)[0m  SELECT "mountains".* FROM "mountains"
+  Rendered mountains/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:43:03 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:03 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:03 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:03 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:03 +1100
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2014-10-25 15:43:04 +1100
+Processing by MountainsController#new as HTML
+  Rendered mountains/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:43:04 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:04 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:04 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:04 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:04 +1100
+
+
+Started POST "/mountains" for 127.0.0.1 at 2014-10-25 15:43:12 +1100
+Processing by MountainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pfvt/sGkN5xDthRffmgdn/6DBynbvpo+Jv8yyofDJ3Q=", "mountain"=>{"name"=>"test", "height"=>"test", "country"=>"test", "range"=>"test", "comments"=>"test"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "mountains" ("comments", "country", "created_at", "height", "name", "range", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["comments", "test"], ["country", "test"], ["created_at", "2014-10-25 04:43:12.415748"], ["height", "test"], ["name", "test"], ["range", "test"], ["updated_at", "2014-10-25 04:43:12.415748"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/mountains
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:43:12 +1100
+Processing by MountainsController#index as HTML
+  [1m[35mMountain Load (0.3ms)[0m  SELECT "mountains".* FROM "mountains"
+  Rendered mountains/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:43:12 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:12 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:12 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:12 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:43:12 +1100
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2014-10-25 15:43:15 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.3ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered mountains/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/1/edit" for 127.0.0.1 at 2014-10-25 15:43:18 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMountain Load (0.3ms)[0m  SELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered mountains/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/mountains/1" for 127.0.0.1 at 2014-10-25 15:43:22 +1100
+Processing by MountainsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pfvt/sGkN5xDthRffmgdn/6DBynbvpo+Jv8yyofDJ3Q=", "mountain"=>{"name"=>"testedited", "height"=>"test", "country"=>"test", "range"=>"test", "comments"=>"test"}, "id"=>"1"}
+  [1m[36mMountain Load (0.4ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "mountains" SET "name" = $1, "updated_at" = $2 WHERE "mountains"."id" = 1[0m  [["name", "testedited"], ["updated_at", "2014-10-25 04:43:22.054423"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-25 15:43:22 +1100
+
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-25 15:45:05 +1100
+
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-25 15:46:58 +1100
+
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.5ms)
+
+
+Started PATCH "/mountains/1" for 127.0.0.1 at 2014-10-25 15:47:04 +1100
+Processing by MountainsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pfvt/sGkN5xDthRffmgdn/6DBynbvpo+Jv8yyofDJ3Q=", "mountain"=>{"name"=>"testedited", "height"=>"test", "country"=>"test", "range"=>"test", "comments"=>"test"}, "id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/mountains
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:47:04 +1100
+Processing by MountainsController#index as HTML
+  [1m[35mMountain Load (0.2ms)[0m  SELECT "mountains".* FROM "mountains"
+  Rendered mountains/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:47:04 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:47:04 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:47:04 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:47:04 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:47:04 +1100
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2014-10-25 15:47:06 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.3ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered mountains/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/1/show" for 127.0.0.1 at 2014-10-25 15:47:52 +1100
+
+ActionController::RoutingError (No route matches [GET] "/mountains/1/show"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.3ms)
+
+
+Started GET "/mountains/show" for 127.0.0.1 at 2014-10-25 15:48:16 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mMountain Load (0.2ms)[0m  SELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Mountain with 'id'=show):
+  app/controllers/mountains_controller.rb:8:in `show'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/mountains/2/show" for 127.0.0.1 at 2014-10-25 15:48:31 +1100
+
+ActionController::RoutingError (No route matches [GET] "/mountains/2/show"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.4ms)
+
+
+Started GET "/mountains/1/show" for 127.0.0.1 at 2014-10-25 15:48:37 +1100
+
+ActionController::RoutingError (No route matches [GET] "/mountains/1/show"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.9ms)
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2014-10-25 15:48:48 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.3ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered mountains/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:48:48 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:48:48 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:48:48 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:48:48 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:48:48 +1100
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2014-10-25 15:50:00 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMountain Load (0.2ms)[0m  SELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered mountains/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:50:00 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:50:00 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:50:00 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:50:00 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:50:00 +1100
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:50:37 +1100
+Processing by MountainsController#index as HTML
+  [1m[36mMountain Load (0.4ms)[0m  [1mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:50:37 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:50:37 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:50:37 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:50:37 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:50:37 +1100
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2014-10-25 15:50:42 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMountain Load (0.2ms)[0m  SELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered mountains/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:54:17 +1100
+Processing by MountainsController#index as HTML
+  [1m[36mMountain Load (0.4ms)[0m  [1mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:54:17 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:54:17 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:54:17 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:54:17 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:54:17 +1100
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:54:20 +1100
+Processing by MountainsController#index as HTML
+  [1m[35mMountain Load (0.3ms)[0m  SELECT "mountains".* FROM "mountains"
+  Rendered mountains/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:54:20 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:54:20 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:54:20 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:54:20 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:54:20 +1100
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:58:07 +1100
+Processing by MountainsController#index as HTML
+  [1m[36mMountain Load (0.3ms)[0m  [1mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:58:07 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:58:07 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:58:07 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:58:07 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:58:07 +1100
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:58:11 +1100
+Processing by MountainsController#index as HTML
+  [1m[35mMountain Load (0.2ms)[0m  SELECT "mountains".* FROM "mountains"
+  Rendered mountains/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2014-10-25 15:58:12 +1100
+Processing by MountainsController#new as HTML
+  Rendered mountains/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:58:13 +1100
+Processing by MountainsController#index as HTML
+  [1m[36mMountain Load (0.3ms)[0m  [1mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/new" for 127.0.0.1 at 2014-10-25 15:58:15 +1100
+Processing by MountainsController#new as HTML
+  Rendered mountains/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mountains" for 127.0.0.1 at 2014-10-25 15:58:24 +1100
+Processing by MountainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pfvt/sGkN5xDthRffmgdn/6DBynbvpo+Jv8yyofDJ3Q=", "mountain"=>{"name"=>"test2", "height"=>"test2", "country"=>"test2", "range"=>"test2", "comments"=>"test2"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "mountains" ("comments", "country", "created_at", "height", "name", "range", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["comments", "test2"], ["country", "test2"], ["created_at", "2014-10-25 04:58:24.518111"], ["height", "test2"], ["name", "test2"], ["range", "test2"], ["updated_at", "2014-10-25 04:58:24.518111"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/mountains
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:58:24 +1100
+Processing by MountainsController#index as HTML
+  [1m[36mMountain Load (0.2ms)[0m  [1mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 15:58:24 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 15:58:24 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 15:58:24 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 15:58:24 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 15:58:24 +1100
+
+
+Started GET "/mountains/2" for 127.0.0.1 at 2014-10-25 15:58:26 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMountain Load (0.2ms)[0m  SELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered mountains/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains/2/edit" for 127.0.0.1 at 2014-10-25 15:58:28 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMountain Load (0.2ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered mountains/edit.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `mountain_path' for #<#<Class:0x007feb89013e30>:0x007feb87454140>):
+    1: <h2>Edit Mountain</h2>
+    2: 
+    3: <%= form_for @mountain do |mount| %>
+    4: 
+    5: 	<%= mount.label :name %>
+    6: 	<p><%= mount.text_field :name %></p>
+  app/views/mountains/edit.html.erb:3:in `_app_views_mountains_edit_html_erb__3355415860336858221_70324792333840'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.6ms)
+
+
+Started GET "/mountains/2/edit" for 127.0.0.1 at 2014-10-25 15:58:28 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMountain Load (0.2ms)[0m  SELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered mountains/edit.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `mountain_path' for #<#<Class:0x007feb89013e30>:0x007feb872e6560>):
+    1: <h2>Edit Mountain</h2>
+    2: 
+    3: <%= form_for @mountain do |mount| %>
+    4: 
+    5: 	<%= mount.label :name %>
+    6: 	<p><%= mount.text_field :name %></p>
+  app/views/mountains/edit.html.erb:3:in `_app_views_mountains_edit_html_erb__3355415860336858221_70324781000500'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.9ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 15:58:41 +1100
+Processing by MountainsController#index as HTML
+  [1m[36mMountain Load (0.3ms)[0m  [1mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2014-10-25 15:58:42 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMountain Load (0.2ms)[0m  SELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered mountains/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains/1/edit" for 127.0.0.1 at 2014-10-25 15:58:43 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered mountains/edit.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `mountain_path' for #<#<Class:0x007feb89013e30>:0x007feb83d8ce78>):
+    1: <h2>Edit Mountain</h2>
+    2: 
+    3: <%= form_for @mountain do |mount| %>
+    4: 
+    5: 	<%= mount.label :name %>
+    6: 	<p><%= mount.text_field :name %></p>
+  app/views/mountains/edit.html.erb:3:in `_app_views_mountains_edit_html_erb__3355415860336858221_70324792333840'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.3ms)
+
+
+Started GET "/mountains/1/edit" for 127.0.0.1 at 2014-10-25 15:58:43 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMountain Load (0.2ms)[0m  SELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered mountains/edit.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `mountain_path' for #<#<Class:0x007feb89013e30>:0x007feb83f9e298>):
+    1: <h2>Edit Mountain</h2>
+    2: 
+    3: <%= form_for @mountain do |mount| %>
+    4: 
+    5: 	<%= mount.label :name %>
+    6: 	<p><%= mount.text_field :name %></p>
+  app/views/mountains/edit.html.erb:3:in `_app_views_mountains_edit_html_erb__3355415860336858221_70324781000500'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.4ms)
+
+
+Started GET "/mountains/1/routes" for 127.0.0.1 at 2014-10-25 15:59:13 +1100
+
+ActionController::RoutingError (No route matches [GET] "/mountains/1/routes"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.8ms)
+
+
+Started GET "/mountains/1/edit" for 127.0.0.1 at 2014-10-25 16:01:10 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered mountains/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 21.8ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/mountains/1" for 127.0.0.1 at 2014-10-25 16:01:13 +1100
+Processing by MountainsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pfvt/sGkN5xDthRffmgdn/6DBynbvpo+Jv8yyofDJ3Q=", "mountain"=>{"name"=>"testedited", "height"=>"test", "country"=>"test", "range"=>"test", "comments"=>"test"}, "id"=>"1"}
+  [1m[35mMountain Load (0.2ms)[0m  SELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/mountains
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 16:01:13 +1100
+Processing by MountainsController#index as HTML
+  [1m[36mMountain Load (0.5ms)[0m  [1mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 16:01:13 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 16:01:13 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 16:01:13 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 16:01:13 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 16:01:13 +1100
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 16:10:35 +1100
+Processing by MountainsController#index as HTML
+  [1m[35mMountain Load (0.3ms)[0m  SELECT "mountains".* FROM "mountains"
+  Rendered mountains/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:35 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 16:10:35 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:35 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:35 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:35 +1100
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2014-10-25 16:10:37 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered mountains/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2014-10-25 16:10:51 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMountain Load (0.2ms)[0m  SELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered mountains/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 16:10:51 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:51 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:51 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:51 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:51 +1100
+
+
+Started DELETE "/mountains/1" for 127.0.0.1 at 2014-10-25 16:10:54 +1100
+Processing by MountainsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Pfvt/sGkN5xDthRffmgdn/6DBynbvpo+Jv8yyofDJ3Q=", "id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1mSELECT  "mountains".* FROM "mountains"  WHERE "mountains"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "mountains" WHERE "mountains"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/mountains
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-25 16:10:54 +1100
+Processing by MountainsController#index as HTML
+  [1m[36mMountain Load (0.3ms)[0m  [1mSELECT "mountains".* FROM "mountains"[0m
+  Rendered mountains/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-25 16:10:54 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:54 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:54 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:54 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-25 16:10:54 +1100

@@ -1,0 +1,19 @@
+<h2>Show Video Details</h2>
+
+<% @result.each do |row| %>
+	<% if row['title'] != "" %>
+	<p>Title: <%= row['title'] %></p>
+	<p>Description: <%= row['description'] %></p>
+	<p>URL: <%= row['url'] %></p>
+	<p>genre: <%= row['genre'] %></p>
+
+	<form action="/memetube/<%= row['id'] %>/edit" method="get">
+		<button>Edit</button>
+	</form>
+
+	<form action="/memetube/<%= row['id'] %>/delete" method="get">
+		<button>Delete</button>
+	</form>
+
+	<% end %>
+<% end %>

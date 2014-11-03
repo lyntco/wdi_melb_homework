@@ -1,0 +1,12 @@
+<h1 class="box">Search Results</h1>
+
+<h2>Click on a link to go to a movie</h2>
+
+<%  counter = 0 %>
+<%  while counter < @search_result.length %>
+<%    movie_string = @search_result[counter]["Title"] %>
+<h3><a href="/movie_results/<%= movie_string %>"><%= @search_result[counter]["Title"] %></a></h3>
+<%		counter += 1 %>
+<%  end %>
+
+<a class="box2" href="/search">Back to Search</a>

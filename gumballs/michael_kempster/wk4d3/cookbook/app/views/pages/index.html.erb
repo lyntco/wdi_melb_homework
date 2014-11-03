@@ -1,0 +1,7 @@
+<h1>Home</h1>
+
+<p>Click on a book for more details</p>
+
+<% @books.each do |book| %>
+	<p><h3><a href="<%= book_path(book) %>"><%= book.title %></a></h3></p>
+<% end %>

@@ -1,0 +1,2723 @@
+  [1m[36m (11.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141020225329)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141020225329)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141020225329)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/mountains" for 127.0.0.1 at 2014-10-21 10:39:49 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.6) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-21 10:39:50 +1100
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.6) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141020225329)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141020225329)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGames (20141020225329)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (19.8ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "magiceightball" character varying(255), "secretnumber" integer, "rockpaperscissors" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141020225329"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-21 10:43:31 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 21ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 10:43:35 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 745ms (Views: 744.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 10:43:36 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 10:43:36 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 10:43:36 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 10:43:36 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 10:43:36 +1100
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 10:43:40 +1100
+
+AbstractController::ActionNotFound (The action 'show' could not be found for GamesController):
+  actionpack (4.1.6) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 10:43:40 +1100
+
+AbstractController::ActionNotFound (The action 'show' could not be found for GamesController):
+  actionpack (4.1.6) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 10:45:16 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template games/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/michaelkempster/wdi/week4/day17/games_app/app/views"
+):
+  actionview (4.1.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.6) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 10:46:24 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 10:46:24 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 10:46:24 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 10:46:24 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 10:46:24 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 10:46:24 +1100
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 10:47:11 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 10:47:11 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 10:47:11 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 10:47:11 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 10:47:11 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 10:47:11 +1100
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:47:14 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.2ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:49:20 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.7ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:50:58 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-21 10:51:09 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 10:51:13 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 10:51:13 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 10:51:13 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 10:51:13 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 10:51:13 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 10:51:13 +1100
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 10:51:16 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:51:18 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.1ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:51:24 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.1ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:52:02 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.5ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:52:05 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.8ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:52:08 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 10:52:17 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 10:52:17 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 10:52:17 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 10:52:17 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 10:52:17 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 10:52:17 +1100
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 10:52:19 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:52:23 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.2ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 10:53:24 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 10:53:25 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 10:54:09 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:55:35 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.8ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:56:23 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.2ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:56:27 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.3ms)
+
+
+Started GET "/magiceightball" for 127.0.0.1 at 2014-10-21 10:56:52 +1100
+
+ActionController::RoutingError (No route matches [GET] "/magiceightball"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-21 11:05:44 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 11:05:48 +1100
+
+ActionController::RoutingError (No route matches [GET] "/games"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.3ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 11:06:12 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:06:12 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:12 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:12 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:12 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:12 +1100
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:06:14 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/show" for 127.0.0.1 at 2014-10-21 11:06:17 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:06:17 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:17 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:17 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:17 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:17 +1100
+
+
+Started GET "/games/show" for 127.0.0.1 at 2014-10-21 11:06:29 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+
+
+Started GET "/games/show" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:30 +1100
+
+
+Started GET "/games/show" for 127.0.0.1 at 2014-10-21 11:06:50 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:06:50 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:50 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:50 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:50 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:06:50 +1100
+
+
+Started GET "/car" for 127.0.0.1 at 2014-10-21 11:06:53 +1100
+
+ActionController::RoutingError (No route matches [GET] "/car"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.8ms)
+
+
+Started GET "/car" for 127.0.0.1 at 2014-10-21 11:07:26 +1100
+
+ActionController::RoutingError (No route matches [GET] "/car"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.8ms)
+
+
+Started GET "/car" for 127.0.0.1 at 2014-10-21 11:07:28 +1100
+
+ActionController::RoutingError (No route matches [GET] "/car"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.8ms)
+
+
+Started GET "/car" for 127.0.0.1 at 2014-10-21 11:07:32 +1100
+
+ActionController::RoutingError (No route matches [GET] "/car"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.8ms)
+
+
+Started GET "/games/show" for 127.0.0.1 at 2014-10-21 11:08:42 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:08:42 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:08:42 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:08:42 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:08:42 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:08:42 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:08:45 +1100
+Processing by GamesController#magiceightball as HTML
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.1.6) lib/action_controller/metal/request_forgery_protection.rb:176:in `handle_unverified_request'
+  actionpack (4.1.6) lib/action_controller/metal/request_forgery_protection.rb:202:in `handle_unverified_request'
+  actionpack (4.1.6) lib/action_controller/metal/request_forgery_protection.rb:197:in `verify_authenticity_token'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 11:13:47 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:13:48 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:13:54 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:13:54 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:13:54 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:13:54 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:13:54 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:13:54 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:14:11 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:14:11 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:11 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:11 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:11 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:11 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:14:21 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:21 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:14:21 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:21 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:21 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:21 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:14:32 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:14:33 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:33 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:33 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:33 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:33 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:14:49 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:49 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:49 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:49 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:14:49 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:14:49 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:15:12 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:15:12 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:12 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:12 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:12 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:12 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:15:15 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:15:15 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:15 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:15 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:15 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:15 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:15:17 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:15:17 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:17 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:17 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:17 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:17 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:15:18 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:15:18 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:18 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:18 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:18 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:18 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:15:19 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:19 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:19 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:15:19 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:19 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:19 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:15:20 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:15:20 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:20 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:20 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:20 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:20 +1100
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 11:15:21 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:15:21 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:21 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:21 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:21 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:15:21 +1100
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 11:41:01 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 67ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:41:01 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:41:01 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:41:01 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:41:01 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:41:01 +1100
+
+
+Started GET "/games/secretnumber" for 127.0.0.1 at 2014-10-21 11:41:03 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"secretnumber"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/secretnumber" for 127.0.0.1 at 2014-10-21 11:41:14 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"secretnumber"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/rockpaperscissors" for 127.0.0.1 at 2014-10-21 11:41:17 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"rockpaperscissors"}
+  Rendered games/magiceightball.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:42:35 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:43:01 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:45:04 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/secretnumber" for 127.0.0.1 at 2014-10-21 11:45:06 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"secretnumber"}
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/rockpaperscissors" for 127.0.0.1 at 2014-10-21 11:45:09 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"rockpaperscissors"}
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/rockpaperscissors" for 127.0.0.1 at 2014-10-21 11:45:14 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"rockpaperscissors"}
+  Rendered games/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:45:21 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/secretnumber" for 127.0.0.1 at 2014-10-21 11:45:23 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"secretnumber"}
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:46:43 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/secretnumber" for 127.0.0.1 at 2014-10-21 11:46:49 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"secretnumber"}
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/rockpaperscissors" for 127.0.0.1 at 2014-10-21 11:46:51 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"rockpaperscissors"}
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routes" for 127.0.0.1 at 2014-10-21 11:47:12 +1100
+
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.1ms)
+
+
+Started GET "/routes" for 127.0.0.1 at 2014-10-21 11:48:14 +1100
+
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.8ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 11:48:22 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:48:22 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:48:22 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:48:22 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:48:22 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:48:22 +1100
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:48:24 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/secretnumber" for 127.0.0.1 at 2014-10-21 11:48:28 +1100
+Processing by GamesController#secretnumber as HTML
+  Rendered games/secretnumber.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/rockpaperscissors" for 127.0.0.1 at 2014-10-21 11:48:32 +1100
+Processing by GamesController#rockpaperscissors as HTML
+  Rendered games/rockpaperscissors.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/secretnumber" for 127.0.0.1 at 2014-10-21 11:48:36 +1100
+Processing by GamesController#secretnumber as HTML
+  Rendered games/secretnumber.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:48:38 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:49:03 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/macigeightball" for 127.0.0.1 at 2014-10-21 11:49:05 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"macigeightball"}
+  Rendered games/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:05 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:49:05 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:05 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:05 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:05 +1100
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 11:49:06 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 11:49:06 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:49:06 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:06 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:06 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:06 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:06 +1100
+
+
+Started GET "/games/magiceightball" for 127.0.0.1 at 2014-10-21 11:49:08 +1100
+Processing by GamesController#magiceightball as HTML
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/secretnumber" for 127.0.0.1 at 2014-10-21 11:49:26 +1100
+Processing by GamesController#secretnumber as HTML
+  Rendered games/secretnumber.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:49:30 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"6"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:49:30 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:30 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:30 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:30 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:49:30 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:50:03 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"1"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:50:03 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:03 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:03 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:03 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:03 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:50:06 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"3"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:50:06 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:06 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:06 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:06 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:06 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:50:43 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"1"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:50:43 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:43 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:43 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:43 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:43 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:50:47 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"3"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:50:47 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:47 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:47 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:47 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:47 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:50:50 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"6"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:50 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:50 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:50 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:50:50 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:50 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:50:53 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"8"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:50:53 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:53 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:53 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:53 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:53 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:50:55 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"5"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:55 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:50:55 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:55 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:55 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:50:55 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:53:53 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"1"}
+  Rendered games/secretnumber.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined local variable or method `numbers' for #<#<Class:0x007ff2d252c840>:0x007ff2cbbaf598>):
+    22: 
+    23: <!-- use this to show the reply.
+    24:  -->
+    25: <p><%= params[numbers] %>:<%= @secret_number_result %> </p> 
+  app/views/games/secretnumber.html.erb:25:in `_app_views_games_secretnumber_html_erb___37290444175114926_70340388402740'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:54:46 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:46 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:46 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:46 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:46 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:54:49 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"4"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:54:49 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:49 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:49 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:49 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:49 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:54:53 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"5"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:54:53 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:53 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:53 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:53 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:54:53 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:56:59 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "numbers"=>"1"}
+  Rendered games/secretnumber.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:56:59 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:56:59 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:56:59 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:56:59 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:56:59 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:57:05 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:05 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:05 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:05 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:05 +1100
+
+
+Started GET "/secret_answer" for 127.0.0.1 at 2014-10-21 11:57:07 +1100
+
+ActionController::RoutingError (No route matches [GET] "/secret_answer"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelkempster/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.5ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 11:57:16 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:57:16 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:16 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:16 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:16 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:16 +1100
+
+
+Started GET "/games/secretnumber" for 127.0.0.1 at 2014-10-21 11:57:19 +1100
+Processing by GamesController#secretnumber as HTML
+  Rendered games/secretnumber.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:57:20 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "number"=>"1"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:57:20 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:20 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:20 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:20 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:20 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:57:23 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "number"=>"5"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:57:23 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:23 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:23 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:23 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:23 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:57:26 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "number"=>"5"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:57:26 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:26 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:26 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:26 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:26 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 11:57:29 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "number"=>"2"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 11:57:29 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:29 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:29 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:29 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 11:57:29 +1100
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-21 12:12:39 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 12:12:44 +1100
+
+SyntaxError (/Users/michaelkempster/wdi/week4/day17/games_app/app/controllers/games_controller.rb:52: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/games_controller.rb:52: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.3ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 12:13:38 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:13:38 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:13:38 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:13:38 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:13:38 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:13:38 +1100
+
+
+Started GET "/games/rockpaperscissors" for 127.0.0.1 at 2014-10-21 12:13:40 +1100
+Processing by GamesController#rockpaperscissors as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `hand' for #<GamesController:0x007ff2d10b3d00>):
+  app/controllers/games_controller.rb:23:in `rockpaperscissors'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.7ms)
+
+
+Started GET "/games/rockpaperscissors" for 127.0.0.1 at 2014-10-21 12:13:40 +1100
+Processing by GamesController#rockpaperscissors as HTML
+Completed 500 Internal Server Error in 4ms
+
+NameError (undefined local variable or method `hand' for #<GamesController:0x007ff2d11cbbc0>):
+  app/controllers/games_controller.rb:23:in `rockpaperscissors'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.3ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.4ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 12:14:49 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:14:49 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:14:49 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:14:49 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:14:49 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:14:49 +1100
+
+
+Started GET "/games/magiceightball" for 127.0.0.1 at 2014-10-21 12:14:54 +1100
+Processing by GamesController#magiceightball as HTML
+  Rendered games/magiceightball.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 12:15:10 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:15:10 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:15:10 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:15:10 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:15:10 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:15:10 +1100
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 12:15:58 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:15:58 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:15:58 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:15:58 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:15:58 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:15:58 +1100
+
+
+Started GET "/games/secretnumber" for 127.0.0.1 at 2014-10-21 12:16:00 +1100
+Processing by GamesController#secretnumber as HTML
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 12:16:09 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "number"=>"5"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:16:09 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:09 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:09 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:09 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:09 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 12:16:20 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "number"=>"8"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:20 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:16:20 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:20 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:20 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:20 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 12:16:24 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "number"=>"3"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:24 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:16:24 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:24 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:24 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:24 +1100
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 12:16:34 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:16:34 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:34 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:34 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:34 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:16:34 +1100
+
+
+Started GET "/games/rockpaperscissors" for 127.0.0.1 at 2014-10-21 12:16:41 +1100
+Processing by GamesController#rockpaperscissors as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `hand' for #<GamesController:0x007ff2caa68848>):
+  app/controllers/games_controller.rb:23:in `rockpaperscissors'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.6ms)
+
+
+Started GET "/games/rockpaperscissors" for 127.0.0.1 at 2014-10-21 12:16:41 +1100
+Processing by GamesController#rockpaperscissors as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `hand' for #<GamesController:0x007ff2cdd44780>):
+  app/controllers/games_controller.rb:23:in `rockpaperscissors'
+
+
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/michaelkempster/.rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.9ms)
+
+
+Started GET "/games/rockpaperscissors" for 127.0.0.1 at 2014-10-21 12:17:06 +1100
+Processing by GamesController#rockpaperscissors as HTML
+  Rendered games/rockpaperscissors.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:17:06 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:17:06 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:17:06 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:17:06 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:17:06 +1100
+
+
+Started POST "/secret_answer" for 127.0.0.1 at 2014-10-21 12:17:16 +1100
+Processing by GamesController#secretnumber as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo=", "user_hand"=>"rock"}
+  Rendered games/secretnumber.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:17:16 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:17:16 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:17:16 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:17:16 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:17:16 +1100
+
+
+Started GET "/games" for 127.0.0.1 at 2014-10-21 12:21:14 +1100
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:21:14 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:21:14 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:21:14 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:21:14 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:21:14 +1100
+
+
+Started GET "/games/magiceightball" for 127.0.0.1 at 2014-10-21 12:21:16 +1100
+Processing by GamesController#magiceightball as HTML
+  Rendered games/magiceightball.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/car" for 127.0.0.1 at 2014-10-21 12:22:31 +1100
+Processing by GamesController#magiceightball as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw9NAF1/x8zmw8y8sxi1T0WPM6Bqun8vNQa1WXQmoCo="}
+  Rendered games/magiceightball.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 12:22:31 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 12:22:31 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 12:22:31 +1100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 12:22:31 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 12:22:31 +1100

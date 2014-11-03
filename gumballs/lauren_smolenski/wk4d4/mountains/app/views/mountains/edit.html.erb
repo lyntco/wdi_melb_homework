@@ -1,0 +1,35 @@
+<h2>Edit <%= @mountain.name %></h2>
+
+<%= form_for @mountain do |m| %>
+<p>
+  <%= m.label :name %>
+  <%= m.text_field :name %>
+</p>
+
+<p>
+  <%= m.label :image_url %>
+  <%= m.text_field :image_url %>
+</p>
+
+<p>
+  <%= m.label :elevation_meters %>
+  <%= m.text_field :elevation_meters %>
+</p>
+
+<p>
+  <%= m.label :country %>
+  <%= m.text_field :country %>
+</p>
+
+<p>
+  <%= m.label :latitude%>
+  <%= m.text_field :latitude%>
+</p>
+
+<p>
+  <%= m.label :longitude %>
+  <%= m.text_field :longitude %>
+</p>
+
+<button>Update</button>
+<% end %>

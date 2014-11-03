@@ -19,7 +19,6 @@ get '/search_list' do
     @movie_hash = JSON.parse(results)
 
     @movies = @movie_hash["Search"]
-    binding.pry
 
     erb :search_list
 end
@@ -35,14 +34,3 @@ get '/index/:name' do
   erb :index
 
 end
-
-# get '/cloud' do
-
-#     params['site_search'].gsub!(/\s+/, '+')
-
-#     results = HTTParty.get("http://www.omdbapi.com/?t=#{params['site_search']}")
-
-#     @movie_hash = JSON.parse(results)
-
-#     erb :index
-# end

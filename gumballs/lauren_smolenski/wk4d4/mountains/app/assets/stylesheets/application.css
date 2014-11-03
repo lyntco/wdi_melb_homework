@@ -1,0 +1,13 @@
+.item {
+  width: 24%;
+  height:0px;
+  padding-bottom: 24%;
+}
+
+.gallery div {
+  display: inline-block;
+}
+
+.item img {
+  height: 200px;
+}

@@ -1,0 +1,6 @@
+<h1>Ingredients</h1>
+
+<% @ingredients.each do |ingredient| %>
+<p><%= ingredient.name %></p>
+<p><%= link_to 'delete', ingredient, :method => :delete, :data => { :confirm => 'are you sure you want to delete this ingredient?' } %></p>
+<% end %>

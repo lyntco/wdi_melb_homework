@@ -1,0 +1,15 @@
+<h2>edit</h2>
+
+<form action="/movies/<%= @movie.id %>" method="post">
+  <label for="">Title</label>
+  <input type="text" name="title" value="<%= @movie.title %>"><br/>
+  <label for="">MEME URL</label>
+  <input type="text" name="url" value="<%= @movie.url %>">
+  <label for="">Description</label>
+  <input type="text" name="description" value="<%= @movie.description %>">
+  <label for="">Genre</label>
+  <input type="text" name="genre" value="<%= @movie.genre %>">
+  <br/>
+
+<button>Update</button>
+</form>

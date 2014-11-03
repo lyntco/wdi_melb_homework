@@ -6,7 +6,23 @@
     <h2><%= @stop_num %></h2>
     
     <div class="journey">
-      <h4><%= @journey.each {|x| print x.upcase + " "} %></h4>
+
+
+<% @journey.each do |x| %>
+<% x %>
+<% end %>
+
+<% @journey.each do |x| %>
+
+<div class="stops">
+ <h3><%= x.upcase %> </h3>
+</div>
+
+<% end %>
+
+    
+<!--       <h2><%= @journey.join().upcase %></h2> -->
+
     </div>  
 
 

@@ -1,0 +1,17 @@
+<h2>post details</h2>
+
+<p>
+  Name: <%= @mountain.name %></br>
+</p>
+
+<p>
+  Mountain Height: <%= @mountain.height %></br>
+</p>
+
+<%= image_tag(@mountain.image_url, :alt => "") %></br>
+
+<%= link_to 'edit', "/mountains/#{@mountain.id}/edit"%>
+
+<%= link_to 'delete', "/mountains/#{@mountain.id}", method: :DELETE %>
+
+<%= link_to 'Home', "/mountains"%>

@@ -1,0 +1,41 @@
+<span>
+  <%= link_to 'Edit', edit_recipe_path %>
+  <%= link_to 'Delete', recipe_path, :method => :delete, :data => { :confirm => 'are you sure?'}%>
+</span>
+
+<h1><%= @recipe.name %></h1>
+
+<p>
+  <% if @recipe.image_url %>
+    <%= image_tag(@recipe.image_url, :class => "image", :alt => "") %></br>
+    <% else %>
+      <% "No Image Url" %>
+  <% end %>
+</p>
+
+<p><strong>Meal Type:</strong><%= @recipe.meal_type %></p>
+
+<p><strong>Cook Time (min):</strong><%= @recipe.cooktime %></p>
+
+<p><strong>Serving Size:</strong><%= @recipe.servingsize %></p>
+
+<p><strong>Instructions:</strong><%= @recipe.instructions %></p>
+
+<p>
+  <%= @books.each do |book|%>
+  Book: <%= book %>
+  <% end %>
+</p>
+
+<h2><%= "Ingredients" if @recipe.ingredients%></h2>
+
+<% @recipe.ingredients.each do |ingredient|%>
+<p><%= ingredient.name %></p>
+<% end %>
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+<%= form_for @recipe do |f| %>
+
+<p>
+  <strong><%= f.label :name %></strong>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <strong><%= f.label :meal_type %></strong>
+  <%= f.select :meal_type, Recipe.meal_types %>
+</p>
+
+<p>
+  <strong><%= f.label :cooktime, :placeholder => '(min)'%></strong>
+  <%= f.text_field :cooktime %>
+</p>
+
+<p>
+  <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name%>
+</p>
+
+<p>
+  <strong><%= f.label :servingsize %></strong>
+  <%= f.text_field :servingsize %>
+</p>
+
+<p>
+  <strong><%= f.label :instructions%></strong></label>
+  <%= f.text_area :instructions %>
+</p>
+
+<p>
+  <strong><%= f.label :image_url%></strong>
+  <%= f.text_area :image_url %>
+</p>
+
+<p>
+  <strong><%= f.label :title %></strong>
+  <%= f.collection_select :book_id,  @books, :id, :title %>
+</p>
+
+<%= link_to 'New Book', new_book_path %>
+
+ <button>Go</button>
+<% end %>

@@ -1,0 +1,26 @@
+<%= link_to 'new recipe', new_recipe_path %>
+
+<p><strong>Book Title:</strong><%= @book.title %></p>
+
+<p><strong>Cuisine:</strong><%= @book.cuisine %></p>
+
+<p>
+
+  <% if @book.image_url %>
+    <%= image_tag(@book.image_url, :alt => "") %></br>
+    <% else %>
+      <% "No Image Url" %>
+  <% end %>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_book_path %>
+</p>
+
+
+<p>
+  <%= link_to 'Delete', book_path, :method => :delete, :data => { :confirm => 'are you sure?'}%>
+</p>
+
+<%= link_to 'Home', root_path %>
+<%= link_to 'Books', books_path %>

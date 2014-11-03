@@ -1,0 +1,35 @@
+<section class="form">
+  <form action="/index" method="get">
+    <div class="input-group">
+      <label for="movie_search" >Movie Details</label>
+      <input type="search" name="movie_search" placeholder="Enter Movie Title">
+      <button>Search</button>
+    </div>
+  </form>
+</section>
+
+
+<% if params['movie_search'] && params['movie_search'] !="" %>
+<div class="container">
+  <div id="left">
+    <img src="<%= @movie_hash['Poster']%>">
+  </div>
+
+  <div id="right">
+    <h1><%= "#{params['movie_search']} (#{@movie_hash['Year']})" %></h1>
+    <p><%="Actors"%></p>
+    <p><%="#{@movie_hash['Actors']}"%></p>
+    <p><%="Plot"%></p>
+    <p><%="Plot#{@movie_hash['Plot']}"%></p>
+    <p><%="Rating #{@movie_hash['Rated']} "%></p>
+    <p><%="Runtime #{@movie_hash['Runtime']}"%></p>
+    <p><%="Imdb Rating #{@movie_hash['imdbRating']}"%></p>
+  </div>
+</div>
+
+<% end %>
+
+
+
+
+

@@ -1,0 +1,11 @@
+<h1>Categories#new</h1>
+
+<p>Current Categories are:</p>
+
+<p>
+  <% @categories.each do |category|%>
+  <strong><%= category.name %></strong></br>
+  <% end %>
+</p>
+
+<%= render 'form' %>

@@ -1,0 +1,19 @@
+ <h1>RESULTS</h1>
+
+<div class="container">
+  <div id="left">
+    <img src="<%= @movie_hash['Poster']%>">
+  </div>
+
+  <div id="right">
+    <h1><%= "#{@movie_hash['Title']} (#{@movie_hash['Year']})" %></h1>
+    <p><%="Actors"%></p>
+    <p><%="#{@movie_hash['Actors']}"%></p>
+    <p><%="Plot"%></p>
+    <p><%="Plot#{@movie_hash['Plot']}"%></p>
+    <p><%="Rating #{@movie_hash['Rated']} "%></p>
+    <p><%="Runtime #{@movie_hash['Runtime']}"%></p>
+    <p><%="Imdb Rating #{@movie_hash['imdbRating']}"%></p>
+  </div>
+</div>
+

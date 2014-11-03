@@ -1,0 +1,27 @@
+  <div class="content">
+
+    <div class="video">
+      <iframe  src="http://www.youtube.com/embed/<%= @row.url.split("=")[1] %>" ></iframe></br>
+    </div>
+
+    <div class="details">
+        <h1><%= @row.title %></h1>
+        <p><%= @row.description %></p>
+    </div>
+
+    <div class="form">
+      <span class="edit">
+        <form action="/videos/<%= @row.id %>/edit" method="get">
+        <button>Edit</button>
+        </form>
+      </span>
+
+      <span class="delete">
+        <form action="/videos/<%= @row.id %>/delete" method="post">
+          <button>Delete</button>
+          </form>
+      </span>
+    </div>
+
+  </div>
+

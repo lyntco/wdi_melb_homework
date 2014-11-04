@@ -3,8 +3,8 @@
 <form action="/movies/<%= @row['id'] %>" method="post">
   <label for="">Title</label>
   <input type="text" name="title" value="<%= @row["title"] %>"><br/>
-  <label for="">Image URL</label>
-  <input type="text" name="url">
+  <label for="">MEME URL</label>
+  <input type="text" name="url" value="<%= @row["url"] %>">
   <label for="">Description</label>
   <input type="text" name="description" value="<%= @row["description"] %>">
   <label for="">Genre</label>

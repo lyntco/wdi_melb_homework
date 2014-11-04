@@ -1,0 +1,10 @@
+<header>
+  <img src="/img/logo.gif" />
+  <h1>Posts</h1>
+</header>
+
+  <% @post.each do |post| %>
+    <p><a href="posts/<%= post.id %>"><%= post.title %></a>
+      <% end %>
+
+  <p><a href="/posts/new">New Post</a></p>

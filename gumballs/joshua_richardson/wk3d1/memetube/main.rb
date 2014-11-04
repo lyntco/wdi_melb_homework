@@ -2,6 +2,11 @@ require 'sinatra'
 require 'pg'
 require 'pry'
 
+before do
+  @genres = run_sql("SELECT DISTINCT genres FROM videos;")
+end
+
+
 get '/' do
   db = PG.connect(:dbname => 'memetube') # connect to db
   sql = "select * from videos;"
@@ -28,14 +33,14 @@ get '/movies/:id' do
 end
 
 post '/movies' do
-  sql = "INSERT INTO videos (name,image_url,meal_type) VALUES ('#{params['name']}','#{params['image_url']}', '#{params['meal_type']}')"
+  sql = "INSERT INTO videos (title,url,description,genre) VALUES ('#{params['title']}','#{params['url']}', '#{params['description']}', '#{params['genre']}')"
 
   run_sql(sql)
   redirect to('/')
 end
 
 post '/movies/:id/delete' do
-  sql = "DELETE FROM movies WHERE id = #{params[:id]}"
+  sql = "DELETE FROM videos WHERE id = #{params[:id]}"
   run_sql(sql)
   redirect to('/')
 end

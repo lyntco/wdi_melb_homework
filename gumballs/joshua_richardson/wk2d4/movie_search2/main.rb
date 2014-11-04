@@ -3,12 +3,12 @@ require "pry"
 require 'httparty'
 
 get '/' do
-  erb :index
+  erb :form
 end
 
-get '/search' do
-    erb :form
-end
+# get '/search' do
+#     erb :form
+# end
 
 get '/search_list' do
 

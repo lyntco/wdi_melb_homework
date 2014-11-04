@@ -1,0 +1,16 @@
+<h1>Home</h1>
+
+<p><%= link_to 'new book', new_book_path %></p>
+
+<p><%= link_to 'new recipe', new_recipe_path %></p>
+
+<h2>Current Books:</h2>
+
+<% @books.each do |book| %>
+<div>
+  <h3><%= link_to "#{book.title}", book_path(book) %></h3>
+  <p><%= link_to "Edit", edit_book_path(book) %><br>
+    <%= link_to 'Delete', book, :method => :delete, :data => { :confirm => 'are you sure?' } %>
+  </p>
+</div>
+<% end %>

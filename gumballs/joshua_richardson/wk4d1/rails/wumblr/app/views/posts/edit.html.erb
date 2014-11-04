@@ -1,0 +1,17 @@
+<%= form_for @post do |f|  %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </p>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </p>
+
+  <button>Go</button>
+<% end %>

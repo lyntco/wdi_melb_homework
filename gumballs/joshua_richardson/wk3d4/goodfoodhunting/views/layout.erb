@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Good Food Hunting</title>
+</head>
+<body>
+<ul>
+  <li><a href="/">ALL</a></li>
+  <% @meal_types = MealType.all %>
+  <% @meal_types.each do |meal_type| %>
+  <li><a href="/?meal_type_id=<%= meal_type.id %>><%= meal_type.name %></a></li>
+  <% end %>
+</ul>
+  <%= yield %>
+
+  <footer>&copy; Josh </footer>
+</body>
+</html>

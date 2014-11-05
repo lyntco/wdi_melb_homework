@@ -1,0 +1,9 @@
+<h1>All Books</h1>
+<% @books.each do |book| %>
+<p><%= book.title %></p>
+<img src="<%= book.image_url %>" alt="">
+<p>By <%= book.chef %></p>
+<p><%= link_to 'show', book %></p>
+<p><span class="glyphicon glyphicon-search"></span><%= link_to 'edit', edit_book_path(book) %></p>
+<p><%= link_to 'delete', book, :method => :delete, :data => { :confirm => 'are you sure you want to delete this book?' } %></p>
+<% end %>

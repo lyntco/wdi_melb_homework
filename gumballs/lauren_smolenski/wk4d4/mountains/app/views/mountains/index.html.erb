@@ -1,0 +1,13 @@
+<h1>Home</h1>
+
+<a href="/mountains/new">Add</a>
+
+
+<div class="gallery">
+  <% @mountains.each do |mountain| %>
+  <div class="item">
+    <p><%= link_to mountain.name, "/mountains/#{mountain.id}" %></p>
+    <img src="<%= mountain.image_url %>" alt="">
+  </div>
+  <% end %>
+</div>

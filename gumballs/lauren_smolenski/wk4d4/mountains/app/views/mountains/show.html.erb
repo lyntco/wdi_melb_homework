@@ -1,0 +1,15 @@
+<h2><%= @mountain.name %></h2>
+
+<a href="/mountains">Home</a>
+
+<img src="<%= @mountain.image_url %>" alt="">
+
+<p>Elevation (meters): <%= @mountain.elevation_meters %></p>
+
+<p>Country: <%= @mountain.country %></p>
+
+<p>Latitude: <%= @mountain.latitude %></p>
+
+<p>Longitude: <%= @mountain.longitude %></p>
+
+<%= link_to 'edit', "/mountains/#{@mountain.id}/edit" %>

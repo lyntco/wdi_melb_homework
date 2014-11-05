@@ -118,7 +118,7 @@ get '/cloud' do
         show_route = (s_values.slice(s_start..4) + n_values.slice(4..n_end)).uniq
         # s up, n down
       elsif (s_start - 4) < 0 && (4 - n_end) > 0
-        show_route = ((s_values.slice(s_start..4) + n_values.slice(n_end..4).reverse)).uniq
+        show_route = s_values.slice(s_start..4) + n_values.slice(n_end..4).reverse.drop(1)
         # s down, n up
       elsif (s_start - 4) > 0 && (4 - n_end) < 0
         show_route = n_values.slice(4..n_end).unshift(s_values.slice(4..s_start).reverse).flatten.uniq
@@ -145,7 +145,7 @@ get '/cloud' do
   end  
 
   if result >= 1
-    @stop_num = "There are #{result} stops from #{starting_stop.upcase} to #{ending_stop.upcase}." 
+    @stop_num = "There are #{result+1} stops from #{starting_stop.upcase} to #{ending_stop.upcase}." 
   elsif result == 1
     @stop_num = "There is #{result} stop from #{starting_stop.upcase} to #{ending_stop.upcase}."
   elsif result == 0
@@ -154,6 +154,7 @@ get '/cloud' do
 
   @journey = show_route.each {|name| print name.upcase + " "} 
   
+
 
   erb :test
 end

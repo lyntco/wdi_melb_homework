@@ -1,5 +1,3 @@
-document.getElementById("mtaButton").addEventListener("click", getTrip, false);
-
 function getTrip() {
 
   var startStation = document.getElementById('start-station').value;
@@ -15,7 +13,7 @@ function getTrip() {
   // Define on and off
   var lineOn = "lineN";
   var stopOn = startStation
-  var lineOff = "lineL";
+  var lineOff = "lineN";
   var stopOff = stopStation;
 
   // Works out stop on and off index
@@ -122,10 +120,17 @@ function getTrip() {
 
     }
 
-    console.log(journey);
-    document.getElementById("output").innerHTML = journey
-
   };
+
+  return document.getElementById("output").innerHTML = journey
 
 }; // end function getTrip
 
+
+  // button function
+  var button = document.getElementById('mtaButton');
+  button.addEventListener('click', function() {
+
+  var trip = getTrip()
+
+});

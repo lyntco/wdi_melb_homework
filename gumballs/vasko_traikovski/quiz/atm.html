@@ -1,0 +1,318 @@
+<style media          ="screen">
+table {
+  border-spacing  : 0;
+  color           : #4a4a4d;
+  font            : 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-radius   : 2px;
+  overflow         :hidden;
+  border-top  : 1px solid #cecfd5;
+        border-collapse:collapse;
+
+
+}
+th,
+td {
+  padding        : 10px 15px;
+  vertical-align : middle;
+}
+thead {
+  background     : #395870;
+  color          : #fff;
+  font-size      : 11px;
+  text-transform : uppercase;
+}
+/*th:first-child {
+  text-align : left;
+}*/
+
+tbody tr:nth-child(even) {
+  background : #f0f0f2;
+}
+td {
+  border : 1px solid #cecfd5;
+/*  border-bottom : 1px solid #cecfd5;
+  border-right   : 1px solid #cecfd5;*/
+}
+td:first-child {
+/*  border-left    : 1px solid #cecfd5;
+*/}
+
+tfoot {
+  text-align: right;
+}
+tfoot tr:last-child {
+  background: #f0f0f2;
+  color: #395870;
+  font-weight: bold;
+}
+button,input{
+    font-size      : 11px;
+  width:6em;
+  height:2em;
+}
+
+.inline{display:inline-block;}
+</style>
+
+
+<div class="inline">
+<h1>Savings</h1>
+  <table>
+  <thead>
+    <tr>
+      <th>Deposit</th>
+      <th>Withdrawal</th>
+      <th>Balance</th>
+    </tr>
+  </thead>
+  <tbody id ="savingsBody" >
+  </tbody>
+  <tfoot>
+    <tr>
+        <td><input id="savingsDeposit"  type="button" value="Deposit" /></td>
+        <td><input id="savingsWithdraw" type="button" value="Withdraw" /></td>
+        <td>$<input id="savingsAmount"   type="text"  placeholder="100" value="100" /></td>
+
+    </tr>
+    <tr>
+      <td id="" colspan     = "2">Total</td>
+      <td id="savingsBalance">0</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+
+
+<div  class="inline">
+<h1>Cheque</h1>
+  <table>
+  <thead>
+    <tr>
+      <th>Deposit</th>
+      <th>Withdrawal</th>
+      <th>Balance</th>
+    </tr>
+  </thead>
+  <tbody id ="chequeBody" >
+  </tbody>
+  <tfoot>
+      <tr>
+        <td><input id="chequeDeposit"  type="button" value="Deposit" /></td>
+        <td><input id="chequeWithdraw" type="button" value="Withdraw" /></td>
+        <td>$<input id="chequeAmount"   type="text"  placeholder="100" value="100" /></td>
+    </tr>
+    <tr>
+      <td colspan     = "2">Total</td>
+      <td id="chequeBalance">0</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+
+
+<br>
+<label id="message"></label>
+
+
+<script>
+$tag       = function(tg){return document.getElementsByTagName(tg)}
+$id        = function(i){return document.getElementById(i) }
+cc         = function(a){console.log(a)}
+create     = function(tg,txt){
+  var el   = document.createElement(tg)
+  el.appendChild (document.createTextNode (txt));
+  return el
+}
+
+function addEl(parent,tg,txt){
+  parent.appendChild( create(tg,txt) )
+}
+
+// Withdraw(25,"cheque")
+// Withdraw(26,"cheque")
+// Withdraw(27,"cheque")
+// Withdraw(25,"cheque")
+// Deposit(25,"cheque")
+// Deposit(25,"cheque")
+// Deposit(25,"cheque")
+// Deposit(25,"cheque")
+// Deposit(25,"cheque")
+// Withdraw(500,"cheque")
+
+
+// Withdraw(25,"savings")
+// Withdraw(25,"savings")
+// Withdraw(25,"savings")
+// Withdraw(25,"savings")
+// Deposit(25,"savings")
+// Deposit(25,"savings")
+// Deposit(25,"savings")
+// Deposit(25,"savings")
+// Deposit(25,"savings")
+
+//DT
+// var balance = 0
+
+// var Deposit = function (amount) {
+//   balance = balance + amount;
+// }
+// var Withdraw = function(amount) {
+//   if (amount <= balance) {
+//     balance = -amount;
+//     return true
+//   }else{
+//     return false;
+//   }
+// }
+
+// var savingsAccount = {
+
+//   balance: 0,
+
+//   Deposit: function(amount) {
+//     this.balance = this.balance + amount;
+
+//   },
+
+// ok for simple stuff, use object factory for complex
+// mark 1
+  // Withdraw: function(amount) {
+  //   if (amount <= this.balance){
+  //     this.balance = this.balance - amount;
+  //     return true
+  //   }else{
+  //     return false;
+  //   }
+  // }
+
+
+
+// }
+//mark 2
+// var renderBalance = function(){
+//   var chequeBalance = document.getElementById('balance1');
+//   chequeBalance.innerHTML = '$'
+// }
+
+
+// var savingsAccount = createAccount(500)
+// var chequeAccount = createAccount(500)
+// var chequeBalance = document.getElementById( 'balance1' );
+// var chequeDepositBtn = document.getElementById( 'chequeDeposit' );
+
+// chequeDepositBtn.addEventListener('click', function(){
+//   var amount = parseInt( document.getElementById('chequeAmount').value );
+//   chequeAccount.Deposit(amount);
+//   chequeBalance.innerHTML = '$' + chequeAccount.balance;
+// })
+
+
+var createAccount = function(initialBalance, type) {
+
+    var account = {
+
+        balance: initialBalance,
+        resetWarning:function(color,msg){
+          document.body.style.color=color
+          $id("message").innerHTML=msg
+        },
+        Deposit:     function(amount,accountType) {
+          var Account = (accountType === "savingsDeposit")?"savingsBody":"chequeBody";
+          this.resetWarning("black","");
+          this.balance = this.balance + amount;
+          updateHistory(amount, 0, this.balance, Account)//Account=savingsBody:chequeBody
+        },
+
+        Withdraw:    function(amount, accountType) { //accountType = "savingsWithdraw ","chequeWithdraw "
+          this.resetWarning("black","");
+          if (amount <= this.balance) {
+            cc('withdraw: '+accountType)
+            this.balance = this.balance - amount;
+            return true
+          } else {
+            cc('withdraw: else')
+            var otherAccount = (accountType === "savingsWithdraw")?"chequeAccount":"savingsAccount";
+            var shortfall = amount - this.balance
+            if ( shortfall < app[otherAccount]['balance']) {
+              app[otherAccount]['Withdraw'](shortfall);
+              this.balance = 0
+            }else{
+              this.resetWarning("red","Not enough Funds")
+            }
+            return false;
+          }
+        } //Withdraw
+
+      } //account
+    return account
+  } //createAccount
+
+
+
+
+// mark 3
+var app = {
+
+  init: function(){
+    this.chequeAccount  = createAccount(150);
+    this.savingsAccount = createAccount(200);
+    this.renderBalance();
+
+// var chequeType = ["cheque", "cheque",  "savings","savings",]
+// var depositType = ["Deposit","Withdraw","Deposit","Withdraw"]
+// for (var i = 0; i < chequeType.length; i++) {
+//     var ch=chequeType[i]
+//     var dp=depositType[i]
+//     cc(ch+dp+" : "+ch+'Amount')
+//     $id(ch+dp).addEventListener('click', function() {
+//         var amount = parseInt( $id(ch+'Amount').value )||0;
+//         app[ch+'Account'][dp]( amount, this.id );
+//         app.renderBalance();
+//       });
+// };
+
+
+
+    $id('chequeDeposit').addEventListener('click', function() {
+        var amount = parseInt( $id('chequeAmount').value )||0;
+        app['chequeAccount']['Deposit']( amount, this.id );
+        app.renderBalance();
+      });
+    $id('chequeWithdraw').addEventListener('click', function() {
+        var amount = parseInt( $id('chequeAmount').value )||0;
+        app['chequeAccount']['Withdraw']( amount, this.id );
+        app.renderBalance();
+      });
+//---------------------------------------------------------------------
+    $id('savingsDeposit').addEventListener('click', function() {
+        var amount = parseInt( $id('savingsAmount').value )||0;
+        app['savingsAccount']['Deposit']( amount, this.id );
+        app.renderBalance();
+      });
+    $id('savingsWithdraw').addEventListener('click', function() {
+        var amount = parseInt( $id('savingsAmount').value )||0;
+        app['savingsAccount']['Withdraw']( amount, this.id );
+        app.renderBalance();
+      });
+
+  },//init
+
+  renderBalance: function(type){
+    $id( "cheque"+"Balance" ).innerHTML = '$' + this.chequeAccount.balance;
+    $id( "savings"+"Balance" ).innerHTML = '$' + this.savingsAccount.balance;
+  }
+
+}//app
+
+
+function updateHistory(deposit, withdrawal, balance, id){
+  var tr = document.createElement("tr")
+  addEl( tr, "td", deposit )
+  addEl( tr, "td", withdrawal )
+  addEl( tr, "td", balance )
+  $id(id).appendChild( tr )
+  $id("message").innerHTML += $tag("tbody")[0].length
+}
+
+app.init();
+</script>

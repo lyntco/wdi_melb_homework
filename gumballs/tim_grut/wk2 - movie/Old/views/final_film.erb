@@ -1,0 +1,19 @@
+<html>
+
+<head>
+  <title></title>
+</head>
+<body>
+  <h1><%= @title %></h1>
+
+<img src="<%= @poster %>">
+<a href="/"><button>Return to Search</button></a>
+<% @display.each do |key, value| %>
+<p><%= key %> : <%= value %></p>
+ <% end %>
+
+ <%= @display %>
+
+
+</body>
+</html>

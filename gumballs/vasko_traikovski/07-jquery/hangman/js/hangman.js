@@ -1,26 +1,26 @@
 cc=function(a){console.log(a)}
 
 var word = {
-  secretWord:"",
-  hangWord:"",
-  wordList:['pudding','cake','biscuit','yoghurt',"fruit"],
-  setSecretWord: function(){ //reset
-    player.MAX_GUESSES=8
-    player.MAX_GUESSES= 8,
-    player.guessesLeft= 8,
-    player.guessedLetters= []
+  secretWord: "",
+  hangWord: "",
+  wordList: ['pudding', 'cake', 'biscuit', 'yoghurt', "fruit"],
+  setSecretWord: function() { //reset
+    player.MAX_GUESSES = 8
+    player.MAX_GUESSES = 8,
+    player.guessesLeft = 8,
+    player.guessedLetters = []
     var list = word.wordList
-    word.secretWord = list[ _.random( list.length-1) ];
+    word.secretWord = list[_.random(list.length - 1)];
     word.hangWord = word.secretWord.replace(/[a-zA-Z]/g, "_")
-    cc( word.secretWord )
+    cc(word.secretWord)
     game.updateDisplay()
   },
 
-  hyphenize: function(wordss,guesses){
-    var a=wordss.split("")
-    var str=""
+  hyphenize: function(wordss, guesses) {
+    var a = wordss.split("")
+    var str = ""
     for (var i = 0; i < a.length; i++) {
-      if( _.contains(   guesses, a[i] ) )
+      if (_.contains(guesses, a[i]))
         str = str + a[i]
       else
         str = str + "_"
@@ -28,21 +28,24 @@ var word = {
     return str
   },
 
-  checkLetters: function(){//lettersUsed
-    if(player.guessesLeft<=0){
+  checkLetters: function() { //lettersUsed
+    if (player.guessesLeft < 1) {
       game.updateDisplay();
       return null
+    } else {
+      cc("aaaaa")
+      var guess = $("#letterField").val()
+      $("#letterField").val("")
+      player.guessedLetters.push(guess);
+      player.guessesLeft -= 1;
+      var has = _.contains(word.secretWord, guess);
+      if (has)
+        cc("has letter")
+      game.updateDisplay()
     }
-    var guess = $("#letterField").val()
-    $("#letterField").val("")
-    player.guessedLetters.push(guess);
-    player.guessesLeft -= 1;
-    var has = _.contains( word.secretWord,  guess );
-    if (has){ cc("has letter")  }
-    game.updateDisplay()
 
-  }//checkLetters
-};//word
+  } //checkLetters
+}; //word
 
 var player = {
   MAX_GUESSES: 8,
@@ -59,6 +62,7 @@ var player = {
 var game = {
   resetGame: function() {
     $("#letterField").val("")
+    $("#letterField").focus()
     word.setSecretWord()
     cc('secretWord: '+ word.secretWord)
   },

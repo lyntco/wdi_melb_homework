@@ -10,9 +10,7 @@ function catWalk() {
       movePixels = -10;
   } else if (currentLeft <= 0) {
       movePixels = 10;
-  } else {
-
-  }
+  };
 };
 
 function startCatWalk() {

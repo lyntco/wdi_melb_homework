@@ -1,0 +1,12 @@
+<h1>Books List</h1>
+
+
+
+<% @books.each do |book| %>
+<p><%= link_to book.title, book_path(book.id) %></p>
+<% end %>
+
+<div class="row">
+  <div class="col-md-6"><%= link_to 'new book', new_book_path, class: 'btn btn-primary' %></div>
+  <div class="col-md-6"><%= link_to 'new recipe', new_recipe_path, class: 'btn btn-primary' %></div>
+</div>

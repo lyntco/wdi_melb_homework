@@ -1,0 +1,29 @@
+
+<h2>Show details</h2>
+
+<% @rows.each do |row| %>
+
+<p><%= row['title'] %></p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/<%= row['url'].gsub('https://www.youtube.com/watch?v=', "") %>" frameborder="0" allowfullscreen></iframe>
+
+<form action="/videos/<%= row['id'] %>/delete" method="post">
+
+<button>Delete</button>
+</form>
+
+<form action="/videos/<%= row['id'] %>/edit" method="get">
+
+<button>Edit</button>
+</form>
+
+
+<% end %>
+
+<script type="text/javascript">
+    function clicked(button) {
+       if (confirm('Are you sure?')) {
+           yourformelement.submit(button);
+       } else {
+           return false;
+       }
+    }

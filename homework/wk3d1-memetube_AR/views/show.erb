@@ -1,0 +1,15 @@
+
+<h2>Details</h2>
+
+
+<p><%= @videos.title %></p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/<%= @videos['url'].gsub('https://www.youtube.com/watch?v=', "") %>" frameborder="0" allowfullscreen></iframe>
+
+<form action="/videos/<%= @videos['id'] %>/delete" method="post">
+
+<button>Delete</button>
+</form>
+
+<a href="/videos/<%= @videos['id'] %>/edit">Edit</a>
+

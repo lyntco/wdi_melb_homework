@@ -1,0 +1,24 @@
+<h1>Edit Book</h1>
+
+<%= form_for @book do |f| %>
+
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :cuisine %>
+  <%= f.text_field :cuisine %>
+</p>
+<p>
+  <%= f.label :chef %>
+  <%= f.text_field :chef %>
+</p>
+<p>
+  <%= f.label :image_url, 'image url' %>
+  <%= f.text_field :image_url %>
+</p>
+
+<button>Edit book</button>
+
+<% end %>

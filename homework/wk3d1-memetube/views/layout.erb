@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memetube</title>
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <div class="container">
+<a href="/"><h1>Welcome to <span>MemeTube</span></h1></a>
+
+<a href="/videos/new">Add a video</a>
+
+<div class="nav">
+    <ul>
+      <% @genre.each do |row| %> <!-- Coming from before method -->
+      <li><a href="/genre/<%= row['genre'] %>"><%= row['genre'] %></a></li>
+      <% end %>
+
+    </ul>
+</div>
+    <%= yield %>
+
+  <footer>&copy; memedream</footer>
+</div>
+</body>
+</html>

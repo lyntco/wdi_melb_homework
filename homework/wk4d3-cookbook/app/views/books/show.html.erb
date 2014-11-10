@@ -1,0 +1,18 @@
+<h1><%= @book.title %></h1>
+
+<p><%= @book.cuisine %></p>
+<p><%= @book.chef %></p>
+<p><%= @book.image_url %></p>
+
+<p><%= link_to 'edit', edit_book_path(@book) %></p>
+
+<% @recipes.each do |recipe| %>
+  <p><%= recipe.name %></p>
+  <p><%= link_to 'delete', recipe, :method => :delete, :data => {:confirm => 'Are you sure?'} %></p>
+  <p><%= link_to 'show', recipe %></p>
+  <p><%= link_to 'edit', edit_recipe_path(recipe) %></p>
+<% end %>
+
+<p>
+<%= link_to 'Add recipe', new_recipe_path %>
+</p>

@@ -1,0 +1,9 @@
+<h1>Movies list</h1>
+
+<% @movies.each do |movie| %>
+
+<p><%= movie.poster_url %></p>
+
+<% end %>
+
+<%= link_to 'new movie poster', new_movie_path  %>

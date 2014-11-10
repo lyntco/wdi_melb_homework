@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MTA javascript</title>
+  <style>
+  p{ text-indent: 5em;}
+  </style>
+</head>
+<body>
+<h1>Activity</h1>
+
+<h3>Create a program that models a simple subway system.
+</h3>
+The program takes the line and stop that a user is getting on at and the line and stop that user is getting off at and prints the total number of stops for the trip.
+<h3>There are 3 subway lines:</h3>
+The N line has the following stops: Times Square, 34th, 28th, 23rd, Union Square, and 8th
+</p><p>
+The L line has the following stops: 8th, 6th, Union Square, 3rd, and 1st
+</p><p>
+The 6 line has the following stops: Grand Central, 33rd, 28th, 23rd, Union Square, and Astor Place.</p><p>
+
+All 3 subway lines intersect at Union Square, but there are no other intersection points. (For example, this means the 28th stop on the N line is different than the 28th street stop on the 6 line, so you'll have to differentiate this when you name your stops in the arrays.)</p><p>
+
+<h3>Psduo Code</h3>
+
+set n  to a list of stations</p><p>
+set l  to a list of stations</p><p>
+set 6  to a list of stations</p><p>
+
+set lines to n, l, 6</p><p>
+
+input start line</p><p>
+input start station</p><p>
+input stop line</p><p>
+input stop station</p><p>
+
+if start line == stop line</p><p>
+  get index position of start station in start line</p><p>
+  get index position of stop  stations in line</p><p>
+
+  if start station index > stop station index</p><p>
+    print range between those index in reverse</p><p>
+  else</p><p>
+    print range between those index</p><p>
+
+
+
+
+<script>
+function cc(a){
+  console.log(a)
+}
+var line_N = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
+    line_L = ["8th", "6th", "Union Square", "3rd", "1st"],
+    line_6 = ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"],
+    lines  = {
+      line_N:line_N,
+      line_L:line_L,
+      line_6:line_6
+    },
+    station0 = "23rd",
+    station1 = "Grand Central",
+    line0    = "line_N",
+    line1    = "line_6"
+for(line in lines)
+  cc(lines[line])
+
+startLine = lines[line0]
+startStation = startLine.indexOf(station0)
+  cc("startStation: " + station0 +" of "+ line0.replace("_"," "))
+
+stopLine    = lines[line1]
+stopStation = stopLine.indexOf(station1)
+cc("stopStation: "+station1 )
+
+var sameLine = (startLine === stopLine)
+if (sameLine){
+  cc("SAME LINE!!")
+  trip = startLine
+}
+if (sameLine && (startStation > stopStation) ){
+  console.log( trip.splice( stopStation, startStation ).reverse() )
+}else if (sameLine && (startStation < stopStation) ){
+  console.log( trip.splice(startStation, stopStation).reverse() )
+}else{
+  trip1 = startLine.splice( startStation,startLine.indexOf("Union Square")-startStation+1 )
+  trip2 = stopLine.splice( stopStation,stopLine.indexOf("Union Square")-stopStation).reverse()
+  cc(trip1.concat(trip2))
+}
+
+</script>
+
+</body>
+</html>

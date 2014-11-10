@@ -1,0 +1,18 @@
+<script>
+function w(a){document.write(a )}
+  var eatPie = function(){
+    console.log(this)
+  }
+
+  var ga = {
+    freeLunch: function(){
+      console.log(this)
+    }
+  }
+
+ga
+ga.freeLunch
+ga.freeLunch();//this = object.freeLunch
+var myOwnLunch = ga.freeLunch;
+myOwnLunch()//this=window
+</script>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<h1>Exercises: Objects</h1>
+<h2>
+The Recipe Card
+</h2>
+<p>
+<h4>Never forget another recipe!
+</h4>
+
+</p><p>
+Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).
+</p><p>
+On separate lines (one console.log statement for each), log the recipe information so it looks like:
+</p><p>
+<ul>
+  <li>Mole</li>
+  <li>Serves: 2</li>
+  <li>Ingredients:</li>
+  <li>cinnamon</li>
+  <li>cumin</li>
+  <li>cocoa</li>
+</ul>
+<h2>The Reading List</h2>
+</p><p>
+<h4>Keep track of which books you read and which books you want to read!</h4>
+</p><p>
+Create an array of objects, where each object describes a book and has properties for the title (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet).
+</p><p>
+Iterate through the array of books. For each book, log the book title and book author like so: "The Hobbit by J.R.R. Tolkien". Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
+</p><p>
+<h2>The Movie Database</h2>
+</p><p>
+<h4>It's like IMDB, but much much smaller!</h4>
+</p><p>
+Create an object to store the following information about your favorite movie: title (a string), duration (a number), and stars (an array of strings).
+</p><p>
+Create a function to print out the movie information like so: "Puff the Magic Dragon lasts for 30 minutes. Stars: Puff, Jackie, Living Sneezes."
+</p>
+<script>
+
+recipe={
+  title:"Mole",
+  serves:2,
+  ingredients:["cinnamon","cumin","cocoa"]
+}
+for (var i in recipe){
+  console.log(i + ":"+ recipe[i])
+}
+
+
+
+
+
+readingList=[
+  { title:       "The Hobbit",
+    author:      "J.R.R. Tolkien",
+    alreadyRead: true
+  },
+  { title:       "The Wizard",
+    author:      "DT",
+    alreadyRead: false
+  },
+  { title:       "The Return of the King",
+    author:      "J.R.R. Tolkien",
+    alreadyRead: true
+  }
+]
+for (var i = 0; i < readingList.length; i++) {
+  book = readingList[i]
+  read_title_author = "read "+book.title+" by "+book.author +"."
+  if (book.alreadyRead){
+    console.log( "You already "+read_title_author )
+  }else{
+    console.log( "You still need to "+read_title_author )
+  }
+}
+
+
+
+
+
+movie = {
+   title: "Jaws",
+   duration: 30,
+   stars: ["jack","jill"]
+}
+function show(movie){
+  console.log(
+  movie.title    +" lasts for "      +
+  movie.duration +" minutes. gsdfgsdfgl;ksdg;Stars: "+
+  movie.stars )
+}
+show(movie)
+</script>
+</body>
+</html>

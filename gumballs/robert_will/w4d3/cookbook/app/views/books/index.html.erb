@@ -1,0 +1,13 @@
+<h2>Current Books</h2>
+<p><%= link_to 'new book', new_book_path %></p>
+
+<% @books.each do |book| %>
+  <h3><%= book.title %></h3>
+  <p><%= book.cuisine %></p>
+  <img src="<%= book.image_url %>">
+  <p><%= link_to 'delete', book, :method => :delete, :data => {:confirm => 'Are you sure?'} %></p>
+  <p><%= link_to 'open', book %></p>
+  <p><%= link_to 'edit', edit_book_path(book) %></p>
+
+<% end %>
+<p><%= link_to 'new book', new_book_path %></p>

@@ -1,0 +1,17 @@
+<%= form_for @book do |f| %>
+
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => 'form-control', :placeholder => 'your title' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cuisine %>
+    <%= f.text_field :cuisine, :class => 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url, :class => 'form-control' %>
+  </div>
+<button class="btn btn-warning">Save Book!</button>
+
+<% end %>

@@ -1,0 +1,6 @@
+<h2><%= @mountain.name %></h2>
+<p>Height:<%= @mountain.height %></p>
+<div class='pic'><img src="<%= @mountain.image_url %>"></div>
+
+<%= link_to 'edit', "/mountains/#{@mountain.id}/edit" %>
+<%= link_to 'delete', "/mountains/#{@mountain.id}/delete" %>

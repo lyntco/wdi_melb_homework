@@ -1,0 +1,316 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"bo",
+				"border-top"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"head",
+				"header	Tag"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"me",
+				"meal_type"
+			],
+			[
+				"new",
+				"new_video"
+			],
+			[
+				"arr",
+				"array_options"
+			],
+			[
+				"ar",
+				"array_options"
+			],
+			[
+				"res",
+				"results"
+			],
+			[
+				"par",
+				"params"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 243.0,
+		"selected_items":
+		[
+			[
+				"Inst",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"Package Control",
+			"Package Control: Install Package",
+			"package control",
+			"Colorsublime",
+			"\"Package Control: Install Package\"",
+			"Package Control: Install Package",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"Colorsublime",
+			"\"Package Control: Install Package\"",
+			"Package Control: Install Package",
+			"import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/robert/Documents/w3/d1/goodfoodhunting/main.rb",
+		"/home/robert/Documents/w3/d1/goodfoodhunting/views/edit.erb",
+		"/home/robert/Documents/w3/d1/goodfoodhunting/views/new.erb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w2d5/querystring/main.rb",
+		"/home/robert/Documents/w3/d3/gfh_active_record/main.rb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetube/public/stylesheets/main.css",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetube/views/index.erb",
+		"/home/robert/Documents/w3/d1/goodfoodhunting/views/layout.erb",
+		"/home/robert/Documents/w3/d1/goodfoodhunting/public/stylesheets/main.css",
+		"/home/robert/Documents/w3/d1/goodfoodhunting/views/index.erb",
+		"/home/robert/Documents/w3/d1/goodfoodhunting/views/show.erb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetube/views/layout.erb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetube/public/ALBAM___.TTF",
+		"/home/robert/Documents/w3/d3/elevator.rb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetube/views/edit.erb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetube/views/show.erb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetube/views/new.erb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetube/main.rb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetube/memetube.sql",
+		"/home/robert/Documents/w3/d2/anagram_detector.rb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetude/main.rb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w3d1/memetude/memetude.sql",
+		"/home/robert/.bash_aliases",
+		"/home/robert/Documents/w3/d1/goodfoodhunting/goodfoodhunting.sql",
+		"/home/robert/.config/sublime-text-3/Packages/User/Colorsublime.sublime-settings",
+		"/home/robert/Documents/w3/d1/goodfoodhunting/views/goodfoodhunting.sql",
+		"/home/robert/Documents/w3/d1/sql_intro/student.sql",
+		"/home/robert/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/robert/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/robert/bash.rc",
+		"/home/robert/Documents/w2/d5/MTA/main.rb",
+		"/home/robert/Documents/w2/d5/MTA/views/routes.erb",
+		"/home/robert/Documents/w2/d5/MTA/views/layout.erb",
+		"/home/robert/Documents/w2/d5/MTA/views/index.erb",
+		"/home/robert/Documents/w3/d1/grade_school.rb",
+		"/home/robert/Documents/w2/d5/robot.rb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w1d4/rental_app/main.rb",
+		"/home/robert/Documents/Homework/wdi_melb_homework/gumballs/robert_will/w1d4/rental_app/building.rb",
+		"/home/robert/Documents/w2/d5/bigbrother/main.rb"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"get '/new",
+			"new",
+			"row",
+			"binding",
+			"end",
+			"result",
+			"out",
+			"row",
+			".db"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "main.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

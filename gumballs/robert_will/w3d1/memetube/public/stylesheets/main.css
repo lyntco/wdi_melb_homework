@@ -26,11 +26,6 @@ body {
 .vids {
   display: inline-block;
   width: 32%;
-
-}
-
-.vids :hover {
-  background-color: yellow;
 }
 
 li {
@@ -49,5 +44,8 @@ a {
 }
 
 iframe {
-  border-radius: 20px;
+  border-radius: 30px;
 }
+
+/*==================================*/
+

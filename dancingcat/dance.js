@@ -10,8 +10,8 @@ function catWalk() {
   if (currentLeft > (window.innerWidth-img.width)) {
     img.style.left = '0px';
   } else if (currentLeft == 300){
-    img.src = "http://www.gifbin.com/bin/20052777.gif";
     stopCatWalk();
+    img.src = "http://www.gifbin.com/bin/20052777.gif";
     catTimer = window.setInterval(catWalk, 300);
   } else if (currentLeft == 330){
     img.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif";

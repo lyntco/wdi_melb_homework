@@ -1,0 +1,23 @@
+<html>
+
+<head>
+  <title></title>
+</head>
+<body>
+  <h2>Oops. their's more than One film by that name, which one did you want?</h2>
+
+<img src="<%= @poster %>">
+<a href="/"><button>Return to Search</button></a>
+<% @display.each do |movie| %>
+<h2><a href="/final_film/<%= @display["Title"] %>"><%=  @display[movie]["Title"]  %></a></h2>
+<% #:nearly_link = @display[counter]["imdbID"]  %>
+
+
+<% counter+=1 %>
+ <% end %>
+
+<!--  <%= @display %>
+ -->
+
+</body>
+</html>

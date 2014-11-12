@@ -1,0 +1,62 @@
+<h1>Search OMDB</h1>
+
+<input type="text" id="search-input"> <button id="search-button">Search</button>
+
+<div id="output"></div>
+
+<script type="text/template" id="movie-template">
+  <h2>{{ title }}</h2>
+  <p>{{ year }}</p>
+  <p>{{ plot }}</p>
+</script>
+
+<script>
+
+  $('#search-button').on('click', function() {
+
+    _.templateSettings = {
+      interpolate: /\{\{(.+?)\}\}/g
+    };
+
+    var $search = $('#search-input').val();
+
+    $.ajax('http://www.omdbapi.com/?t=' + $search).done(function(data) {
+
+      var showMovie = function(data) {
+
+      // $('#output').append('<p><h2>' + 'Result: ' + data.Title + '</h2> ' + data.Year + data.Description + data.Plot + '</p>');
+
+      // var templateStr = "<p> Title: {{ title }} Year: {{ year }}</p>";
+      // var templateFunc = _.template(templateStr);
+      // // Could be done like this:
+      // // var template = _.template("<p> Title: {{ title }}</p>");
+      // var htmlOutput = templateFunc({ title: data.Title, year: data.Year });
+
+      var templateFunc = _.template($('#movie-template').html());
+      var htmlOutput = templateFunc({
+        title: data.Title,
+        year: data.Year,
+        plot: data.Plot
+      });
+
+      $('#output').append(htmlOutput);
+
+      }
+
+      var options = {
+        url: 'http://www.omdbapi.com/?t=' + $search,
+        type: 'GET',
+        dataType: 'json'
+      }
+
+      $.ajax(options).done(showMovie);
+
+      // $("<p></p>").text("Text.");
+      // var title = $('p').append(result.Title);
+      // var year = $('p').append(result.Year);
+
+    });
+  });
+
+
+</script>

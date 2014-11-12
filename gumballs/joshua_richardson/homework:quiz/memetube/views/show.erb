@@ -1,0 +1,12 @@
+<h2>show details</h2>
+
+<div class="videos">
+    <% @rows.each do |row| %></p>
+  <%= row["title"] %><br><iframe width="560" height="315" src="http://<%= row['url'] %>"></iframe></p>
+  <form action="/movies/<%= row['id'] %>/delete" method="post">
+    <button>Delete</button>
+  </form>
+
+  <a href="/movies/<%= row['id'] %>/edit">EDIT</a>
+  <% end %>
+</div>

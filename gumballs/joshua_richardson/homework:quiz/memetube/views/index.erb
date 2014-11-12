@@ -1,0 +1,17 @@
+<h1>MemeTube</h1>
+
+
+<div class="videos">
+
+ <a href="/">All</a>
+      <% @genres.each do |row| %>
+        <a href="/genre/<%= row['genre'] %>"><%= row['genre'] %></a>
+      <% end %>
+
+<% @rows.each do |row| %>
+
+  <a href="/movies/<%= row['id'] %>"><%= row['title'] %>
+  <%= row['id'] %></a><br>
+  <iframe width="450" height="250" src="http://<%= row['url'] %>"></iframe>
+  <% end %>
+</div>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HW 2</title>
+	
+</head>
+<body>
+	
+	<h1>My Book List</h1>
+
+
+
+</body>
+
+<script>
+	var books = [
+  {title: 'The Design of EveryDay Things',
+   author: 'Don Norman',
+   alreadyRead: false
+  },
+
+  {title: 'The Most Human Human',
+  author: 'Brian Christian',
+  alreadyRead: true
+  }];
+
+  for (var i=0; i < books.length; i++) {
+  	var book = books[i];
+
+  	var details= document.createTextNode('title: ' + book.title + ', author: ' + book.author);
+  
+  	document.createElement("P").appendChild(details);
+  }
+
+
+</script>
+
+
+</html>

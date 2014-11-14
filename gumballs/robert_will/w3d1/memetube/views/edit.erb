@@ -1,14 +1,14 @@
 <h2>edit videos</h2>
 
-<form action="/videos/<%= @row['id'] %>" method="post">
+<form action="/videos/<%= @video['id'] %>" method="post">
   <label for="">Title</label>
-  <input type="text" name="title" value="<%= @row['title'] %>"><br/>
+  <input type="text" name="title" value="<%= @video['title'] %>" required><br/>
   <label for="">Description</label>
-  <input type="text" name="description" value="<%= @row['description'] %>"><br/>
+  <input type="text" name="description" value="<%= @video['description'] %>" required><br/>
   <label for="">URL</label>
-  <input type="text" name="url" value="<%= @row['url'] %>"><br/>
+  <input type="text" name="url" value="<%= @video['url'] %>" required><br/>
   <label for="">Genre Type</label>
-  <input type="text" name="genre" value="<%= @row['genre'] %>"><br/>
+  <input type="text" name="genre" value="<%= @video['genre'] %>" required><br/>
 
   <button>Update</button>
 </form>

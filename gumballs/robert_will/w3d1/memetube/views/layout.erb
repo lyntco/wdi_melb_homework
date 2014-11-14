@@ -7,33 +7,23 @@
   <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-
 <div class="container">
+  <h3>Meme-Tube</h3>
   <div class="genres">
     <ul>
     <li><a href="/">All</a></li>
-      <% @genre.each do |row| %>
+      <% @genres.each do |genre| %>
       <li>
-
-
-
-
-        <a href="/?genre=<%= row['genre'] %>"><%= row['genre'] %></a>
-
-
+        <a href="/?genre=<%= genre %>"><%= genre %></a>
       </li>
       <% end %>
     </ul>
+    <ul>
+      <li><a href="/videos/new">Add New</a></li>
+    </ul>
   </div>
-
-
-  <h3>Meme-Tube</h3>
 </div>
-
   <%= yield %>
-
   <footer>&copy; WillRobWillRobRobWill</footer>
-
 </body>
 </html>

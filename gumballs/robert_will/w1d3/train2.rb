@@ -15,7 +15,7 @@ until s_line == "exit"
 			s_line = gets.chomp
 		else
 			if s_line == "n"
-			lines[s_line.to_sym]
+				s_line = lines[:n]
 				s_line_key = :n
 			end
 			if s_line == "l"

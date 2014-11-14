@@ -1,47 +1,63 @@
 require 'sinatra'
+require 'sinatra/reloader'
+require 'active_record'
 require 'pg'
 require 'pry'
 
-before do
-  @genre = run_sql("SELECT DISTINCT genre FROM videos;")
+
+ActiveRecord::Base.establish_connection(
+    :adapter => 'postgresql',
+    :username => 'robert',
+    :database => 'memetube'
+  )
+
+class Videos < ActiveRecord::Base
 end
 
+before do
+  @genres = Videos.pluck(:genre).uniq
+end
 
-
+after do
+  ActiveRecord::Base.connection.close
+end
 
 
 get '/' do
 
-if params[:genre] != nil
-  sql = "SELECT * FROM videos WHERE genre = 'Comedy';"
+  if params[:genre] != nil
+    @videos = Videos.where(:genre => "#{params[:genre]}")
   else
-    sql = "select * from videos;"
-      @rows = run_sql(sql)
+    @videos = Videos.all
   end
   erb :index
 end
 
 get '/videos' do
-  @rows = run_sql("select * from videos;")
+  @videos = Videos.all
   erb :index
 end
 
 post '/videos/:id/delete' do
-  sql = "DELETE FROM videos WHERE id = #{params[:id]}"
-  run_sql(sql)
+  @video = Videos.find(params[:id])
+  @video.destroy
   redirect to("/")
 end
 
 get '/videos/:id/edit' do
-  sql = "SELECT * FROM videos WHERE id = #{params[:id]}"
-  @rows = run_sql(sql)
-  @row = @rows.first
+  @video = Videos.find(params[:id])
   erb :edit
 end
 
 post '/videos/:id' do
-  sql = "UPDATE videos SET title='#{params[:title]}', description='#{params[:description]}', url='#{params[:url]}', genre='#{params[:genre]}' WHERE id = #{params[:id]}"
-  run_sql(sql)
+  @video = Videos.find(params[:id])
+  @video.title = params[:title]
+  @video.url = params[:url]
+  @video.description = params[:description]
+  @video.genre = params[:genre]
+
+  @video.save
+
   redirect to("/videos/#{params[:id]}")
 end
 
@@ -50,20 +66,14 @@ get '/videos/new' do
 end
 
 get '/videos/:id' do
-  sql = "select * from videos where id = #{params[:id]}"
-  @rows = run_sql(sql)
+  @video = Videos.find(params[:id])
   erb :show
 end
 
 post '/videos' do
-  sql = "INSERT INTO videos (title,description,url,genre) VALUES ('#{params['title']}','#{params[:description]}','#{params['url']}','#{params['genre']}')"
-  new_video = run_sql(sql)
+  video = Videos.create(:title => "#{params['title']}", :url => "#{params['url']}", :description => "#{params['description']}", :genre => "#{params['genre']}")
+  redirect to("/")
   redirect to("/")
 end
 
-def  run_sql(sql)
-  db = PG.connect(:dbname => 'memetube')
-  rows = db.exec(sql)
-  db.close
-  rows
-end
+

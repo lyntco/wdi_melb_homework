@@ -1,0 +1,10 @@
+<h1>INDEX</h1>
+
+<form action="/mountains/new">
+  <button>Add New!</button>
+</form>
+
+
+<% @mountains.each do |mountain| %>
+  <p><%= link_to mountain.name, "/mountains/#{mountain.id}" %></p>
+<% end %>

@@ -1,0 +1,42 @@
+<h2>Edit</h2>
+
+<%= form_for @recipe do |f| %>
+
+  <p>
+    <label for="">Book</label>
+    <%= f.collection_select :book_id, @books, :id, :title %>
+  </p>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :meal_type %>
+    <%= f.select :meal_type, Recipe.meal_types %>
+  </p>
+  <p>
+    <%= f.label :cooktime %>
+    <%= f.number_field :cooktime %>
+  </p>
+  <p>
+    <%= f.label :servingsize %>
+    <%= f.number_field :servingsize %>
+  </p>
+  <p>
+    <%= f.label :instructions %>
+    <%= f.text_field :instructions %>
+  </p>
+
+  <p>
+    <%= f.label :ingredients %>
+    <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
+    <%#= f.text_field :ingredient_ids  %>
+  </p>
+
+  <p>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </p>
+<button>Save Recipe!</button>
+
+<% end %>

@@ -1,0 +1,27 @@
+body {
+  background-image: url(img/bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:237% 0%;
+  background-color: #000;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #fff;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 2em;
+  text-align: center;
+}
+
+p.titles {
+  color: #fff;
+}

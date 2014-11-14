@@ -1,0 +1,12 @@
+<h2>show details</h2>
+
+<div class="videos">
+
+  <%= @movie.title %><br><iframe width="560" height="315" src="http://<%= @movie.url %>"></iframe></p>
+  <form action="/movies/<%= @movie.id %>/delete" method="post">
+    <button>Delete</button>
+  </form>
+
+  <a href="/movies/<%= @movie.id %>/edit">EDIT</a>
+
+</div>

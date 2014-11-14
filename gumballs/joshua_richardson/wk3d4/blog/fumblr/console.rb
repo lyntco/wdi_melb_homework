@@ -1,0 +1,23 @@
+require 'pry'
+require 'sinatra'
+require 'active_record'
+
+config = {
+  adapter: 'postgresql',
+  host: 'localhost',
+  database: 'fumblr'
+}
+
+ActiveRecord::Base.establish_connection(config)
+
+class Post < ActiveRecord::Base
+end
+
+get '/' do
+  erb :index
+end
+
+
+
+
+

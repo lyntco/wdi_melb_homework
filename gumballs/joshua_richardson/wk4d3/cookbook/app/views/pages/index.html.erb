@@ -1,0 +1,19 @@
+<h1>Home</h1>
+
+
+<div class="row">
+
+  <div class="col-sm-6">
+  <h2>Current Books:</h2>
+
+  <% @books.each do |book| %>
+  <div>
+    <h3><%= link_to "#{book.title}", book_path(book) %></h3>
+    <p><%= link_to "Edit", edit_book_path(book) %><br>
+      <%= link_to 'Delete', book, :method => :delete, :data => { :confirm => 'are you sure?' } %>
+    </p>
+  </div>
+  </div>
+
+</div>
+<% end %>

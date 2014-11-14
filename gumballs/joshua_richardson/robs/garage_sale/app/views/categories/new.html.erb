@@ -1,0 +1,12 @@
+<h1>Categories#new</h1>
+
+<%= form_for @category do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'example' %>
+  </p>
+
+  <button>Go</button>
+
+<% end %>

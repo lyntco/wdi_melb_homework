@@ -1,0 +1,8 @@
+<h1>MemeTube</h1>
+
+<% @movies.each do |movie| %>
+  <div class="videos">
+    <iframe src="http://<%= movie.url %>"></iframe>
+    <a href="/movies/<%= movie.id %>"><%= movie.title %></a><br>
+  </div>
+<% end %>

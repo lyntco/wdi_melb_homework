@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul class="nav nav-tabs">
+        <li><%= link_to 'new book', new_book_path %></li>
+        <li><%= link_to 'new recipe', new_recipe_path %></li>
+      </ul>
+    </nav>
+
+    <% flash.each do |key, value| %>
+      <div class="alert alert-info" role="alert"><%= value  %></div>
+    <% end %>
+
+    <%= yield %>
+
+  </div>
+
+</body>
+</html>

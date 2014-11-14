@@ -1,0 +1,25 @@
+<h2>edit</h2>
+
+<form action="/dishes/<%= @row.id %>" method="post">
+<label for="">Name</label>
+<input type="text" name="name" value="<%= @row.name %>"><br/>
+<label for="">Image URL</label>
+<input type="text" name="image_url">
+<label for="">Meal Type</label>
+
+<select name="meal_type_id" id="">
+
+  <% @meal_types.each do |meal_type| %>
+  <% if meal_type.id == @dish.meal_type_id %>
+  <option value="<%= meal_type.id %>"><%= meal_type.name %></option>
+  <% else %>
+  <option value="<%= meal_type.id %>"><%= meal_type.name %></option>
+  <% end %>
+  <% end %>
+
+</select>
+
+<input type="text" name="meal_type_id" value="<%= @row.meal_type_id %>"><br/>
+
+<button>Update</button>
+</form>

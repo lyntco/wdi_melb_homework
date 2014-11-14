@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GarageSale</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul>
+  <li><%= link_to 'home', root_path %></li>
+  <li><%= link_to 'products', products_path %></li>
+  <li><%= link_to 'categories', categories_path %></li>
+  <% if logged_in? %>
+    <li><%= link_to 'logout', login_path, :method => :delete, :data => { :confirm => 'are you sue?' } %></li>
+  <% else %>
+    <li><%= link_to 'login', login_path %></li>
+  <% end %>
+  <p></p>
+  <li><%= link_to 'delete account', user_path %></li>
+</ul>
+
+
+<%= yield %>
+
+</body>
+</html>

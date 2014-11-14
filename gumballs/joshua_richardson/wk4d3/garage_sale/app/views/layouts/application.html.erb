@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GarageSale</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul>
+  <li><%= link_to 'home', root_path %></li>
+  <li><%= link_to 'products', products_path %></li>
+
+  <% if logged_in? %>
+  <li><%= link_to 'logout', login_path, :method => :delete, :data => { :confirm => 'Are you sure?' } %></li>
+  <% else %>
+  <li><%= link_to 'login', login_path %></li>
+  <% end %>
+</ul>
+
+<% result = Yummly.search('Onion soup') %>
+<% result.total # returns 43350 %>
+<% result.size # returns 10 %>
+<%= result.collect { |recipe| recipe.name } %>
+
+<%= yield %>
+
+</body>
+</html>

@@ -4,7 +4,7 @@ require 'httparty'
 
 
 get '/' do
-  erb :index
+  erb :form
 end
 
 get '/search' do

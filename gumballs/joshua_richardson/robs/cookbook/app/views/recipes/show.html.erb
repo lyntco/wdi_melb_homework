@@ -1,0 +1,16 @@
+<h1><%= @recipe.name %></h1>
+
+<p><%= @recipe.meal_type %></p>
+<p><%= @recipe.cooktime %> minutes</p>
+<p><%= @recipe.servingsize %> people</p>
+<p><%= @recipe.instructions %></p>
+<h4>Recipes</h4>
+<% @recipe.ingredients.each do |ingredient| %>
+<p><%= ingredient.name %></p>
+<% end %>
+
+<img src="<%= @recipe.image_url %>">
+
+<%= link_to 'delete', @recipe, :method => :delete, :data => {:confirm => 'Are you sure?'} %>
+<%= link_to 'edit', edit_recipe_path(@recipe) %>
+

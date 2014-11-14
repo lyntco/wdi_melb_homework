@@ -1,0 +1,8 @@
+<h1>Mountains</h1>
+
+<% @mountains.each do |mountain| %>
+<p><%= link_to mountain.name, "/mountains/#{mountain.id}/edit" %>
+<form action="/mountains/<%= mountain.id %>/delete" method="delete">
+  <button>Delete</button>
+</form></p>
+<% end %>

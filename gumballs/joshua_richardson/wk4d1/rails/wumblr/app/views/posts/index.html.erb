@@ -1,0 +1,5 @@
+<p>index</p>
+
+<% @posts.each do |post| %>
+<p><%= link_to post.name, "/posts/#{post.id}/edit" %></p>
+<% end %>

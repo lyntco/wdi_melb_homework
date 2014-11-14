@@ -1,65 +1,85 @@
 require 'sinatra'
 require 'pg'
 require 'pry'
+require 'active_record'
 
-before do
-  @meal_types = run_sql("SELECT DISTINCT meal_type FROM dishes;")
+ActiveRecord::Base.establish_connection(
+  :adapter => 'postgresql',
+  :host => 'localhost',
+  :database => 'goodfoodhunting',
+  :pool => 500 # temporary fix increasing pool size limit
+)
+
+class Dish < ActiveRecord::Base # inherits from active record, the Base module
+  validates_presence_of :name
 end
 
+
+# this will go between for before and end
+
+# @meal_types = Dish.pluck(meal_type).uniq
+
+# before do
+#   @meal_types = run_sql("SELECT DISTINCT meal_type FROM dishes;")
+# end may use .uniq
+# Dish.all.map {|dish| dish.meal_type}.uniq
+
 get '/' do
-  meal_type = params[:meal_type]
-  sql = "select * from dishes;"
-  @rows = run_sql(sql)
+  @meal_type = params[:meal_type]
+  @rows = Dish.all
   erb :index
 end
 
 get '/dishes' do
-  db = PG.connect(:dbname => 'goodfoodhunting') # connect to db
-  @rows = run_sql("select * from dishes;")
+  @rows = Dish.all
   erb :index
 end
 
 get '/dishes/new' do
+  d1 = Dish.new
+  d1.name = params[:name]
+  d1.image_url = params[:image_url]
+  d1.meal_type = params[:meal_type]
+  d1.save
   erb :new
 end
 
 get '/dishes/:id' do
-  db = PG.connect(:dbname => 'goodfoodhunting') # connect to db
-  sql = "select * from dishes where id = #{params[:id]}"
-  @rows = run_sql(sql)
-
+  @row = Dish.find(params[:id])
   erb :show
 end
 
-post '/dishes' do
-  sql = "INSERT INTO dishes (name,image_url,meal_type) VALUES ('#{params['name']}','#{params['image_url']}', '#{params['meal_type']}')"
-  run_sql(sql)
-  redirect to('/')
-end
-
-post '/dishes/:id/delete' do
-  sql = "DELETE FROM dishes WHERE id = #{params[:id]}"
-  run_sql(sql)
-  redirect to('/')
-end
-
 get '/dishes/:id/edit' do
-    sql = "SELECT * FROM dishes WHERE id = #{params[:id]}"
-    @rows = run_sql(sql) # beacause the method always returned a collection bit there is only one
-    @row = @rows.first # pluck the first row
-    erb :edit
+  @row = Dish.find(params[:id])
+  erb :edit
 end
 
-post '/dishes/:id' do
-  sql = "UPDATE dishes SET name='#{params[:name]}', image_url='#{params[:image_url]}', meal_type='#{params[:meal_type]}' WHERE id = #{params[:id]}"
-  run_sql(sql)
+post '/dishes' do
+  # dish = Dish.new(name: params[:name], image_url: params[:image_url], params[:meal_type])
+  dish = Dish.new
+  dish.name = params[:name]
+  dish.image_url = params[:image_url]
+  dish.meal_type = params[:meal_type]
+  dish.save
+  redirect to('/')
+end
+
+post '/dishes/:id' do # edit
+  dish = Dish.find(params[:id])
+  dish.name = params[:name]
+  dish.image_url = params[:image_url]
+  dish.meal_type = params[:meal_type]
+  dish.save
+
   redirect to("/dishes/#{params[:id]}")
 end
 
-# methods
-def run_sql(sql)
-  db = PG.connect(:dbname => 'goodfoodhunting') # connect to db
-  rows = db.exec(sql)
-  db.close
-  rows
+post '/dishes/:id/delete' do
+  @dish = Dish.find(params[:id])
+  @dish.delete
+  redirect to('/')
 end
+
+after do
+    ActiveRecord::Base.connection.close
+  end

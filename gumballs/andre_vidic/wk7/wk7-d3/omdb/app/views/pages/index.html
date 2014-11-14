@@ -1,0 +1,103 @@
+<input type="text" id="search-box">
+<button id="search-button">Search</button>
+
+<p id="output"></p>
+
+<script>
+//   console.log('hello from index html');
+
+//   var search = function(){
+
+//     console.log($('#search-box').val());
+
+//     var searchTerm = $('#search-box').val();
+
+//     $.ajax('http://www.omdbapi.com/?t='+searchTerm).done(function(data){
+//       console.log(data);
+
+//       var $title = $('<p>').html($.parseJSON(data)["Title"]);
+//       $('body').append($title);
+
+//       var $year = $('<p>').html($.parseJSON(data)["Year"]);
+//       $('body').append($year);
+
+//       var $released = $('<p>').html($.parseJSON(data)["Released"]);
+//       $('body').append($released);
+
+//       var $runtime = $('<p>').html($.parseJSON(data)["Runtime"]);
+//       $('body').append($runtime);
+//     });
+//   }
+
+// $('#search-button').on('click',search);
+</script>
+
+<script type="text/template" id="movie-template">
+    <article>
+        <h2>Title: {{ title }}</h2>
+        <p>Year: {{ year }}</p>
+        <p>Type: {{ Type }}</p>
+    </article>
+</script>
+
+<script>
+// DTs solution
+console.log('hello from the index html erb page');
+
+_.templateSettings = {
+    interpolate: /\{\{(.+?)\}\}/g
+};
+
+// grab stuff on this page using jquery
+var $button = $('#search-button');
+
+// add event listener to the button
+$button.on('click', function() {
+
+    // grab value in the input box
+    var $inputVal = $('#search-box').val();
+
+    // when the request is "done", put the movie details inside the paragraph
+    var showMovie = function(data) {
+        console.log(data);
+
+        debugger;
+        items = data.Search
+        for (i in items) {
+            console.log(i);
+            console.log(items[i]);
+
+            var templateFunc = _.template($('#movie-template').html());
+            var htmlOutput = templateFunc({
+                title: items[i].Title,
+                year: items[i].Year,
+                Type: items[i].Type
+            });
+
+            $('#output').append(htmlOutput);
+
+        }
+       
+            // var templateStr = "<p> Title: {{title}} Year:: {{year}} Type: {{Type}}</p>";
+            // var templateFunc = _.template(templateStr);
+            // var htmlOutput = templateFunc({ title: data.Title, year: data.Year, Type: data.Type});
+
+
+        // $('#output').append("<p>" + data.Title + ' ' + data.Year + ' ' + data.Released);
+
+        // $('#output').html(data.Title + ' ' + data.Year);
+        // }
+
+    };
+
+    var options = {
+        url: 'http://www.omdbapi.com/?s=' + $inputVal,
+        type: 'GET',
+        dataType: 'json'
+    }
+
+    // make an ajax request to omdb to search for movie
+    $.ajax(options).done(showMovie);
+
+});
+</script>

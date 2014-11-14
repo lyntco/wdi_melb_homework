@@ -1,9 +1,0 @@
-<%= link_to 'New Recipes', new_recipe_path %>
-
-<h1>Index of existing recipes</h1>
-
-<% @recipes.each do |recipe|%>
-<p><%= link_to recipe.name, recipe_path(recipe.id)  %></p>
-
-<% end %>
-

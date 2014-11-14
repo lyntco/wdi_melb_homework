@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Totor</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <style>
+		li { cursor: pointer; }
+		.completed { text-decoration: line-through; }
+	</style>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

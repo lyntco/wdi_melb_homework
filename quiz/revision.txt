@@ -53,20 +53,29 @@ get displays items and post updates and changes items.
 
 What is the name of the hash that has user submitted data from a form?
 
-params[:item]
+params
 
 How can you add things to this hash without form submission?
 
-kitchen[:drawer] << "fork"
+params[:item]
 
 
 What is the command to make a new rails app with postgres?
 
+rails new file_name -d=postgresql
+
 What view and controller would the route get '/posts/:id' => 'posts#show' use by default?
+
+Posts_controller
+Posts/show.html.erb
 
 How would you manually create a new user without a view, controller and action?
 
+add to the seed file
+
 How would you manually destroy the first user created?
+
+
 
 How would you manually destroy all the users?
 
@@ -74,9 +83,15 @@ What are the rails naming conventions for
 
 a. a model
 
+post.rb
+
 b. a controller for this model
 
+posts_controller.rb
+
 c. the views for this model and controller
+
+
 
 What is the difference between User.new and User.create?
 

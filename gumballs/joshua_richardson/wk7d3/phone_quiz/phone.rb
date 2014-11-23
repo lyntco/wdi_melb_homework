@@ -28,7 +28,7 @@ class Phone
   end
 
   def to_s
-    "(#{@number[0..2]}) #{@number[3..5]}-#{@number[6..10]}"
+    "(#{area_code}) #{@number[3..5]}-#{@number[6..10]}"
   end
 
 end

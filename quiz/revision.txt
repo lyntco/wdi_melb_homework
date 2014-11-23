@@ -1,0 +1,82 @@
+Cheat sheet:
+Fill in the blanks
+
+Given you have the hash
+
+kitchen = {
+:drawer => ['knife','spoon'],
+:stove => [],
+:sink => [],
+:oven => 'Turkey'
+}
+a. How would you return what's inside the oven?
+
+puts "#{kitchen[:oven]}"
+
+b. How would you take a spoon out of the drawer?
+
+kitchen[:drawer].slice!(1)
+
+c. How would you put a fork into the drawer?
+
+kitchen[:drawer] << "fork"
+
+What does attr_accessor do?
+
+allows you to read and write within a class in ruby
+
+What's the difference between an object and a class?
+
+Write a class Student that has the attributes name, age, favourite subject, and make a new student object from it. Make it so when you make a new student their favourite subject is sleeping if you don't pass in anything for their subject.
+
+What is the difference between a get and a post?
+
+What is the name of the hash that has user submitted data from a form?
+
+How can you add things to this hash without form submission?
+
+What is the command to make a new rails app with postgres?
+
+What view and controller would the route get '/posts/:id' => 'posts#show' use by default?
+
+How would you manually create a new user without a view, controller and action?
+
+How would you manually destroy the first user created?
+
+How would you manually destroy all the users?
+
+What are the rails naming conventions for
+
+a. a model
+
+b. a controller for this model
+
+c. the views for this model and controller
+
+What is the difference between User.new and User.create?
+
+What is the command to update the schema with new migrations?
+
+Write the javascript version of this:
+
+class Hat
+attr_reader :color
+def initialize
+  @color = ["white","yellow","purple","red"].sample
+end
+end
+What's the difference between $('div') and $('<div>') ?
+
+How do you get the movie Jaws from OMBPAPI?
+
+Write the code to bring the title and the year out on the current page with ajax.
+
+In this code:
+
+$('body').on('click', function(e){
+console.log(this)
+console.log(e)
+});
+a. What event triggers the console.logs?
+
+b. What will be logged to the console?

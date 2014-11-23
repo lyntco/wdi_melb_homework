@@ -50,7 +50,7 @@ iframe {
 
 .youtube {
   margin-top: 4em;
-  border-radius: 20px;
+
 }
 .btn-primary {
   color: #d1e5c9;
@@ -86,9 +86,9 @@ iframe {
 }
 .single {
   background: #7b815d;
-
   border-radius: 10px;
   padding-top: 0.3em;
   padding-left: 3em;
   padding-right: 3em;
+  display: inline-block;
 }

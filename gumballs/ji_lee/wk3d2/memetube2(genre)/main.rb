@@ -3,6 +3,11 @@ require 'sinatra'
 require 'pg'
 require 'pry'
 
+
+before do 
+  @genres = run_sql("SELECT distinct genre FROM videos;")
+end
+
 get '/' do
   sql = "select * from videos;"
   @rows = run_sql(sql)
@@ -56,10 +61,10 @@ post '/videos' do
   redirect to('/')
 end
 
+
 def run_sql(sql)
   db = PG.connect(:dbname => 'memetube') 
   rows = db.exec(sql)
   db.close
   return rows
 end
-

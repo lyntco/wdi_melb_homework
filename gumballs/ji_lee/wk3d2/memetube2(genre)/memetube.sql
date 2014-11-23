@@ -9,3 +9,4 @@ CREATE TABLE videos (
 );
 
 insert into videos (title,description,video_url,genre) values ('surf up','The Beast, Ex-Hurricane Ida, flooded the mid-Atlantic states and sent swells crashing into South Florida. Surfers hit the water in Delray Beach.','https://www.youtube.com/watch?v=ReMKmrxq9RI','sports');
+

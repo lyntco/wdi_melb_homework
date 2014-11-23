@@ -27,13 +27,38 @@ allows you to read and write within a class in ruby
 
 What's the difference between an object and a class?
 
+An object is an instance of a class.
+
 Write a class Student that has the attributes name, age, favourite subject, and make a new student object from it. Make it so when you make a new student their favourite subject is sleeping if you don't pass in anything for their subject.
+
+class Student
+ attr_accessor :name, :age, :favourite subject
+
+ def initialize(student)
+ end
+end
+
+student = {
+  :name => 'Mo',
+  :age => 10,
+  :favourite_subject => 'sleeping'
+
+}
+
+s1 - Student.new(student)
 
 What is the difference between a get and a post?
 
+get displays items and post updates and changes items.
+
 What is the name of the hash that has user submitted data from a form?
 
+params[:item]
+
 How can you add things to this hash without form submission?
+
+kitchen[:drawer] << "fork"
+
 
 What is the command to make a new rails app with postgres?
 

@@ -95,7 +95,7 @@ c. the views for this model and controller
 /views/users/"anything".html.erb
 
 What is the difference between User.new and User.create?
-
+User.new only creates a new user with the passed attributes but does not save it to the database whereas create does this and saves to the database
 
 What is the command to update the schema with new migrations?
 
@@ -109,7 +109,9 @@ def initialize
   @color = ["white","yellow","purple","red"].sample
 end
 end
+
 What's the difference between $('div') and $('<div>') ?
+
 
 How do you get the movie Jaws from OMBPAPI?
 
@@ -122,5 +124,7 @@ console.log(this)
 console.log(e)
 });
 a. What event triggers the console.logs?
+click
 
 b. What will be logged to the console?
+everything in the body html?

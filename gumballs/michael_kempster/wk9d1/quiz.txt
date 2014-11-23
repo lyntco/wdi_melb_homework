@@ -1,0 +1,44 @@
+1a) - kitchen[:oven]
+1b) - kitchen[:drawer].pop
+1c) - kitchen[:drawer].push('fork')
+
+2) Allows access to internal instance variables inside a class
+
+3) An object is an instance of a class and a class is the template for creating objects
+
+4)class Student
+
+		def initialize(name, age, fav_subject = sleep)
+			@name = name
+			@age = age
+			@fav_subject = @fav_subject
+		end
+
+	end
+
+5) get displays information from a server to a web page where post updates information to a server from a web page
+
+6) params
+
+7) Use an ajax query
+
+8) rails new project -d=postgresql
+
+9) View - show.html.erb, Controller - posts_controller.rb
+
+10) Use the Rails console or access the database directly
+
+11) User.find(user).destroy
+
+12) User.destroy_all
+
+13a) model.rb
+13b) model_controller.rb
+13c) model_view.html.erb
+
+14) User.new will need to have the changes saved with User.save whereas User.create does not
+
+15) rake db:migrate
+
+20a) click
+20b) body e

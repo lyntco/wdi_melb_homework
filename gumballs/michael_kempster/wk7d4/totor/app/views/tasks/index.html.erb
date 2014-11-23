@@ -1,0 +1,130 @@
+<h1>Todor</h1>
+
+<!-- The remote true part tells the form to use ajax -->
+<%= form_for Task.new, :remote => true do |f| %>
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+	<%= f.submit %>
+<% end %>
+
+<ul id="tasks">
+</ul>
+
+<script>
+ 
+  var appendTask = function(task) {
+    var $li = $('<li>')
+      .attr('data-id',task.id)
+      .html(task.description);
+    if (task.completed) {
+      $li.addClass('completed');
+    }
+ 
+    $('#tasks').append($li);  
+  };
+ 
+  var fetchTask = function() {
+ 
+    $.ajax({
+      url: '/tasks.json',
+      dataType: 'json'
+    }).done(function(data) {
+      $(data).each(function(index, task) {
+        appendTask(task);
+      })
+    });
+ 
+  }; // end fetchTask
+ 
+  $('#new_task').on('ajax:success', function(evt, task) {
+    $('#task_description').val('');
+    appendTask(task);
+  });
+ 
+  $('#tasks').on('click', 'li', function() {
+    var $li = $(this);
+
+  	if ($li.attr('class') === 'completed') {
+	    $.ajax({       
+	      url: '/tasks/' + $li.attr('data-id') + '/uncomplete'
+	    }).done(function() {
+	      $li.toggleClass('completed');
+	    });
+  	} else {
+			$.ajax({       
+	      url: '/tasks/' + $li.attr('data-id') + '/complete'
+	    }).done(function() {
+	      $li.toggleClass('completed');
+	    });
+  	}
+
+  });
+ 
+  fetchTask();
+
+
+	// The below code has been refactored as per the above to only add one lit iotem at a time and not have to redeaw the whole list
+	// Also note that toggleClass has been used here to simplify the togging of completed tasks
+
+	// var fetchTask = function() {
+	// $('#tasks').empty(); // This clears the list as the below code will generate it again
+	// 	$.ajax({
+	// 		url: '/tasks.json',
+	// 		dataType: 'json'
+	// 	}).done(function(data) {
+	// 		console.log('I have tasks!');
+
+	// 		$(data).each(function(index, task) {
+
+	// 			var task = $('<li>').html(task.description);
+	// 			$('#tasks').append(task);
+	// 		})
+	// 	});
+	// }; // End of fetchTask
+
+	// $('#new_task').on('ajax:success', function() {
+	// 	fetchTask();
+	// 	$('#task_description').val(''); // This clears the box after the task has been run
+	// });
+
+	// fetchTask(); // This loads the initial data prior to any new button presses
+
+	// $('#tasks').on('click', 'li', function() {
+	// 	console.log('item clicked');
+	// 	if ($(this).hasClass('completed')) {
+	// 		$(this).attr('class', '');
+	// 	} else {
+	// 		$(this).attr('class', 'completed');
+	// 	}
+	// });
+
+	// Hijacking the submit button to stop the page from having to reload each time a user submits
+	// 				Note that the below code has been refactored to use ajax above
+	// This allows the JavaScript to handle the button press instead of the Rails form
+	// $('#new_task').on('submit', function(event) {
+	// 	console.log('submit was tried...');
+	// 	event.preventDefault(); // Stop the event
+
+	// 	var formData = new FormData();
+	// 	formData.append('description', $('#task_description').val());
+
+	// 	$.ajax({
+	// 		url: '/tasks',
+	// 		//dataType: 'json',
+	// 		type: 'POST',
+	// 		processData: false,
+	// 		contentType: false,
+	// 		data: formData
+	// 	}).done(function(data) {
+	// 		console.log(data);
+
+	// 		var task = $('<li>').html(data.description);
+	// 		$('#tasks').append(task);
+
+	// 	}).fail(function(){
+	// 		console.log('failed');
+	// 	});
+
+	// });
+
+</script>

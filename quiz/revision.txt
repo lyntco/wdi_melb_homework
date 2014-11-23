@@ -91,7 +91,7 @@ posts_controller.rb
 
 c. the views for this model and controller
 
-
+posts.html.erb
 
 What is the difference between User.new and User.create?
 

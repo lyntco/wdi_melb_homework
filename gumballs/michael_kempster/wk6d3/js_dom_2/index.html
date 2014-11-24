@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>My Book List</h1>
+</body>
+<script>
+	
+	var books = [
+  {title: 'The Design of EveryDay Things',
+   author: 'Don Norman',
+   cover: 'http://yangsu.github.io/images/teapot-for-masochists.jpeg',
+   alreadyRead: false
+  },
+  {title: 'The Most Human Human',
+  author: 'Brian Christian',
+  cover: 'http://d.gr-assets.com/books/1295465264l/8884400.jpg',
+  alreadyRead: true
+  }];
+
+  function addStuff() {
+	  for (var i = 0; i < books.length; i++) {
+	  	var newPara = document.createElement("li");
+	  	var node = document.createTextNode(books[i].title + ' by ' + books[i].author);
+	  	newPara.appendChild(node);
+	  	var currentElement = document.getElementById("h1");
+	  	document.body.insertBefore(newPara, currentElement);
+
+	  	var newPicture = document.createElement("img");
+	  	newPicture.setAttribute("src", books[i].cover);
+	  	var currentElement2 = document.getElementById("li");
+	  	document.body.insertBefore(newPicture, currentElement2);
+	  }
+	}
+
+	document.body.onload = addStuff;
+</script>
+</html>

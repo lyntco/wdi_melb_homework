@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memetube</title>
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/images/specialicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+  <div class="container">
+<a href="/"><h1>Welcome to <span>MemeTube</span></h1></a>
+
+<h2>There's gold in them there hills. Curate YouTube.</h2>
+
+<a href="/videos/new">Add a video</a>
+
+<div class="nav">
+    <ul>
+      <% @genres.each do |genre| %> <!-- Coming from before method -->
+      <li><a href="/genre/<%= genre %>"><%= genre %></a></li>
+      <% end %>
+
+    </ul>
+</div>
+    <%= yield %>
+
+  <footer>&copy; memedream</footer>
+</div>
+</body>
+</html>

@@ -36,7 +36,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    # important look more into this
+    # important
     params.require(:task).permit(:description)
   end
 

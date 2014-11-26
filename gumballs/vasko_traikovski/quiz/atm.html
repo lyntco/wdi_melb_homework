@@ -6,6 +6,7 @@ table {
   border-radius   : 2px;
   overflow         :hidden;
   border-top  : 1px solid #cecfd5;
+  tbody  : 1px solid #cecfd5;
         border-collapse:collapse;
 
 
@@ -54,10 +55,12 @@ button,input{
 .inline{display:inline-block;}
 </style>
 
-
+<h2 id="messages">ATM</h2>
 <div class="inline">
 <h1>Savings</h1>
   <table>
+
+
   <thead>
     <tr>
       <th>Deposit</th>
@@ -207,35 +210,49 @@ function addEl(parent,tg,txt){
 // })
 
 
-var createAccount = function(initialBalance, type) {
+var createAccount = function(initialBalance, accType) {
 
     var account = {
 
         balance: initialBalance,
+        accType: accType,
         resetWarning:function(color,msg){
           document.body.style.color=color
           $id("message").innerHTML=msg
         },
         Deposit:     function(amount,accountType) {
-          var Account = (accountType === "savingsDeposit")?"savingsBody":"chequeBody";
+          var Account = (accType === "savings")?"savingsBody":"chequeBody";
           this.resetWarning("black","");
           this.balance = this.balance + amount;
           updateHistory(amount, 0, this.balance, Account)//Account=savingsBody:chequeBody
         },
 
         Withdraw:    function(amount, accountType) { //accountType = "savingsWithdraw ","chequeWithdraw "
+        cc(accountType+", accountType. amount: "+amount)
+        var AccountBody      = (accType === "savings")?"savingsBody":"chequeBody";
+        var otherAccountBody = (accType === "savings")?"chequeBody":"savingsBody";
+        var otherAccount     = (accType === "savings")?"chequeAccount":"savingsAccount";
+          // cc("accountType: "+((accountType)?accountType:"null"))
+          // cc("accountBody: "+AccountBody)
+          // cc("otherAccountBody: "+otherAccountBody)
+          //cc("otherAccount: "+otherAccount)
           this.resetWarning("black","");
+
           if (amount <= this.balance) {
-            cc('withdraw: '+accountType)
+            cc("amount <= this.balance")
             this.balance = this.balance - amount;
+            updateHistory(0, amount, this.balance, AccountBody)//Account=savingsBody:chequeBody
             return true
-          } else {
-            cc('withdraw: else')
-            var otherAccount = (accountType === "savingsWithdraw")?"chequeAccount":"savingsAccount";
+          } else {//amount>this.balance
+            cc("amount > this.balance")
+            cc("amount: "+amount+" this.balance: "+this.balance )
             var shortfall = amount - this.balance
-            if ( shortfall < app[otherAccount]['balance']) {
-              app[otherAccount]['Withdraw'](shortfall);
+            if ( shortfall <= app[otherAccount]['balance']) {
+              updateHistory(0, amount-shortfall, 0, AccountBody)//Account=savingsBody:chequeBody
               this.balance = 0
+              app[otherAccount]['Withdraw'](shortfall, otherAccount);
+
+              //enough in both accounts
             }else{
               this.resetWarning("red","Not enough Funds")
             }
@@ -254,8 +271,8 @@ var createAccount = function(initialBalance, type) {
 var app = {
 
   init: function(){
-    this.chequeAccount  = createAccount(150);
-    this.savingsAccount = createAccount(200);
+    this.chequeAccount  = createAccount(150,"cheque");
+    this.savingsAccount = createAccount(200,"savings");
     this.renderBalance();
 
 // var chequeType = ["cheque", "cheque",  "savings","savings",]
@@ -310,6 +327,11 @@ function updateHistory(deposit, withdrawal, balance, id){
   addEl( tr, "td", deposit )
   addEl( tr, "td", withdrawal )
   addEl( tr, "td", balance )
+  // cc('deposit: '+deposit)
+  // cc('withdrawal: '+withdrawal)
+  // cc('balance: '+balance)
+  // cc('id: '+id)
+
   $id(id).appendChild( tr )
   $id("message").innerHTML += $tag("tbody")[0].length
 }

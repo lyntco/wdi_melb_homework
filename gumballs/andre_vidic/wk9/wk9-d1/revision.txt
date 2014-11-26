@@ -1,0 +1,130 @@
+Fill in the blanks
+
+Given you have the hash
+
+kitchen = {
+:drawer => ['knife','spoon'],
+:stove => [],
+:sink => [],
+:oven => 'Turkey'
+}
+a. How would you return what's inside the oven?
+kitchen.oven or kitchen["oven"]
+
+b. How would you take a spoon out of the drawer?
+kitchen.drawer[1]
+c. How would you put a fork into git the drawer?
+???? what does this question mean
+
+What does attr_accessor do?
+it does the equivalent of the below, which allows for read and write access
+
+def name
+@name = name
+
+end
+
+What's the difference between an object and a class?
+
+A class can contain objects and can create many 'instants'/ customised versions of a class. An object is a predefined and not customisable like a class is. A class can be created and specific information can be added to that class. Creating a specific class. An object is fixed. 
+
+Write a class Student that has the attributes name, age, favourite subject, and make a new student object from it. Make it so when you make a new student their favourite subject is sleeping if you don't pass in anything for their subject.
+
+def Student
+
+	def initialize(name, age, favourite_subject=sleeping)
+		@name = name
+		@age = age
+		@favourite_subject = favourite_subject
+	end
+end
+
+new_student = Student.new
+
+What is the difference between a get and a post?
+A get is usually used to read information. 
+A post is usually used to write/delete. 
+
+A post is more secure than a get because the parameters are not stored in the browser history.
+
+A get has a restricted number of characters (~2048) in the URL string, a post does not.
+
+Post variables are not displayed in the URL
+
+
+What is the name of the hash that has user submitted data from a form?
+Params. Params is a hash that takes data that a user has submitted into a form. 
+
+
+
+How can you add things to this hash without form submission?
+
+What is the command to make a new rails app with postgres?
+
+rails g new "app" -d=postgres
+
+What view and controller would the route get '/posts/:id' => 'posts#show' use by default?
+
+view: show.html.erb
+controller: posts
+
+How would you manually create a new user without a view, controller and action?
+in rails c,
+user = "database_name".new
+
+
+
+How would you manually destroy the first user created?
+in rails c,
+user.first.destroy
+
+
+How would you manually destroy all the users?
+"database_name".all.destroy
+
+
+What are the rails naming conventions for
+
+a. a model
+user.rb, where < ActiveRecord::Base
+
+b. a controller for this model
+users_controller.rb, where < ApplicationController
+
+c. the views for this model and controller
+/views/users/"anything".html.erb
+
+What is the difference between User.new and User.create?
+User.new only creates a new user with the passed attributes but does not save it to the database whereas create does this and saves to the database
+
+What is the command to update the schema with new migrations?
+
+rake db:migrate
+
+Write the javascript version of this:
+
+class Hat
+attr_reader :color
+def initialize
+  @color = ["white","yellow","purple","red"].sample
+end
+end
+
+What's the difference between $('div') and $('<div>') ?
+
+
+How do you get the movie Jaws from OMBPAPI?
+
+Write the code to bring the title and the year out on the current page with ajax.
+
+In this code:
+
+$('body').on('click', function(e){
+console.log(this)
+console.log(e)
+});
+a. What event triggers the console.logs?
+click
+
+b. What will be logged to the console?
+everything in the body html?

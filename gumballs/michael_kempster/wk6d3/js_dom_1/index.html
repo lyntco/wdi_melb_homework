@@ -1,0 +1,42 @@
+<!-- Note answers to this homework exercise are listed in the comments below -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+</head>
+<body>
+  <h1>About Me</h1>
+  
+  <ul>
+    <li class="listitem">Nickname: <span id="nickname"></span>
+    <li>Favorites:  <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+   </ul>
+  
+   <aside>
+     <h1>Instructions</h1>
+     <pre>
+(In JS) Change the body tag's style so it has a font-family of "Arial, sans-serif".
+<!-- document.body.style.fontFamily = "Arial,sans-serif"; -->
+(In JS) Replace each of the spans (nickname, favorites, hometown) with your own information.
+<!-- for(var i = 0; i < 3; i++) {
+document.getElementsByTagName("span")[i].id = "something";
+} -->
+Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red. DOES NOT WORK - REVISE
+<!-- for(var i = 0; i < 3; i++) {
+document.getElementById("li")[i].class = "listitem";
+}
+document.body.listitem.color = "red" -->
+Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+<!-- var newPicture = document.createElement("img");
+	  	newPicture.setAttribute("src", "http://www.shannons.com.au/library/images/auctions/W5B82BC52I6KL8HP/large/1974-ford-xb-fairmont-gs-coupe.jpg");
+	  	var currentElement2 = document.getElementById("li");
+	  	document.body.insertBefore(newPicture, currentElement2); -->
+     </pre>
+   </aside>
+   
+ 
+ </body>
+</html>

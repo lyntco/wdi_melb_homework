@@ -1,0 +1,128 @@
+<h1>Todor</h1>
+
+<%= form_for Task.new, :remote => true do |f| %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>
+
+<ul id="tasks">
+</ul>
+
+
+
+<script>
+
+ var appendTask = function(task) {
+    var $li = $('<li>')
+    .attr('data-id', 'task.id')
+    .html(task.description);
+
+    if (task.completed) {
+      $li.addClass('completed');
+    }
+
+
+    $('#tasks').append($li);
+  };
+
+  var fetchTask = function() {
+
+    // $('#tasks').empty(); // clear the ul
+
+    $.ajax({
+      url: '/tasks.json',
+      dataType: 'json'
+    }).done(function(data) {
+      $(data).each(function(index, task) {
+        appendTask(task);
+      })
+    });
+
+  }; // end fetchTask
+
+  $('#new_task').on('ajax:success', function(e, task) {
+    $('#task_description').val('');
+    appendTask(task);
+  });
+
+  $('#tasks').on('click', 'li', function() {
+    $(this).toggleClass('completed');
+
+    $ajax({
+      url: '/tasks/' + $li.data('data-id') + '/complete'
+    }).done(function() {
+    $li.toggleClass('completed');
+    });
+  });
+
+  fetchTask();
+
+
+
+
+
+
+
+//the old way thiss clears the list and reloads all the content
+//    var fetchTask = function() {
+//     $('#tasks').empty();
+
+//     $.ajax({
+//       url: '/tasks.json',
+//       dataType: 'json',
+//     }).done(function(data) {
+//       console.log("got data")
+
+//       $(data).each(function(index, task){
+
+//       var task = $('<li>').html(task.description);
+//       $('#tasks').append(task);
+//     })
+//   });
+// };
+
+// $('#new_task').on('ajax:success', function() {
+//   $('#task_description').val('');
+//   fetchTask();
+//   /* Act on the event */
+// });
+
+// var $todoListElem = $('#tasks');
+// $todoListElem.on('click', 'li', function(){
+//   $(this).toggleClass('completed');
+// });
+
+
+
+// fetchTask();
+
+
+
+
+//   $('#new_task').on('submit', function(event){
+//     event.preventDefault();
+
+//     var formData = new FormData();
+//     formData.append('description', $('#task_description').val())
+
+//     $.ajax({
+//       url: '/task',
+//       type: 'POST',
+//       // dataType: 'json',
+//       data: formData
+
+//     }).done(function() {
+//       console.log("success");
+
+//     var task = $('<li>').html(data.description);
+//     $('#task').append(task);
+
+//     }).fail(function() {
+//       console.log("error");
+//     });
+// });
+
+
+</script>
+

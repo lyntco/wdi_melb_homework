@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todor V2</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<script type="template/handlebars" id="taskItemView">
+  <p>{{ description }}  <a href="">Delete</a></p>
+</script>
+
+<script>
+  var App = {};
+  App.Views = {};
+  App.Models = {};
+  App.Collections = {};
+
+</script>
+<%= javascript_include_tag 'application' %>
+</body>
+</html>

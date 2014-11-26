@@ -1,0 +1,88 @@
+<h1>Todo in Rails</h1>
+
+<%= form_for Task.new, :remote => true do |f|  %>
+	<%= f.label :description  %>
+	<%= f.text_field :description %>
+	<%= f.submit %>
+<% end %>
+
+<ul id="tasks">
+	
+	
+	<script>
+
+		var fetchTask = function() {
+			$('#tasks').empty(); //clear the ul
+
+			$.ajax({
+				url: '/tasks.json',
+				dataType: 'json'
+			}).done(function(data){
+				console.log('i got tasks');
+		
+
+			$(data).each (function( index, task) {
+
+				var task = $('<li>').html(task.description);
+				$('#tasks').append(task);
+
+				})
+
+			});
+
+		}; //end fetchTask
+
+
+		$('#new_task').on('ajax:success', function(){
+			$('#task_description').val('');
+			fetchTask();
+		});
+
+		fetchTask();
+
+
+		$(document).ready(function() {
+			$('li').on('click', function() {
+				console.log('clicked!');
+			});
+		});
+
+		// $(document).on('click', function(data){
+		// 	console.log(data);
+		// })
+
+
+
+		// $('#new_task').on('submit', function(event){
+		// 	console.log('leave it to me!!');
+		// 	event.preventDefault(); //stop!
+
+		// 	var formData = new FormData();
+		// 	formData.append('description', $('#task_description').val());
+		
+
+		// 	$.ajax({
+		// 		url: '/tasks',
+		// 		type: 'POST',
+		// 		processData: false,
+		// 		contentType: false,
+		// 		data: formData 
+
+		// 	}).done(function(data){
+		// 		console.log(data);
+
+		// 		var task = $('<li>').html(data.description);
+		// 		$('#tasks').append(task);
+
+		// 	}).fail(function(){
+		// 		console.log('failure');
+		// 	});
+
+		// });
+
+
+	</script>
+
+
+</ul>
+

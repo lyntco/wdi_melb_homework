@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="gamePlayArea">
+    <div id="hangmanArea">
+      Guesses Left: <span id="guessesLeft"></span>
+    </div>
+    <div id="secretWordArea">
+      Secret word: <span id="secretWordBlanks"></span> 
+    </div>
+    <div id="letterArea">
+      <div id="lettersUsed">
+        It doesn't have these letters:
+        <div id="guessedLetters"></div>
+      </div>
+      <div id="wordsUsed">
+        It is NOT these words:
+        <div id="guessedWords"></div>
+      </div>
+      <div id="guessBox">
+        Guess a Letter here and press Enter:
+        <input id="letterField" type="text" maxlength="1" />
+      </div>
+      <div id="guessWordBox">
+        Know the word? Type here and press Enter:
+        <input id="wordField" type="text" />
+      </div>
+      <div id="statusArea">
+        Game Status:
+        <div id="gameStatus"> </div>
+      </div>
+    </div>
+  </div>
+  <div id="wordString"></div>
+  <div id="gameControlArea">
+    <input id="giveUpButton" class="button" type="submit" value="Give up"/>
+    <input id="resetButton" class="button" type="submit" value="Reset Game"/>
+  </div>
+
+  <script type="text/javascript" src="underscore-min.js"></script>
+  <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="hangman.js"></script>
+</body>
+</html>

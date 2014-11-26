@@ -1,0 +1,43 @@
+1.a kitchen[:oven]
+1.b kitchen[:drawer].pop[1]
+1.c kitchen[:drawer].push('fork')
+
+2. it's a method called on the current class and makes the parameter you pass to that method
+
+3. an oject is a piece of dta like an number or some text. A class is what the program calls is eg. some text is a String and a number is an integer.
+
+4.
+
+class Student (name, age, fav_subject)
+
+end
+
+
+Student.new('Matt', 36, 'Coding')
+
+5. get is a request for data and is passive where as post sends data and is distructive.
+
+6. params
+
+7. data=""
+
+8. rails new APPNAME -d=postgress
+
+9. controller = post_controller.rb and view = show.erb.rb
+
+10. rails g migration user:string
+
+11. Users.first.destroy
+
+12. Users.all.destroy
+
+13. a model = model.rb
+    a controller for this model = models_controller.rb
+    the views = index.html.erb
+
+14. new will use GET and send a new post object to the view and create is when a  POST will be sent to the controller.
+
+15.
+
+
+

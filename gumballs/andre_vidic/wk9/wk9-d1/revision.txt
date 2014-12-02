@@ -114,7 +114,7 @@ What's the difference between $('div') and $('<div>') ?
 
 
 How do you get the movie Jaws from OMBPAPI?
-
+send a HTTPparty request 
 Write the code to bring the title and the year out on the current page with ajax.
 
 In this code:
